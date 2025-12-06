@@ -122,7 +122,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                     )}
 
             
-                    <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
+                    {/* <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
                         <button className="dropdown-toggle items-center" type="button" onClick={()=>setUserManu(!userManu)}>
                             <span className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-md border border-primary bg-primary text-white"><Image src='/images/client/16.jpg' width={30} height={30} className="rounded-md" alt=""/></span>
                         </button>
@@ -145,12 +145,15 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 </ul>
                             </div>
                         )}
-                    </li>
+                    </li> */}
                 </ul>
 
                 <div id="navigation" style={{display: isToggle === true ? 'block' : 'none'}}>
                     <ul className={`navigation-menu ${manuclass}`}>
-                        <li className={`has-submenu parent-menu-item ${['/','/index-two','/index-three','/index-four','/index-five','/index-item'].includes(manu) ? 'active' : '' }`}>
+                        <li className={`parent-menu-item ${manu === '/' ? 'active' : '' }`}>
+                            <Link href="/" onClick={()=>{ setManu('/'); setSubManu('/'); setToggle(false); }} className="sub-menu-item">Home</Link>
+                        </li>
+                        {/* <li className={`has-submenu parent-menu-item ${['/','/index-two','/index-three','/index-four','/index-five','/index-item'].includes(manu) ? 'active' : '' }`}>
                             <Link href="" onClick={()=>setSubManu(setManu === '/index-item' ? '' : '/index-item')}>Hero</Link><span className="menu-arrow"></span>
                             <ul className={`submenu ${['/','/index-two','/index-three','/index-four','/index-five','/index-item'].includes(subManu) ? 'open' : '' }`}>
                                 <li className={`${manu === '/' ? 'active' : '' }`}><Link href="/" className="sub-menu-item">Tour One</Link></li>
@@ -159,7 +162,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 <li className={`${manu === '/index-four' ? 'active' : '' }`}><Link href="/index-four" className="sub-menu-item">Tour Four</Link></li>
                                 <li className={`${manu === '/index-five' ? 'active' : '' }`}><Link href="/index-five" className="sub-menu-item">Tour Five</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
 
                         <li className={`has-submenu parent-parent-menu-item ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(manu) ? 'active' : '' }`}><Link href="" onClick={()=>setSubManu(subManu === '/listing-item' ? '' : '/listing-item' )}> Listing </Link><span className="menu-arrow"></span>
                             <ul className={`submenu ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(subManu) ? 'open' : '' }`}>
