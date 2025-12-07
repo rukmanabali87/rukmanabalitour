@@ -25,14 +25,14 @@
           li{
             &.active {
               > a {
-                @apply !text-primary dark:!text-primary;
+                @apply !text-[#397A3D] dark:!text-[#397A3D];
               }
             }
           }
         }
         &.active {
           .menu-arrow {
-            @apply !border-t-transparent !border-e-primary !border-b-primary !border-s-transparent;
+            @apply !border-t-transparent !border-e-[#397A3D] !border-b-[#397A3D] !border-s-transparent;
           }
         }
       }
@@ -44,17 +44,17 @@
           &:hover,
           &.active {
             > .submenu-arrow {
-              @apply border-t-transparent border-e-primary border-b-primary border-s-transparent;
+              @apply border-t-transparent border-e-[#397A3D] border-b-[#397A3D] border-s-transparent;
             }
           }
           .submenu {
             .has-submenu{
               &:hover {
                 .submenu-arrow {
-                  @apply border-t-transparent border-e-primary border-b-primary border-s-transparent;
+                  @apply border-t-transparent border-e-[#397A3D] border-b-[#397A3D] border-s-transparent;
                 }
                 > .submenu-arrow {
-                  @apply border-t-transparent border-e-primary border-b-primary border-s-transparent;
+                  @apply border-t-transparent border-e-[#397A3D] border-b-[#397A3D] border-s-transparent;
                 }
               }
             }
@@ -87,7 +87,7 @@
             @apply w-full top-[6px] -rotate-45;
           }
           &:hover {
-            @apply bg-primary;
+            @apply bg-[#397A3D];
           }
         }
       }
@@ -146,13 +146,13 @@
           @apply block text-slate-900 dark:text-white text-base bg-transparent font-medium tracking-[1px] leading-6 font-dm px-[15px];
           &:hover, 
           &:active {
-            @apply text-primary;
+            @apply text-[#397A3D];
           }
         }
         &:hover, 
         &.active{
           > a {
-            @apply !text-primary dark:!text-primary;
+            @apply !text-[#397A3D] dark:!text-[#397A3D];
           }
         }
         .submenu.megamenu {
@@ -190,10 +190,10 @@
           &:hover, 
           &.active{
             > a {
-              @apply text-primary;
+              @apply text-[#397A3D];
             }
             > .menu-arrow {
-              @apply !border-t-transparent !border-e-primary !border-b-primary !border-s-transparent;
+              @apply !border-t-transparent !border-e-[#397A3D] !border-b-[#397A3D] !border-s-transparent;
             }
           }
         }
@@ -221,20 +221,20 @@
             }
             &.active {
               > a {
-                @apply !text-primary dark:!text-primary;
+                @apply !text-[#397A3D] dark:!text-[#397A3D];
               }
             }
             &:hover, 
             &.active{
               > .menu-arrow {
-                @apply !border-t-transparent !border-e-primary dark:!border-e-primary !border-b-primary dark:!border-b-primary !border-s-transparent;
+                @apply !border-t-transparent !border-e-[#397A3D] dark:!border-e-[#397A3D] !border-b-[#397A3D] dark:!border-b-[#397A3D] !border-s-transparent;
               }
             }
             
             &:hover, 
             &.active {
               > a {
-                @apply !text-primary dark:!text-primary;
+                @apply !text-[#397A3D] dark:!text-[#397A3D];
               }
             }
           }
@@ -346,7 +346,7 @@
               transition: all 0.3s;
               @apply block py-[10px] px-5 clear-both whitespace-nowrap text-[14px] tracking-[0.04em] font-normal text-slate-900 dark:text-white leading-[17px];
               &:hover {
-                @apply !text-primary dark:!text-primary;
+                @apply !text-[#397A3D] dark:!text-[#397A3D];
               }
             }
             ul {
@@ -373,13 +373,13 @@
         }
         &:hover {
           > .menu-arrow {
-            @apply !border-t-transparent !border-e-primary !border-b-primary !border-s-transparent;
+            @apply !border-t-transparent !border-e-[#397A3D] !border-b-[#397A3D] !border-s-transparent;
           }
         }
         &:hover, 
         &.active{
           > a {
-            @apply !text-primary dark:!text-primary;
+            @apply !text-[#397A3D] dark:!text-[#397A3D];
           }
         }
         &.last-elements{
@@ -527,7 +527,7 @@
         > a:hover,
         .submenu li a:hover,
         &.has-submenu.open > a {
-          @apply text-primary;
+          @apply text-[#397A3D];
         }
       }
     }
@@ -665,7 +665,7 @@
           .navbar-link {
             @apply text-[15px] font-semibold;
             &.active {
-              @apply text-primary;
+              @apply text-[#397A3D];
           }
             .navbar-icon {
               @apply text-lg me-[6px];
@@ -674,20 +674,20 @@
           &:hover,
           &.active {
             .navbar-link {
-              @apply text-primary;
+              @apply text-[#397A3D];
             }
           }
     }
     li{
       &.active {
         a {
-          @apply text-primary;
+          @apply text-[#397A3D];
         }
       }
       &.account-menu.active,
       &.account-menu:hover{
         .navbar-link {
-          @apply !text-primary dark:!text-white;
+          @apply !text-[#397A3D] dark:!text-white;
         }
       }
     }
