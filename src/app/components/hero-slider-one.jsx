@@ -12,7 +12,7 @@ export default function HeroSliderOne(){
             <div className="swiper-container absolute end-0 top-0 w-full h-full">
                 <Swiper className="swiper-wrapper" loop={true} speed={2000} autoplay={{delay:6500}} effect="flip" modules={[Autoplay,EffectFade ]}>
                     <SwiperSlide className="swiper-slide flex items-center overflow-hidden">
-                        <div className="slide-inner absolute end-0 top-0 w-full h-full slide-bg-image flex items-center bg-center" style={{backgroundImage:`url('/images/bg/10.jpg')`}}>
+                        <div className="slide-inner absolute end-0 top-0 w-full h-full slide-bg-image flex items-center bg-center" style={{backgroundImage:`url('/images/bg/10.webp')`}}>
                             <div className="absolute inset-0 bg-slate-900/10"></div>
                             <div className="container relative">
                                 <div className="grid grid-cols-1">
@@ -31,7 +31,7 @@ export default function HeroSliderOne(){
                     </SwiperSlide> 
 
                     <SwiperSlide className="swiper-slide flex items-center overflow-hidden">
-                        <div className="slide-inner absolute end-0 top-0 w-full h-full slide-bg-image flex items-center bg-center" style={{backgroundImage:`url('/images/bg/12.jpg')`}}>
+                        <div className="slide-inner absolute end-0 top-0 w-full h-full slide-bg-image flex items-center bg-center" style={{backgroundImage:`url('/images/bg/12.webp')`}}>
                             <div className="absolute inset-0 bg-slate-900/30"></div>
                             <div className="container relative">
                                 <div className="grid grid-cols-1">
