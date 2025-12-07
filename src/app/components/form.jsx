@@ -55,7 +55,7 @@ export default function Form(){
                             </div>
 
                             <div className="lg:mt-[35px]">
-                                <input type="submit" id="search-buy" name="search" className="py-1 px-5 h-10 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary text-white rounded-md w-full cursor-pointer" defaultValue="Search"/>
+                                <input type="submit" id="search-buy" name="search" className="py-1 px-5 h-10 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md w-full cursor-pointer" defaultValue="Search"/>
                             </div>
                         </div>
                     </div>

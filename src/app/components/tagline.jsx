@@ -5,7 +5,7 @@ import {FiClock, FiMapPin, FiMail, FiFacebook, FiInstagram, FiTwitter, FiPhone} 
 export default function Tagline(){
     return(
         <>
-        <div className="tagline bg-[#0B472D]">
+        <div className="tagline bg-[#0B472D] dark:bg-emerald-900">
             <div className="container relative">                
                 <div className="grid grid-cols-1">
                     <div className="flex items-center justify-between">

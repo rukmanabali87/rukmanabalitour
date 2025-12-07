@@ -249,32 +249,16 @@ export const blogData = [
 
 export const footerSocial = [
     {
-        icon:FiShoppingCart,
-        link:'https://1.envato.market/shreethemes-portfolio'
-    },
-    {
-        icon:FiDribbble,
-        link:'https://dribbble.com/shreethemes'
-    },
-    {
-        icon:FiLinkedin,
-        link:'http://linkedin.com/company/shreethemes'
-    },
-    {
         icon:FiFacebook,
-        link:'https://www.facebook.com/shreethemes'
+        link:'https://www.facebook.com/rukmanabalitour'
     },
     {
         icon:FiInstagram,
-        link:'https://www.instagram.com/shreethemes'
-    },
-    {
-        icon:FiTwitter,
-        link:'https://twitter.com/shreethemes'
+        link:'https://www.instagram.com/rukmanabalitour/'
     },
     {
         icon:FiMail,
-        link:'mailto:support@shreethemes.in'
+        link:'mailto:info@rukmanabalitour.com'
     },
 ]
 

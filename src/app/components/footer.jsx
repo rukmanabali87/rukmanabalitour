@@ -7,7 +7,7 @@ import {FiMapPin, FiMail, FiPhone} from 'react-icons/fi'
 
 export default function Footer(){
     return(
-        <footer className="footer bg-slate-900 dark:bg-slate-800 relative text-gray-200 dark:text-gray-200">    
+        <footer className="footer bg-[#0B472D] dark:bg-emerald-900 relative text-gray-200 dark:text-gray-200">    
             <div className="container relative">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12">
@@ -15,7 +15,7 @@ export default function Footer(){
                             <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                                 <div className="lg:col-span-3 md:col-span-12">
                                     <Link href="#" className="text-[22px] focus:outline-none">
-                                        <Image src='/images/logo-light.png' width={133} height={28} alt=""/>
+                                        <Image src='/images/logo-rubt-light.png' width={133} height={28} alt=""/>
                                     </Link>
                                     <p className="mt-6 text-gray-300">Planning for a trip? We will organize your trip with the best places and within best budget!</p>
                                     <ul className="list-none mt-6 space-x-1">
@@ -23,7 +23,7 @@ export default function Footer(){
                                             let Icon = item.icon
                                             return(
 
-                                                <li className="inline" key={index}><Link href={item.link} target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:bg-primary hover:text-white text-slate-300"><Icon className="size-4 align-middle" title="Buy Now"></Icon></Link></li>
+                                                <li className="inline" key={index}><Link href={item.link} target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:bg-[#DEA243] hover:text-white text-slate-300"><Icon className="size-4 align-middle" title="Buy Now"></Icon></Link></li>
                                             )
                                         })}
                                     </ul>
@@ -35,23 +35,23 @@ export default function Footer(){
                                         <h5 className="tracking-[1px] text-gray-100 mt-6">Travosy Tour & Travels</h5>
 
                                         <div className="flex mt-4">
-                                            <FiMapPin className="size-4 text-primary me-2 mt-1"></FiMapPin>
+                                            <FiMapPin className="size-4 text-[#397A3D] me-2 mt-1"></FiMapPin>
                                             <div className="">
-                                                <h6 className="text-gray-300">C/54 Northwest Freeway, <br/> Suite 558, <br/> Houston, USA 485</h6>
+                                                <h6 className="text-gray-300">Jl. Mangut No.19, Carangsari,<br/> Kec. Petang, Kabupaten Badung, Bali 80353</h6>
                                             </div>
                                         </div>
 
                                         <div className="flex mt-4">
-                                            <FiMail className="size-4 text-primary me-2 mt-1"></FiMail>
+                                            <FiMail className="size-4 text-[#397A3D] me-2 mt-1"></FiMail>
                                             <div className="">
-                                                <Link href="mailto:contact@example.com" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">contact@example.com</Link>
+                                                <Link href="mailto:info@rukmanabalitour.com" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">info@rukmanabalitour.com</Link>
                                             </div>
                                         </div>
                         
                                         <div className="flex mt-4">
-                                            <FiPhone className="size-4 text-primary me-2 mt-1"></FiPhone>
+                                            <FiPhone className="size-4 text-[#397A3D] me-2 mt-1"></FiPhone>
                                             <div className="">
-                                                <Link href="tel:+152534-468-854" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">+152 534-468-854</Link>
+                                                <Link href="https://wa.me/6287862207901" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">+62 878-6220-7901</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +83,7 @@ export default function Footer(){
                                                 </div>
                                             </div>
                                         
-                                            <button type="submit" id="submitsubscribe" name="send" className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-primary text-white rounded-md">Subscribe</button>
+                                            <button type="submit" id="submitsubscribe" name="send" className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md">Subscribe</button>
                                         </div>
                                     </form>
                                 </div>
@@ -97,7 +97,7 @@ export default function Footer(){
                 <div className="container relative text-center">
                     <div className="grid grid-cols-1">
                         <div className="text-center">
-                            <p className="mb-0">© {new Date().getFullYear()} Travosy. Design & Develop with <i className="mdi mdi-heart text-primary-600"></i> by <Link href="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
+                            <p className="mb-0">© {new Date().getFullYear()} Rukmana Bali Tour</p>
                         </div>
                     </div>
                 </div>
