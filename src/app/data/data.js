@@ -268,24 +268,8 @@ export const footerCompany = [
         link:'/aboutus'
     },
     {
-        name:'Services',
-        link:'/services'
-    },
-    {
-        name:'Team',
-        link:'/team'
-    },
-    {
-        name:'Pricing',
-        link:'/pricing'
-    },
-    {
         name:'Blog',
         link:'/blogs'
-    },
-    {
-        name:' Login',
-        link:'/login'
     },
 ]
 
