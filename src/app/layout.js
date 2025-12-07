@@ -13,8 +13,8 @@ const dm_sans = DM_Sans({
    });
 
 export const metadata = {
-  title: "Travosy - Next Js Tour & Travels Agency Tailwind CSS Template",
-  description: "Next Js Tour & Travels Agency Tailwind CSS Template",
+  title: "Rukmana Bali Tour",
+  description: "Make Your Holiday Easier",
 };
 
 export default function RootLayout({ children }) {
