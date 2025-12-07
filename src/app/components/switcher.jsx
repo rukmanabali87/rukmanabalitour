@@ -68,7 +68,7 @@ export default function Switcher(){
             </Link>
         </div>
 
-        <Link href="#" id="back-to-top" className="back-to-top fixed text-lg rounded-md z-10 bottom-5 end-5 size-8 text-center bg-primary/10 hover:bg-primary text-primary hover:text-white justify-center items-center" style={{display: visible ? 'inline-flex' : 'none'}}><i className="mdi mdi-arrow-up"></i></Link>
+        <Link href="#" id="back-to-top" className="back-to-top fixed text-lg rounded-md z-10 bottom-5 end-5 size-8 text-center bg-[#397A3D]/40 hover:bg-[#397A3D] text-white hover:text-white justify-center items-center" style={{display: visible ? 'inline-flex' : 'none'}}><i className="mdi mdi-arrow-up"></i></Link>
         </>
     )
 }
