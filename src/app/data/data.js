@@ -47,7 +47,6 @@ export const packages = [
     {
         id:1,
         image:'/images/listing/1.jpg',
-        tagText:'10% Off',
         place:'Dubai',
         title:'Cuba Sailing Adventure',
         amount:'$ 58 / Day'
@@ -83,7 +82,6 @@ export const packages = [
     {
         id:6,
         image:'/images/listing/6.jpg',
-        tagText:'25% Off',
         place:'Bangkok',
         title:'Hot Baloon Journey',
         amount:'$ 58 / Day'
@@ -98,7 +96,6 @@ export const packages = [
     {
         id:8,
         image:'/images/listing/8.jpg',
-        tagText:'20% Off',
         place:'Thailand',
         title:'Caño Cristales River Trip',
         amount:'$ 58 / Day'
