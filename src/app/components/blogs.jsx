@@ -22,21 +22,21 @@ export default function Blogs(){
                                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
                                     <Image src={item.image} width={0} height={0} sizes="100vw" style={{width:'100%', height:'auto'}} className="group-hover:scale-110 group-hover:rotate-3 duration-500" alt=""/>
                                     <div className="absolute top-0 start-0 p-4 opacity-0 group-hover:opacity-100 duration-500">
-                                        <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">{item.tag}</span>
+                                        <span className="bg-[#397A3D] text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">{item.tag}</span>
                                     </div>
                                 </div>
 
                                 <div className="mt-6">
                                     <div className="flex mb-4">
-                                        <span className="flex items-center text-slate-400 text-sm"><FiClock className="size-4 text-slate-900 dark:text-white me-1.5"></FiClock>5 min read</span>
-                                        <span className="text-slate-400 text-sm ms-3">by <Link href="" className="text-slate-900 dark:text-white hover:text-primary dark:hover:text-primary font-medium">Travosy</Link></span>
+                                        {/* <span className="flex items-center text-slate-400 text-sm"><FiClock className="size-4 text-slate-900 dark:text-white me-1.5"></FiClock>5 min read</span> */}
+                                        <span className="text-slate-400 text-sm">by <Link href="" className="text-slate-900 dark:text-white hover:text-[#397A3D] dark:hover:text-[#397A3D] font-medium">Rukmana Bali Tour</Link></span>
                                     </div>
 
-                                    <Link href={`/blog-detail/${item.id}`} className="text-lg font-medium hover:text-primary duration-500 ease-in-out">{item.title}</Link>
+                                    <Link href={`/blog-detail/${item.id}`} className="text-lg font-medium hover:text-[#397A3D] duration-500 ease-in-out">{item.title}</Link>
                                     <p className="text-slate-400 mt-2">{item.desc}</p>
 
                                     <div className="mt-3">
-                                        <Link href={`/blog-detail/${item.id}`} className="hover:text-primary inline-flex items-center">Read More <FiChevronRight className="size-4 ms-1"></FiChevronRight></Link>
+                                        <Link href={`/blog-detail/${item.id}`} className="hover:text-[#397A3D] inline-flex items-center">Read More <FiChevronRight className="size-4 ms-1"></FiChevronRight></Link>
                                     </div>
                                 </div>
                             </div>
