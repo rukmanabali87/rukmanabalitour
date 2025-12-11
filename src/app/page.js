@@ -108,7 +108,38 @@ export default function Home() {
     <>
     <Tagline/>
     <Navbar navclass="defaultscroll is-sticky tagline-height" navlight={true} manuclass="!justify-end nav-light"/>
-    <HeroSliderOne/>
+    {/* <HeroSliderOne/> */}
+    <section className="relative w-full h-screen overflow-hidden">
+        {/* Fallback Image */}
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg/10.webp')" }}/>
+
+        {/* Video */}
+        <video autoPlay muted loop playsInline preload="none" className="absolute inset-0 w-full h-full object-cover">
+            <source src="/videos/landing-page-home.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-slate-900/40"></div>
+        <div className="container relative h-full flex items-center">
+            <div className="grid md:grid-cols-12 grid-cols-1 items-center w-full gap-[30px]">
+                <div className="lg:col-span-8 md:col-span-7">
+                    <h5 className="text-3xl !font-dancing text-white mb-4">
+                        Discover the Beauty of Nusa Penida
+                    </h5>
+
+                    <h4 className="font-bold text-white lg:leading-normal leading-tight text-4xl lg:text-6xl mb-6">
+                        Leave the Road, <br /> Sail to the Island
+                    </h4>
+
+                    <p className="text-white/80 text-xl max-w-xl">
+                        Dreaming of a tropical escape? Let us design your perfect island adventure.
+                    </p>
+                </div>
+                {/* <VideoModalOne /> */}
+            </div>
+        </div>
+    </section>
+
     <section className="relative py-16 bg-gray-50 dark:bg-slate-800">
         <div className="container relative">
             <Form/>
