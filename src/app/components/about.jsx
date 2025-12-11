@@ -13,10 +13,10 @@ export default function About(){
             <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6 relative">
                 <div className="md:col-span-5">
                     <div className="relative">
-                        <Image src='/images/about.jpg' width={0} height={0} sizes="100vw" style={{width:'90%', height:'auto'}} className="mx-auto rounded-3xl shadow dark:shadow-gray-700 w-[90%]" alt=""/>
+                        <Image src='/images/about.webp' width={0} height={0} sizes="100vw" style={{width:'90%', height:'auto'}} className="mx-auto rounded-3xl shadow dark:shadow-gray-700 w-[90%]" alt=""/>
                         
 
-                        <div className="absolute flex items-center bottom-16 md:-start-10 -start-5 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-56 m-3">
+                        {/* <div className="absolute flex items-center bottom-16 md:-start-10 -start-5 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-56 m-3">
                             <div className="flex items-center justify-center h-[65px] min-w-[65px] bg-[#397A3D]/5 text-[#397A3D] text-center rounded-xl me-3">
                                 <FiUsers className="size-6"></FiUsers>
                             </div>
@@ -34,17 +34,17 @@ export default function About(){
                                 <span className="text-slate-400">Travel Packages</span>
                                 <p className="text-xl font-bold"><CountUp className="counter-value" start={0} end={50}/>+</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
                 <div className="md:col-span-7">
                     <div className="lg:ms-8">
-                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">World Best Travel <br/> Agency: Travosy</h3>
+                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Discover Bali Easily <br/> with Rukmana Bali Tour</h3>
 
-                        <p className="text-slate-400 max-w-xl mb-6">Get instant helpful resources about anything on the go, easily implement secure money transfer solutions, boost your daily efficiency, connect to other app users and create your own Travosy network, and much more with just a few taps. commodo consequat. Duis aute irure.</p>
+                        <p className="text-slate-400 max-w-xl mb-6">Experience the magic of Bali with Rukmana Bali Tour&apos;s carefully crafted travel packages. From breathtaking beaches and iconic temples to vibrant culture and scenic nature, our tour packages let you explore the island stress-free. Whether you&apos;re planning a romantic getaway, a family holiday, or an adventure with friends, we provide flexible and affordable options to make your Bali vacation truly unforgettable.</p>
 
-                        <Link href="" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link>
+                        {/* <Link href="" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link> */}
                     </div>
                 </div>
 
