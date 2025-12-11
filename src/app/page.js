@@ -124,15 +124,15 @@ export default function Home() {
             <div className="grid md:grid-cols-12 grid-cols-1 items-center w-full gap-[30px]">
                 <div className="lg:col-span-8 md:col-span-7">
                     <h5 className="text-3xl !font-dancing text-white mb-4">
-                        Discover the Beauty of Nusa Penida
+                        Explore Bali&apos;s Wonders
                     </h5>
 
                     <h4 className="font-bold text-white lg:leading-normal leading-tight text-4xl lg:text-6xl mb-6">
-                        Leave the Road, <br /> Sail to the Island
+                        Escape the Ordinary, <br /> with Rukmana Bali Tour
                     </h4>
 
                     <p className="text-white/80 text-xl max-w-xl">
-                        Dreaming of a tropical escape? Let us design your perfect island adventure.
+                        Ready for a tropical escape? We&apos;ll design the perfect island journey just for you.
                     </p>
                 </div>
                 {/* <VideoModalOne /> */}
