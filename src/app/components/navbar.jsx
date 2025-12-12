@@ -88,7 +88,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                     </div>
                 </div>
 
-                <ul className="buy-button list-none mb-0 space-x-1">
+                {/* <ul className="buy-button list-none mb-0 space-x-1">
                     {navlight === true ? (
                         <li className="dropdown inline-block relative pe-1" ref={dropdownRef}>
                             <button className="dropdown-toggle align-middle inline-flex search-dropdown" type="button" onClick={()=>setIsOpen(!isOpen)}>
@@ -122,7 +122,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                     )}
 
             
-                    {/* <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
+                    <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
                         <button className="dropdown-toggle items-center" type="button" onClick={()=>setUserManu(!userManu)}>
                             <span className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-md border border-primary bg-primary text-white"><Image src='/images/client/16.jpg' width={30} height={30} className="rounded-md" alt=""/></span>
                         </button>
@@ -145,8 +145,8 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 </ul>
                             </div>
                         )}
-                    </li> */}
-                </ul>
+                    </li>
+                </ul> */}
 
                 <div id="navigation" style={{display: isToggle === true ? 'block' : 'none'}}>
                     <ul className={`navigation-menu ${manuclass}`}>
@@ -167,7 +167,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                         <li className={`has-submenu parent-parent-menu-item ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(manu) ? 'active' : '' }`}><Link href="" onClick={()=>setSubManu(subManu === '/listing-item' ? '' : '/listing-item' )}> Our Tour Packages </Link><span className="menu-arrow"></span>
                             <ul className={`submenu ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(subManu) ? 'open' : '' }`}>
                                 <li className={`has-submenu parent-menu-item ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/grid-item'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/grid-item' ? '' : '/grid-item')}>Tour Grid </Link><span className="submenu-arrow"></span>
+                                    <Link href="" onClick={()=>setSubManu(subManu === '/grid-item' ? '' : '/grid-item')}> Day Trip </Link><span className="submenu-arrow"></span>
                                     <ul className={`submenu ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/grid-item'].includes(subManu) ? 'open' : ''}`}>
                                         <li className={`${manu === '/grid' ? 'active' : '' }`}><Link href="/grid" className="sub-menu-item">Grid</Link></li>
                                         <li className={`${manu === '/grid-left-sidebar' ? 'active' : '' }`}><Link href="/grid-left-sidebar" className="sub-menu-item">Grid Left Sidebar</Link></li>
@@ -176,7 +176,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 </li>
 
                                 <li className={`has-submenu parent-menu-item ${['/list-item','/list','/list-left-sidebar','/list-right-sidebar'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/list-item' ? '' : '/list-item')}>Tour List </Link><span className="submenu-arrow"></span>
+                                    <Link href="" onClick={()=>setSubManu(subManu === '/list-item' ? '' : '/list-item')}> Outdoor Activities </Link><span className="submenu-arrow"></span>
                                     <ul className={`submenu ${['/list-item','/list','/list-left-sidebar','/list-right-sidebar'].includes(subManu) ? 'open' : ''}`}>
                                         <li className={`${manu === '/list' ? 'active' : '' }`}><Link href="/list" className="sub-menu-item">List</Link></li>
                                         <li className={`${manu === '/list-left-sidebar' ? 'active' : '' }`}><Link href="/list-left-sidebar" className="sub-menu-item">List Left Sidebar</Link></li>
@@ -185,7 +185,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 </li>
 
                                 <li className={`has-submenu parent-menu-item ${['/detail-item','/tour-detail-one','/tour-detail-two'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/detail-item' ? '' : '/detail-item')}> Tour Detail </Link><span className="submenu-arrow"></span>
+                                    <Link href="" onClick={()=>setSubManu(subManu === '/detail-item' ? '' : '/detail-item')}> Ticket & Passed </Link><span className="submenu-arrow"></span>
                                     <ul className={`submenu ${['/detail-item','/tour-detail-one','/tour-detail-two'].includes(subManu) ? 'open' : ''}`}>
                                         <li className={`${manu === '/tour-detail-one' ? 'active' : '' }`}><Link href="/tour-detail-one" className="sub-menu-item">Tour Detail One</Link></li>
                                         <li className={`${manu === '/tour-detail-two' ? 'active' : '' }`}><Link href="/tour-detail-two" className="sub-menu-item">Tour Detail Two</Link></li>
@@ -194,7 +194,11 @@ export default function classNavbar({navclass, navlight, manuclass}){
                             </ul>
                         </li>
                 
-                        <li className={`has-submenu parent-parent-menu-item ${['/page-item','/aboutus','/user-item','/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting','/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support','/auth-item','/login','/signup','/forgot-password','/lock-screen','/utility-item','/terms','/privacy','/special-item','/comingsoon','/maintenance','/404'].includes(manu) ? 'active' : ''}`}>
+                        <li className={`parent-menu-item ${manu === '/aboutus' ? 'active' : '' }`}>
+                            <Link href="/aboutus" onClick={()=>{ setManu('/aboutus'); setSubManu('/aboutus'); setToggle(false); }} className="sub-menu-item">About Us</Link>
+                        </li>
+
+                        {/* <li className={`has-submenu parent-parent-menu-item ${['/page-item','/aboutus','/user-item','/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting','/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support','/auth-item','/login','/signup','/forgot-password','/lock-screen','/utility-item','/terms','/privacy','/special-item','/comingsoon','/maintenance','/404'].includes(manu) ? 'active' : ''}`}>
                             <Link href="" onClick={()=>setSubManu(subManu === '/page-item' ? '' : '/page-item')}>Pages</Link><span className="menu-arrow"></span>
                             <ul className={`submenu ${['/page-item','/aboutus','/user-item','/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting','/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support','/auth-item','/login','/signup','/forgot-password','/lock-screen','/utility-item','/terms','/privacy','/special-item','/comingsoon','/maintenance','/404'].includes(subManu) ? 'open' : ''}`}>
                                 <li className={`${manu === '/aboutus' ? 'active' : '' }`}><Link href="/aboutus" className="sub-menu-item">About Us</Link></li>
@@ -245,7 +249,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                     </ul> 
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
 
                         <li className={`has-submenu parent-menu-item ${['/blogs', '/blog-standard','/blog-detail', '/blog-item'].includes(manu) ? 'active' : ''}`}>
                             <Link href="" onClick={()=>setSubManu(subManu === '/blog-item' ? '' : '/blog-item')}>Blog</Link><span className="menu-arrow"></span>
