@@ -44,7 +44,7 @@ export default function About(){
 
                         <p className="text-slate-400 max-w-xl mb-6">Experience the magic of Bali with Rukmana Bali Tour&apos;s carefully crafted travel packages. From breathtaking beaches and iconic temples to vibrant culture and scenic nature, our tour packages let you explore the island stress-free. Whether you&apos;re planning a romantic getaway, a family holiday, or an adventure with friends, we provide flexible and affordable options to make your Bali vacation truly unforgettable.</p>
 
-                        {/* <Link href="" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link> */}
+                        {/* <Link href="/aboutus" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link> */}
                     </div>
                 </div>
 

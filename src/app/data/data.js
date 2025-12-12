@@ -130,6 +130,51 @@ export const packages = [
     },
 ]
 
+export const TopTourPackages = [
+{
+        id:1,
+        image:'/images/listing/1.webp',
+        place:'Nusa Penida, Bali',
+        title:'Nusa Penida Day Tour',
+        amount:'$ 58 / Day'
+    },
+    {
+        id:2,
+        image:'/images/listing/2.webp',
+        place:'Ubud, Bali',
+        title:'Bali Quad ATV',
+        amount:'$ 58 / Day'
+    },
+    {
+        id:3,
+        image:'/images/listing/3.webp',
+        place:'Karangasem, Bali',
+        title:'Blue Lagoon Snorkeling',
+        amount:'$ 58 / Day'
+    },
+    {
+        id:4,
+        image:'/images/listing/4.webp',
+        place:'Ubud, Bali',
+        title:'Ayung River Rafting',
+        amount:'$ 58 / Day'
+    },
+    {
+        id:5,
+        image:'/images/listing/5.webp',
+        place:'Karangasem, Bali',
+        title:'Lempuyang Tour',
+        amount:'$ 58 / Day'
+    },
+    {
+        id:6,
+        image:'/images/listing/6.webp',
+        place:'Tabanan, Bali',
+        title:'Tanah Lot Sunset Tour',
+        amount:'$ 58 / Day'
+    },
+]
+
 export const ClientData = [
     {
         image:'/images/client/01.jpg',
