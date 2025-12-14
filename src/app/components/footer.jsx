@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { footerCompany, footerSocial } from "../data/data";
-import {FiMapPin, FiMail, FiPhone} from 'react-icons/fi'
+import {FiMapPin, FiMail, FiPhone} from 'react-icons/fi';
+import { FaBuilding } from "react-icons/fa";
 
 export default function Footer(){
     return(
@@ -32,7 +33,7 @@ export default function Footer(){
                                 <div className="lg:col-span-3 md:col-span-4">
                                     <div className="lg:ms-8">
                                         <h5 className="tracking-[1px] text-gray-100 font-semibold">Office</h5>
-                                        <h5 className="tracking-[1px] text-gray-100 mt-6">Travosy Tour & Travels</h5>
+                                        {/* <h5 className="tracking-[1px] text-gray-100 mt-6">PT. Rejeki Utama Kencana</h5> */}
 
                                         <div className="flex mt-4">
                                             <FiMapPin className="size-4 text-[#397A3D] me-2 mt-1"></FiMapPin>
@@ -52,6 +53,13 @@ export default function Footer(){
                                             <FiPhone className="size-4 text-[#397A3D] me-2 mt-1"></FiPhone>
                                             <div className="">
                                                 <Link href="https://wa.me/6287862207901" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">+62 878-6220-7901</Link>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex mt-4">
+                                            <FaBuilding className="size-4 text-[#397A3D] me-2 mt-1"></FaBuilding>
+                                            <div className="">
+                                                <h6 className="text-gray-300">Legal: PT. Rejeki Utama Kencana</h6>
                                             </div>
                                         </div>
                                     </div>
