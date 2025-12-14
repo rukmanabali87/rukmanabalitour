@@ -8,17 +8,17 @@ import Switcher from "../../components/switcher";
 import TourImageOne from "../../components/tour-image-one";
 import TourDetailFaq from "../../components/faq/tour-detail-faq";
 
-import { FiMapPin} from 'react-icons/fi'
+import { FiMapPin, FiClock, FiActivity, FiUsers, FiGlobe, FiDollarSign} from 'react-icons/fi'
 
-import { tourDetailAbout, packages } from "../../data/data";
+import { tourDetailAbout, packages, TopTourPackages } from "../../data/data";
 
 export default function TourDetailOne(props){
     let id = props.params.id
-    let data = packages.find((item)=>item.id === parseInt(id))
+    let data = TopTourPackages.find((item)=>item.id === parseInt(id))
 
     return(
         <>
-         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
+        <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
         <section className="relative table w-full items-center py-36 bg-[url('/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
@@ -29,7 +29,7 @@ export default function TourDetailOne(props){
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Travosy</Link></li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Rukmana Bali Tour</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Tour</li>
                 </ul>
@@ -42,14 +42,14 @@ export default function TourDetailOne(props){
                         <TourImageOne/>
 
                         <h5 className="text-2xl font-semibold mt-5">{data?.title}</h5>
-                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>New Zealand</p>
+                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>{data?.place}</p>
 
                         <ul className="list-none">
-                            {tourDetailAbout.map((item,index)=>{
-                                let Icon = item.icon
+                            {/* {tourDetailAbout.map((item,index)=>{
+                                let Icon = item.icon    
                                 return(
                                     <li className="inline-flex items-center me-5 mt-5" key={index}>
-                                        <Icon className="size-6 stroke-[1.5] text-primary"></Icon>
+                                        <Icon className="size-6 stroke-[1.5] text-[#397A3D]"></Icon>
 
                                         <div className="ms-3">
                                             <p className="font-medium">{item.name}</p>
@@ -57,7 +57,48 @@ export default function TourDetailOne(props){
                                         </div>
                                     </li>
                                 )
-                            })}
+                            })} */}
+
+                            <li className="inline-flex items-center me-5 mt-5">
+                                <FiClock className="size-6 stroke-[1.5] text-[#397A3D]"></FiClock>
+
+                                <div className="ms-3">
+                                    <p className="font-medium">Duration</p>
+                                    <span className="text-slate-400 font-medium text-sm">{data?.duration}</span>
+                                </div>
+                            </li>
+                            <li className="inline-flex items-center me-5 mt-5">
+                                <FiActivity className="size-6 stroke-[1.5] text-[#397A3D]"></FiActivity>
+
+                                <div className="ms-3">
+                                    <p className="font-medium">Type</p>
+                                    <span className="text-slate-400 font-medium text-sm">{data?.type}</span>
+                                </div>
+                            </li>
+                            <li className="inline-flex items-center me-5 mt-5">
+                                <FiUsers className="size-6 stroke-[1.5] text-[#397A3D]"></FiUsers>
+
+                                <div className="ms-3">
+                                    <p className="font-medium">Grup Size</p>
+                                    <span className="text-slate-400 font-medium text-sm">{data?.grupSize} Peoples</span>
+                                </div>
+                            </li>
+                            <li className="inline-flex items-center me-5 mt-5">
+                                <FiGlobe className="size-6 stroke-[1.5] text-[#397A3D]"></FiGlobe>
+
+                                <div className="ms-3">
+                                    <p className="font-medium">Languages</p>
+                                    <span className="text-slate-400 font-medium text-sm">English</span>
+                                </div>
+                            </li>
+                            <li className="inline-flex items-center me-5 mt-5">
+                                <FiDollarSign className="size-6 stroke-[1.5] text-[#397A3D]"></FiDollarSign>
+
+                                <div className="ms-3">
+                                    <p className="font-medium">Prices</p>
+                                    <span className="text-slate-400 font-medium text-sm">{data?.amount} / Pax</span>
+                                </div>
+                            </li>
                         </ul>
 
                         <div className="mt-6">
@@ -67,13 +108,13 @@ export default function TourDetailOne(props){
                             <p className="text-slate-400 mt-3">The advantage of its Latin origin and the relative meaninglessness of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's attention from the layout.</p>
                         </div>
 
-                        <div className="mt-6">
+                        {/* <div className="mt-6">
                             <h5 className="text-lg font-semibold">Questions & Answers:</h5>
 
                             <TourDetailFaq/>
-                        </div>
+                        </div> */}
 
-                        <div className="mt-6">
+                        {/* <div className="mt-6">
                             <h5 className="text-lg font-semibold">Leave A Comment:</h5>
 
                             <form className="mt-6">
@@ -103,7 +144,7 @@ export default function TourDetailOne(props){
                                 </div>
                                 <button type="submit" id="submit" name="send" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary text-white rounded-md w-full">Send Message</button>
                             </form>
-                        </div>
+                        </div> */}
                     </div>
 
                     <DetailSidebar/>

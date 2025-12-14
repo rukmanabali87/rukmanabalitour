@@ -189,9 +189,9 @@ export default function Home() {
                                 </div>
                                 
                                 <div className="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 className="text-lg font-medium text-[#397A3D]">$ 58 / Day</h5>
+                                    <h5 className="text-lg font-medium text-[#397A3D]">{item.amount} / Pax</h5>
 
-                                    <Link href="" className="text-slate-400 hover:text-[#397A3D]">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
+                                    <Link href={`/tour-detail-one/${item.id}`} className="text-slate-400 hover:text-[#397A3D]">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
                                 </div>
                             </div>
                         </div>
