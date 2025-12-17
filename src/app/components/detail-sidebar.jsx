@@ -23,8 +23,9 @@ export default function DetailSidebar(){
                         </div>
 
                         <div className="md:w-2/3 mt-4 md:mt-0">
-                            <div className="relative w-full py-2 ps-3 pr-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0">
-                                <DatePicker className="" selected={startDate} onChange={(date) => setStartDate(date)} />
+                            <div className="form-icon relative w-full h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded border border-gray-100 dark:border-gray-800 flex items-center">
+                                <FiCalendar className="w-4 absolute top-3 start-4"></FiCalendar>
+                                <DatePicker className="w-full ps-12 py-2 px-3 h-10 outline-none border-0 focus:outline-none focus:ring-0" selected={startDate} onChange={(date) => setStartDate(date)} />
                             </div>
                         </div>
                     </div>
