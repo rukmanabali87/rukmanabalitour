@@ -160,7 +160,7 @@ export default function Home() {
                     return(
                         <div className="group rounded-md shadow dark:shadow-gray-700" key={index}>
                             <div className="relative overflow-hidden rounded-t-md shadow dark:shadow-gray-700 mx-3 mt-3">
-                                <Image src={item.image} width={0} height={0} sizes="100vw" style={{width:'100%', height:'auto'}} className="scale-125 group-hover:scale-100 duration-500" alt=""/>
+                                <Image src={item.images[0]} width={0} height={0} sizes="100vw" style={{width:'100%', height:'auto'}} className="scale-125 group-hover:scale-100 duration-500" alt=""/>
                                 {item.tagText && (
                                     <div className="absolute top-0 start-0 p-4">
                                         <span className="bg-[#397A3D] text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">{item.tagText}</span>

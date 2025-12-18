@@ -133,7 +133,12 @@ export const packages = [
 export const TopTourPackages = [
     {
         id:1,
-        image:'/images/listing/1.webp',
+        images: [
+            '/images/tour-packages/nusa-penida-day-tour/1.webp',
+            '/images/tour-packages/nusa-penida-day-tour/2.webp',
+            '/images/tour-packages/nusa-penida-day-tour/3.webp',
+            '/images/tour-packages/nusa-penida-day-tour/4.webp',
+        ],
         place:'Nusa Penida, Bali',
         title:'Nusa Penida Day Tour',
         amount:'IDR 1.100.000',
@@ -143,7 +148,12 @@ export const TopTourPackages = [
     },
     {
         id:2,
-        image:'/images/listing/2.webp',
+        images: [
+            '/images/tour-packages/bali-quad-atv/1.webp',
+            '/images/tour-packages/bali-quad-atv/2.webp',
+            '/images/tour-packages/bali-quad-atv/3.webp',
+            '/images/tour-packages/bali-quad-atv/4.webp',
+        ],
         place:'Ubud, Bali',
         title:'Bali Quad ATV',
         amount:'IDR 540.000',
@@ -153,7 +163,12 @@ export const TopTourPackages = [
     },
     {
         id:3,
-        image:'/images/listing/3.webp',
+        images: [
+            '/images/tour-packages/blue-lagoon-snorkeling/1.webp',
+            '/images/tour-packages/blue-lagoon-snorkeling/2.webp',
+            '/images/tour-packages/blue-lagoon-snorkeling/3.webp',
+            '/images/tour-packages/blue-lagoon-snorkeling/4.webp',
+        ],
         place:'Karangasem, Bali',
         title:'Blue Lagoon Snorkeling',
         amount:'IDR 580.000',
@@ -163,7 +178,12 @@ export const TopTourPackages = [
     },
     {
         id:4,
-        image:'/images/listing/4.webp',
+        images: [
+            '/images/tour-packages/ayung-river-rafting/1.webp',
+            '/images/tour-packages/ayung-river-rafting/2.webp',
+            '/images/tour-packages/ayung-river-rafting/3.webp',
+            '/images/tour-packages/ayung-river-rafting/4.webp',
+        ],
         place:'Ubud, Bali',
         title:'Ayung River Rafting',
         amount:'IDR 470.000',
@@ -173,7 +193,12 @@ export const TopTourPackages = [
     },
     {
         id:5,
-        image:'/images/listing/5.webp',
+        images: [
+            '/images/tour-packages/lempuyang-tour/1.webp',
+            '/images/tour-packages/lempuyang-tour/2.webp',
+            '/images/tour-packages/lempuyang-tour/3.webp',
+            '/images/tour-packages/lempuyang-tour/4.webp',
+        ],
         place:'Karangasem, Bali',
         title:'Lempuyang Tour',
         amount:'IDR 1.500.000',
@@ -183,7 +208,12 @@ export const TopTourPackages = [
     },
     {
         id:6,
-        image:'/images/listing/6.webp',
+        images: [
+            '/images/tour-packages/tanah-lot-sunset-tour/1.webp',
+            '/images/tour-packages/tanah-lot-sunset-tour/2.webp',
+            '/images/tour-packages/tanah-lot-sunset-tour/3.webp',
+            '/images/tour-packages/tanah-lot-sunset-tour/4.webp',
+        ],
         place:'Tabanan, Bali',
         title:'Tanah Lot Sunset Tour',
         amount:'IDR 700.000',

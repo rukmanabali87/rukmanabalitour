@@ -20,7 +20,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="light scroll-smooth" dir="ltr">
-      <body className={`${dm_sans.variable} ${dancing_script.variable}  bg-white dark:bg-slate-900`}>{children}</body>
+      <body className={`${dm_sans.variable} ${dancing_script.variable}  bg-white dark:bg-slate-900`}>
+        
+        {children}
+
+        {/* Midtrans Snap JS */}
+        <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key={process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY} />
+
+      </body>
     </html>
   );
 }

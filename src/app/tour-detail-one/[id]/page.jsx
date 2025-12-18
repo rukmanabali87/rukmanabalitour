@@ -39,7 +39,7 @@ export default function TourDetailOne(props){
             <div className="container relative">
                 <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                     <div className="lg:col-span-8 md:col-span-7">
-                        <TourImageOne/>
+                        <TourImageOne images={data?.images} />
 
                         <h5 className="text-2xl font-semibold mt-5">{data?.title}</h5>
                         <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>{data?.place}</p>
