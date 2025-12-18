@@ -1,4 +1,5 @@
 import { DM_Sans, Dancing_Script } from "next/font/google";
+import Script from "next/script";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
 
@@ -24,9 +25,12 @@ export default function RootLayout({ children }) {
         
         {children}
 
-        {/* Midtrans Snap JS */}
-        <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key={process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY} />
-
+        {/* Midtrans Snap JS (WAJIB pakai next/script) */}
+        <Script
+          src="https://app.sandbox.midtrans.com/snap/snap.js"
+          data-client-key={process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY}
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
