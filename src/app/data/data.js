@@ -133,6 +133,7 @@ export const packages = [
 export const TopTourPackages = [
     {
         id:1,
+        slug: 'nusa-penida-day-tour',
         images: [
             '/images/tour-packages/nusa-penida-day-tour/1.webp',
             '/images/tour-packages/nusa-penida-day-tour/2.webp',
@@ -148,6 +149,7 @@ export const TopTourPackages = [
     },
     {
         id:2,
+        slug: 'bali-quad-atv',
         images: [
             '/images/tour-packages/bali-quad-atv/1.webp',
             '/images/tour-packages/bali-quad-atv/2.webp',
@@ -163,6 +165,7 @@ export const TopTourPackages = [
     },
     {
         id:3,
+        slug: 'blue-lagoon-snorkeling',
         images: [
             '/images/tour-packages/blue-lagoon-snorkeling/1.webp',
             '/images/tour-packages/blue-lagoon-snorkeling/2.webp',
@@ -178,6 +181,7 @@ export const TopTourPackages = [
     },
     {
         id:4,
+        slug: 'ayung-river-rafting',
         images: [
             '/images/tour-packages/ayung-river-rafting/1.webp',
             '/images/tour-packages/ayung-river-rafting/2.webp',
@@ -193,6 +197,7 @@ export const TopTourPackages = [
     },
     {
         id:5,
+        slug: 'lempuyang-tour',
         images: [
             '/images/tour-packages/lempuyang-tour/1.webp',
             '/images/tour-packages/lempuyang-tour/2.webp',
@@ -208,6 +213,7 @@ export const TopTourPackages = [
     },
     {
         id:6,
+        slug: 'tanah-lot-sunset-tour',
         images: [
             '/images/tour-packages/tanah-lot-sunset-tour/1.webp',
             '/images/tour-packages/tanah-lot-sunset-tour/2.webp',

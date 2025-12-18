@@ -156,9 +156,9 @@ export default function Home() {
             </div>
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
-                {TopTourPackages.slice(0,6).map((item,index)=>{
+                {TopTourPackages.slice(0,6).map((item,slug)=>{
                     return(
-                        <div className="group rounded-md shadow dark:shadow-gray-700" key={index}>
+                        <div className="group rounded-md shadow dark:shadow-gray-700" key={slug}>
                             <div className="relative overflow-hidden rounded-t-md shadow dark:shadow-gray-700 mx-3 mt-3">
                                 <Image src={item.images[0]} width={0} height={0} sizes="100vw" style={{width:'100%', height:'auto'}} className="scale-125 group-hover:scale-100 duration-500" alt=""/>
                                 {item.tagText && (
@@ -174,7 +174,7 @@ export default function Home() {
 
                             <div className="p-4">
                                 <p className="flex items-center text-slate-400 font-medium mb-2"><FiMapPin className="text-[#397A3D] size-4 me-1"></FiMapPin> {item.place}</p>
-                                <Link href={`/tour-detail-one/${item.id}`} className="text-lg font-medium hover:text-[#397A3D] duration-500 ease-in-out">{item.title}</Link>
+                                <Link href={`/tours/${item.slug}`} className="text-lg font-medium hover:text-[#397A3D] duration-500 ease-in-out">{item.title}</Link>
 
                                 <div className="flex items-center mt-2">
                                     <span className="text-slate-400">Rating:</span>
@@ -191,7 +191,7 @@ export default function Home() {
                                 <div className="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
                                     <h5 className="text-lg font-medium text-[#397A3D]">{item.amount} / Pax</h5>
 
-                                    <Link href={`/tour-detail-one/${item.id}`} className="text-slate-400 hover:text-[#397A3D]">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
+                                    <Link href={`/tours/${item.slug}`} className="text-slate-400 hover:text-[#397A3D]">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
                                 </div>
                             </div>
                         </div>
