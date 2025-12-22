@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { footerCompany, footerSocial } from "../data/data";
-import {FiMapPin, FiMail, FiPhone} from 'react-icons/fi';
-import { FaBuilding } from "react-icons/fa";
+import {FiMapPin, FiMail, FiPhone, FiFacebook, FiInstagram} from 'react-icons/fi';
+import { FaBuilding, FaTiktok } from "react-icons/fa";
 
 export default function Footer(){
     return(
@@ -19,15 +19,6 @@ export default function Footer(){
                                         <Image src='/images/logo-rubt-light.png' width={133} height={28} alt=""/>
                                     </Link>
                                     <p className="mt-6 text-gray-300">Planning for a trip? We will organize your trip with the best places and within best budget!</p>
-                                    <ul className="list-none mt-6 space-x-1">
-                                        {footerSocial.map((item,index)=>{
-                                            let Icon = item.icon
-                                            return(
-
-                                                <li className="inline" key={index}><Link href={item.link} target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:bg-[#DEA243] hover:text-white text-slate-300"><Icon className="size-4 align-middle" title="Buy Now"></Icon></Link></li>
-                                            )
-                                        })}
-                                    </ul>
                                 </div>
 
                                 <div className="lg:col-span-3 md:col-span-4">
@@ -79,21 +70,18 @@ export default function Footer(){
                                 </div>
     
                                 <div className="lg:col-span-3 md:col-span-4">
-                                    <h5 className="tracking-[1px] text-gray-100 font-semibold">Newsletter</h5>
-                                    <p className="mt-6">Sign up and receive the latest tips via email.</p>
-                                    <form>
-                                        <div className="grid grid-cols-1">
-                                            <div className="my-3">
-                                                <label className="form-label">Write your email <span className="text-primary-600">*</span></label>
-                                                <div className="form-icon relative mt-2">
-                                                    <FiMail className="size-4 absolute top-3 start-4"></FiMail>
-                                                    <input type="email" className="ps-12 rounded w-full py-2 px-3 h-10 bg-gray-800 border-0 text-gray-100 focus:shadow-none focus:ring-0 placeholder:text-gray-200 outline-none" placeholder="Email" name="email" required=""/>
-                                                </div>
-                                            </div>
-                                        
-                                            <button type="submit" id="submitsubscribe" name="send" className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md">Subscribe</button>
-                                        </div>
-                                    </form>
+                                    <div className="lg:ms-8">
+                                        <h5 className="tracking-[1px] text-gray-100 font-semibold">Social Media</h5>
+
+                                        <ul className="list-none mt-6 space-x-1">
+                                        {footerSocial.map((item,index)=>{
+                                            let Icon = item.icon
+                                            return(
+                                                <li className="inline" key={index}><Link href={item.link} target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:bg-[#DEA243] hover:text-white text-slate-300"><Icon className="size-4 align-middle" title="Buy Now"></Icon></Link></li>
+                                            )
+                                        })}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

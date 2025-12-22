@@ -14,7 +14,7 @@ export default function Form(){
                 <form className="p-6 bg-white dark:bg-slate-900 rounded-xl shadow dark:shadow-gray-700">
                     <div className="registration-form text-dark text-start">
                         <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4">
-                            <div>
+                            <div className="lg:col-span-4">
                                 <label className="form-label font-medium text-slate-900 dark:text-white">Search:</label>
                                 <div className="relative mt-2">
                                     <FiSearch className="size-[18px] absolute top-[10px] start-3"></FiSearch>
@@ -23,7 +23,7 @@ export default function Form(){
                                 </div>
                             </div>
 
-                            <div>
+                            {/* <div>
                                 <label className="form-label font-medium text-slate-900 dark:text-white">Select Your Date:</label>
                                 <div className="relative mt-2">
                                     <FiCalendar className="size-[18px] absolute top-[10px] start-3 z-50"></FiCalendar>
@@ -52,9 +52,9 @@ export default function Form(){
                                         <option>5</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <div className="lg:mt-[35px]">
+                            <div className="flex items-end">
                                 <input type="submit" id="search-buy" name="search" className="py-1 px-5 h-10 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md w-full cursor-pointer" defaultValue="Search"/>
                             </div>
                         </div>

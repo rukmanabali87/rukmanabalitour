@@ -1,4 +1,5 @@
 import {FiShoppingCart,FiDribbble, FiLinkedin,FiFacebook,FiInstagram,FiTwitter,FiMail,FiClock,FiActivity, FiUsers, FiGlobe,FiDollarSign,FiYoutube,FiHelpCircle,FiBookmark,FiSettings,FiGithub,FiGitlab} from "react-icons/fi"
+import { FaTiktok } from "react-icons/fa";
 
 export const topDestination = [
     {
@@ -130,7 +131,58 @@ export const packages = [
     },
 ]
 
-export const TopTourPackages = [
+export const topTourPackages = [
+    {
+        id:1,
+        image: '/images/tours/nusa-penida-day-tour/1.webp',        
+        place: 'Nusa Penida, Bali',
+        title: 'Nusa Penida Day Tour',
+        amount:'1.100.000',
+        route: '/tours/nusa-penida-day-tour',
+    },
+    {
+        id:2,
+        image: '/images/activities/bali-quad-atv/1.webp', 
+        place: 'Ubud, Bali',
+        title: 'Bali Quad ATV',
+        amount:'1.100.000',
+        route: '/activities/bali-quad-atv',
+    },
+    {
+        id:3,
+        image: '/images/activities/blue-lagoon-snorkeling/1.webp',
+        place: 'Karangasem, Bali',
+        title: 'Blue Lagoon Snorkeling',
+        amount:'1.100.000',
+        route: '/activities/blue-lagoon-snorkeling',
+    },
+    {
+        id:4,
+        image: '/images/activities/ayung-river-rafting/1.webp',       
+        place: 'Ubud, Bali',
+        title: 'Ayung River Rafting',
+        amount:'1.100.000',
+        route: '/activities/ayung-river-rafting',
+    },
+    {
+        id:5,
+        image: '/images/tours/gates-of-heaven-tour/1.webp',  
+        place: 'Karangasem, Bali',
+        title: 'Gates of Heaven Tour',
+        amount:'1.100.000',
+        route: '/tours/gates-of-heaven-tour',
+    },
+    {
+        id:6,
+        image: '/images/tours/tanah-lot-sunset-tour/1.webp',
+        place: 'Tabanan, Bali',
+        title: 'Tanah Lot Sunset Tour',
+        amount:'1.100.000',
+        route: '/tours/tanah-lot-sunset-tour',
+    },
+]
+
+export const tourPackages = [
     {
         id:1,
         slug: 'nusa-penida-day-tour',
@@ -197,7 +249,7 @@ export const TopTourPackages = [
     },
     {
         id:5,
-        slug: 'lempuyang-tour',
+        slug: 'gates-of-heaven-tour',
         images: [
             '/images/tour-packages/lempuyang-tour/1.webp',
             '/images/tour-packages/lempuyang-tour/2.webp',
@@ -205,7 +257,7 @@ export const TopTourPackages = [
             '/images/tour-packages/lempuyang-tour/4.webp',
         ],
         place:'Karangasem, Bali',
-        title:'Lempuyang Tour',
+        title:'Gates of Heaven Tour',
         amount:'IDR 1.500.000',
         duration: '6 hours',
         type: 'Adventure',
@@ -353,8 +405,8 @@ export const footerSocial = [
         link:'https://www.instagram.com/rukmanabalitour/'
     },
     {
-        icon:FiMail,
-        link:'mailto:info@rukmanabalitour.com'
+        icon:FaTiktok,
+        link:'https://www.tiktok.com/@rukmanabalitour'
     },
 ]
 

@@ -25,9 +25,9 @@ export default function classNavbar({navclass, navlight, manuclass}){
 
         const handleOutsideClick = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-              setIsOpen(false);
+                setIsOpen(false);
             }
-          };
+        };
 
         const userOutsideClick = (e) =>{
             if(userRef.current && !userRef.current.contains(e.target)){
@@ -48,12 +48,12 @@ export default function classNavbar({navclass, navlight, manuclass}){
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('click', handleOutsideClick);
             window.removeEventListener('click', userOutsideClick);
-          };
+        };
     },[])
 
     const toggleMenu = () =>{
         setToggle(!isToggle)
-      }
+    }
 
     return(
         <nav id="topnav" className={`${navclass} ${scrolling ? 'nav-sticky' : ''}`}>
@@ -88,213 +88,54 @@ export default function classNavbar({navclass, navlight, manuclass}){
                     </div>
                 </div>
 
-                {/* <ul className="buy-button list-none mb-0 space-x-1">
-                    {navlight === true ? (
-                        <li className="dropdown inline-block relative pe-1" ref={dropdownRef}>
-                            <button className="dropdown-toggle align-middle inline-flex search-dropdown" type="button" onClick={()=>setIsOpen(!isOpen)}>
-                                <FiSearch className="size-5 dark-icon"></FiSearch>
-                                <FiSearch className="size-5 white-icon text-white"></FiSearch>
-                            </button>
-                            {isOpen && (
-                                <div className="dropdown-menu absolute overflow-hidden end-0 m-0 mt-5 z-10 md:w-52 w-48 rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800">
-                                    <div className="relative">
-                                        <FiSearch className="size-4 absolute top-[9px] end-3"></FiSearch>
-                                        <input type="text" className="h-9 px-3 pe-10 w-full border-0 focus:ring-0 outline-none bg-white dark:bg-slate-900" name="s" id="searchItem" placeholder="Search..."/>
-                                    </div>
-                                </div>
-                            )}
-                        </li>
-                    ) : (
-
-                        <li className="dropdown inline-block relative pe-1" ref={dropdownRef}>
-                            <button className="dropdown-toggle align-middle inline-flex search-dropdown" type="button" onClick={()=>setIsOpen(!isOpen)}>
-                                <FiSearch className="size-5"></FiSearch>
-                            </button>
-                            {isOpen && (
-                                <div className="dropdown-menu absolute overflow-hidden end-0 m-0 mt-5 z-10 md:w-52 w-48 rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800">
-                                    <div className="relative">
-                                        <FiSearch className="size-4 absolute top-[9px] end-3"></FiSearch>
-                                        <input type="text" className="h-9 px-3 pe-10 w-full border-0 focus:ring-0 outline-none bg-white dark:bg-slate-900" name="s" id="searchItem" placeholder="Search..."/>
-                                    </div>
-                                </div>
-                            )}
-                        </li>
-                    )}
-
-            
-                    <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
-                        <button className="dropdown-toggle items-center" type="button" onClick={()=>setUserManu(!userManu)}>
-                            <span className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-md border border-primary bg-primary text-white"><Image src='/images/client/16.jpg' width={30} height={30} className="rounded-md" alt=""/></span>
-                        </button>
-                        {userManu && (
-                            <div className="dropdown-menu absolute end-0 m-0 mt-4 z-10 w-48 rounded-md overflow-hidden bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 ">
-                                <ul className="py-2 text-start">
-                                    <li>
-                                        <Link href="/user-profile" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-primary dark:hover:text-white"><FiUser className="size-4 me-2"></FiUser>Profile</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/helpcenter" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-primary dark:hover:text-white"><FiHelpCircle className="size-4 me-2"></FiHelpCircle>Helpcenter</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/user-setting" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-primary dark:hover:text-white"><FiSettings className="size-4 me-2"></FiSettings>Settings</Link>
-                                    </li>
-                                    <li className="border-t border-gray-100 dark:border-gray-800 my-2"></li>
-                                    <li>
-                                        <Link href="/login" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-primary dark:hover:text-white"><FiLogOut className="size-4 me-2"></FiLogOut>Logout</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        )}
-                    </li>
-                </ul> */}
-
                 <div id="navigation" style={{display: isToggle === true ? 'block' : 'none'}}>
                     <ul className={`navigation-menu ${manuclass}`}>
                         <li className={`parent-menu-item ${manu === '/' ? 'active' : '' }`}>
                             <Link href="/" onClick={()=>{ setManu('/'); setSubManu('/'); setToggle(false); }} className="sub-menu-item">Home</Link>
                         </li>
-                        {/* <li className={`has-submenu parent-menu-item ${['/','/index-two','/index-three','/index-four','/index-five','/index-item'].includes(manu) ? 'active' : '' }`}>
-                            <Link href="" onClick={()=>setSubManu(setManu === '/index-item' ? '' : '/index-item')}>Hero</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/','/index-two','/index-three','/index-four','/index-five','/index-item'].includes(subManu) ? 'open' : '' }`}>
-                                <li className={`${manu === '/' ? 'active' : '' }`}><Link href="/" className="sub-menu-item">Tour One</Link></li>
-                                <li className={`${manu === '/index-two' ? 'active' : '' }`}><Link href="/index-two" className="sub-menu-item">Tour Two</Link></li>
-                                <li className={`${manu === '/index-three' ? 'active' : '' }`}><Link href="/index-three" className="sub-menu-item">Tour Three</Link></li>
-                                <li className={`${manu === '/index-four' ? 'active' : '' }`}><Link href="/index-four" className="sub-menu-item">Tour Four</Link></li>
-                                <li className={`${manu === '/index-five' ? 'active' : '' }`}><Link href="/index-five" className="sub-menu-item">Tour Five</Link></li>
+
+                        <li className={`has-submenu parent-menu-item ${manu.startsWith('/tours') ? 'active' : ''}`}>
+                            <Link href="#">Tours</Link><span className="menu-arrow"></span>
+                            <ul className={`submenu ${manu.startsWith('/tours') ? 'open' : ''}`}>
+                                <li className={`${manu === '/tours/nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours/nusa-penida-day-tour" className="sub-menu-item">Nusa Penida Day Tour</Link></li>
+                                <li className={`${manu === '/tours/tanah-lot-sunset-tour' ? 'active' : ''}`}><Link href="/tours/tanah-lot-sunset-tour" className="sub-menu-item">Tanah Lot Sunset Tour</Link></li>
+                                <li className={`${manu === '/tours/gates-of-heaven-tour' ? 'active' : ''}`}><Link href="/tours/gates-of-heaven-tour" className="sub-menu-item">Gates of Heaven Tour</Link></li>
+                                <li className={`${manu === '/tours/east-of-nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours/east-of-nusa-penida-day-tour" className="sub-menu-item">East of Nusa Penida Day Tour</Link></li>
+                                <li className={`${manu === '/tours/bali-car-rental' ? 'active' : ''}`}><Link href="/tours/bali-car-rental" className="sub-menu-item">Bali Car Rental</Link></li>
+                                <li className={`${manu === '/tours/uluwatu-sunset-tour' ? 'active' : ''}`}><Link href="/tours/uluwatu-sunset-tour" className="sub-menu-item">Uluwatu Sunset Tour</Link></li>
+                                <li className={`${manu === '/tours/ubud-tanah-lot-tour' ? 'active' : ''}`}><Link href="/tours/ubud-tanah-lot-tour" className="sub-menu-item">Ubud Tanah Lot Tour</Link></li>
+                                <li className={`${manu === '/tours/bali-dolphin-tour' ? 'active' : ''}`}><Link href="/tours/bali-dolphin-tour" className="sub-menu-item">Bali Dolphin Tour</Link></li>
+                                <li className={`${manu === '/tours/bali-romantic-tour' ? 'active' : ''}`}><Link href="/tours/bali-romantic-tour" className="sub-menu-item">Bali Romantic Tour</Link></li>
+                                <li className={`${manu === '/tours/ubud-highlights-tour' ? 'active' : ''}`}><Link href="/tours/ubud-highlights-tour" className="sub-menu-item">Ubud Highlights Tour</Link></li>
                             </ul>
-                        </li> */}
-
-                        {/* <li className={`has-submenu parent-parent-menu-item ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(manu) ? 'active' : '' }`}><Link href="" onClick={()=>setSubManu(subManu === '/listing-item' ? '' : '/listing-item' )}> Tour Packages </Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/list','/list-left-sidebar','/list-right-sidebar','/tour-detail-one','/tour-detail-two','/listing-item','/grid-item','/list-item','/detail-item'].includes(subManu) ? 'open' : '' }`}>
-                                <li className={`has-submenu parent-menu-item ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/grid-item'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/grid-item' ? '' : '/grid-item')}> Day Trip </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/grid','/grid-left-sidebar','/grid-right-sidebar','/grid-item'].includes(subManu) ? 'open' : ''}`}>
-                                        <li className={`${manu === '/grid' ? 'active' : '' }`}><Link href="/grid" className="sub-menu-item">Grid</Link></li>
-                                        <li className={`${manu === '/grid-left-sidebar' ? 'active' : '' }`}><Link href="/grid-left-sidebar" className="sub-menu-item">Grid Left Sidebar</Link></li>
-                                        <li className={`${manu === '/grid-right-sidebar' ? 'active' : '' }`}><Link href="/grid-right-sidebar" className="sub-menu-item">Grid Right Sidebar</Link></li>
-                                    </ul>  
-                                </li>
-
-                                <li className={`has-submenu parent-menu-item ${['/list-item','/list','/list-left-sidebar','/list-right-sidebar'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/list-item' ? '' : '/list-item')}> Outdoor Activities </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/list-item','/list','/list-left-sidebar','/list-right-sidebar'].includes(subManu) ? 'open' : ''}`}>
-                                        <li className={`${manu === '/list' ? 'active' : '' }`}><Link href="/list" className="sub-menu-item">List</Link></li>
-                                        <li className={`${manu === '/list-left-sidebar' ? 'active' : '' }`}><Link href="/list-left-sidebar" className="sub-menu-item">List Left Sidebar</Link></li>
-                                        <li className={`${manu === '/list-right-sidebar' ? 'active' : '' }`}><Link href="/list-right-sidebar" className="sub-menu-item">List Right Sidebar</Link></li>
-                                    </ul>  
-                                </li>
-
-                                <li className={`has-submenu parent-menu-item ${['/detail-item','/tour-detail-one','/tour-detail-two'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/detail-item' ? '' : '/detail-item')}> Ticket & Passed </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/detail-item','/tour-detail-one','/tour-detail-two'].includes(subManu) ? 'open' : ''}`}>
-                                        <li className={`${manu === '/tour-detail-one' ? 'active' : '' }`}><Link href="/tour-detail-one" className="sub-menu-item">Tour Detail One</Link></li>
-                                        <li className={`${manu === '/tour-detail-two' ? 'active' : '' }`}><Link href="/tour-detail-two" className="sub-menu-item">Tour Detail Two</Link></li>
-                                    </ul>  
-                                </li>
-                            </ul>
-                        </li> */}
-
-                        <li className={`has-submenu parent-menu-item ${['/tours', '/tours/nusa-penida-day-tour'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/tour-item' ? '' : '/tour-item')}>Tours</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/tours', 'tours/nusa-penida-day-tour', '/tanah-lot-sunset-tour', '/gates-of-heaven-tour', '/east-nusa-penida-day-tour', '/bali-car-rental', '/uluwatu-sunset-tour', '/ubud-tanah-lot-tour', '/bali-dolphin-tour', '/bali-romantic-tour', '/ubud-highlights-tour', '/tour-item'].includes(subManu) ? 'open' : ''}`}>
-                                <li className={`${manu === '/tours/nusa-penida-day-tour' ? 'active' : '' }`}><Link href="/tours/nusa-penida-day-tour" className="sub-menu-item"> Nusa Penida Day Tour </Link></li>
-                                <li className={`${manu === '/tanah-lot-sunset-tour' ? 'active' : '' }`}><Link href="'/tanah-lot-sunset-tour'" className="sub-menu-item"> Tanah Lot Sunset Tour</Link></li>
-                                <li className={`${manu === '/gates-of-heaven-tour' ? 'active' : '' }`}><Link href="'/gates-of-heaven-tour'" className="sub-menu-item"> Gates of Heaven Tour </Link></li>
-                                <li className={`${manu === '/east-nusa-penida-day-tour' ? 'active' : '' }`}><Link href="'/east-nusa-penida-day-tour'" className="sub-menu-item"> East of Nusa Penida Day Tour </Link></li>
-                                <li className={`${manu === '/bali-car-rental' ? 'active' : '' }`}><Link href="'/bali-car-rental'" className="sub-menu-item"> Bali Car Rental </Link></li>
-                                <li className={`${manu === '/uluwatu-sunset-tour' ? 'active' : '' }`}><Link href="'/uluwatu-sunset-tour'" className="sub-menu-item"> Uluwatu Sunset Tour </Link></li>
-                                <li className={`${manu === '/ubud-tanah-lot-tour' ? 'active' : '' }`}><Link href="'/ubud-tanah-lot-tour'" className="sub-menu-item"> Ubud Tanah Lot Tour </Link></li>
-                                <li className={`${manu === '/bali-dolphin-tour' ? 'active' : '' }`}><Link href="'/bali-dolphin-tour'" className="sub-menu-item"> Bali Dolphin Tour </Link></li>
-                                <li className={`${manu === '/bali-romantic-tour' ? 'active' : '' }`}><Link href="'/bali-romantic-tour'" className="sub-menu-item"> Bali Romantic Tour </Link></li>
-                                <li className={`${manu === '/ubud-highlights-tour' ? 'active' : '' }`}><Link href="'/ubud-highlights-tour'" className="sub-menu-item"> Ubud Highlights Tour </Link></li>
-                            </ul> 
                         </li>
 
-                        <li className={`has-submenu parent-menu-item ${['/blogs', '/blog-standard','/blog-detail', '/blog-item'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/blog-item' ? '' : '/blog-item')}>Activities</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/blogs', '/blog-standard','/blog-detail','/blog-item'].includes(subManu) ? 'open' : ''}`}>
-                                <li className={`${manu === '/blogs' ? 'active' : '' }`}><Link href="/blogs" className="sub-menu-item"> -</Link></li>
-                                <li className={`${manu === '/blog-standard' ? 'active' : '' }`}><Link href="/blog-standard" className="sub-menu-item"> -</Link></li>
-                                <li className={`${manu === '/blog-detail' ? 'active' : '' }`}><Link href="/blog-detail" className="sub-menu-item"> -</Link></li>
-                            </ul> 
+                        <li className={`has-submenu parent-menu-item ${manu.startsWith('/activities') ? 'active' : ''}`}>
+                            <Link href="#">Activities</Link><span className="menu-arrow"></span>
+                            <ul className={`submenu ${manu.startsWith('/activities') ? 'open' : ''}`}>
+                                <li className={`${manu === '/activities/bali-quad-atv' ? 'active' : ''}`}><Link href="/activities/bali-quad-atv" className="sub-menu-item">Bali Quad ATV</Link></li>
+                                <li className={`${manu === '/activities/ayung-river-rafting' ? 'active' : ''}`}><Link href="/activities/ayung-river-rafting" className="sub-menu-item">Ayung River Rafting</Link></li>
+                                <li className={`${manu === '/activities/bali-quad-bike-and-rafting' ? 'active' : ''}`}><Link href="/activities/bali-quad-bike-and-rafting" className="sub-menu-item">Bali Quad Bike and Rafting</Link></li>
+                                <li className={`${manu === '/activities/tulamben-diving' ? 'active' : ''}`}><Link href="/activities/tulamben-diving" className="sub-menu-item">Tulamben Diving</Link></li>
+                                <li className={`${manu === '/activities/blue-lagoon-snorkeling' ? 'active' : ''}`}><Link href="/activities/blue-lagoon-snorkeling" className="sub-menu-item">Blue Lagoon Snorkeling</Link></li>
+                                <li className={`${manu === '/activities/bali-paintball' ? 'active' : ''}`}><Link href="/activities/bali-paintball" className="sub-menu-item">Bali Paintball</Link></li>
+                                <li className={`${manu === '/activities/bali-water-sports-package' ? 'active' : ''}`}><Link href="/activities/bali-water-sports-package" className="sub-menu-item">Bali Water Sports Package</Link></li>
+                                <li className={`${manu === '/activities/jumping-sliding-aling-aling-waterfall' ? 'active' : ''}`}><Link href="/activities/jumping-sliding-aling-aling-waterfall" className="sub-menu-item">Jumping Sliding Aling-Aling Waterfall</Link></li>
+                                <li className={`${manu === '/activities/mount-batur-sunrise-trekking' ? 'active' : ''}`}><Link href="/activities/mount-batur-sunrise-trekking" className="sub-menu-item">Mount Batur Sunrise Trekking</Link></li>
+                                <li className={`${manu === '/activities/sea-walker-bali' ? 'active' : ''}`}><Link href="/activities/sea-walker-bali" className="sub-menu-item">Sea Walker Bali</Link></li>
+                            </ul>
                         </li>
 
-                        <li className={`has-submenu parent-menu-item ${['/blogs', '/blog-standard','/blog-detail', '/blog-item'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/blog-item' ? '' : '/blog-item')}>Tickets</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/blogs', '/blog-standard','/blog-detail','/blog-item'].includes(subManu) ? 'open' : ''}`}>
-                                <li className={`${manu === '/blogs' ? 'active' : '' }`}><Link href="/blogs" className="sub-menu-item"> -</Link></li>
-                                <li className={`${manu === '/blog-standard' ? 'active' : '' }`}><Link href="/blog-standard" className="sub-menu-item"> -</Link></li>
-                                <li className={`${manu === '/blog-detail' ? 'active' : '' }`}><Link href="/blog-detail" className="sub-menu-item"> -</Link></li>
-                            </ul> 
+                        <li className={`has-submenu parent-menu-item ${manu.startsWith('/tickets') ? 'active' : ''}`}>
+                            <Link href="#">Tickets</Link><span className="menu-arrow"></span>
+                            <ul className={`submenu ${manu.startsWith('/tickets') ? 'open' : ''}`}>
+                                <li className={`${manu === '/tickets/bali-bird-park-ticket' ? 'active' : ''}`}><Link href="/tickets/bali-bird-park-ticket" className="sub-menu-item">Bali Bird Park Ticket</Link></li>
+                            </ul>
                         </li>
                 
                         <li className={`parent-menu-item ${manu === '/aboutus' ? 'active' : '' }`}>
                             <Link href="/aboutus" onClick={()=>{ setManu('/aboutus'); setSubManu('/aboutus'); setToggle(false); }} className="sub-menu-item">Blogs</Link>
                         </li>
-
-                        {/* <li className={`has-submenu parent-parent-menu-item ${['/page-item','/aboutus','/user-item','/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting','/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support','/auth-item','/login','/signup','/forgot-password','/lock-screen','/utility-item','/terms','/privacy','/special-item','/comingsoon','/maintenance','/404'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/page-item' ? '' : '/page-item')}>Pages</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/page-item','/aboutus','/user-item','/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting','/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support','/auth-item','/login','/signup','/forgot-password','/lock-screen','/utility-item','/terms','/privacy','/special-item','/comingsoon','/maintenance','/404'].includes(subManu) ? 'open' : ''}`}>
-                                <li className={`${manu === '/aboutus' ? 'active' : '' }`}><Link href="/aboutus" className="sub-menu-item">About Us</Link></li>
-
-                                <li className={`has-submenu parent-menu-item ${['/user-item', '/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting'].includes(manu) ? 'active' : ''}`}><Link href="" onClick={()=>setSubManu(subManu === '/user-item' ? '' : '/user-item')}> My Account<span className="bg-primary inline-block text-white text-[10px] font-bold px-2.5 py-0.5 rounded h-5 ms-1">New</span></Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/user-item', '/user-profile','/user-billing','/user-payment','/user-invoice','/user-social','/user-notification','/user-setting'].includes(subManu) ? 'open' : ''}`}>
-                                        <li className={`${manu === '/user-profile' ? 'active' : '' }`}><Link href="/user-profile" className="sub-menu-item">User Account</Link></li>
-                                        <li className={`${manu === '/user-billing' ? 'active' : '' }`}><Link href="/user-billing" className="sub-menu-item">User Billing<span className="bg-primary inline-block text-white text-[10px] font-bold px-2.5 py-0.5 rounded h-5 ms-1">New</span></Link></li>
-                                        <li className={`${manu === '/user-payment' ? 'active' : '' }`}><Link href="/user-payment" className="sub-menu-item">Payment</Link></li>
-                                        <li className={`${manu === '/user-invoice' ? 'active' : '' }`}><Link href="/user-invoice" className="sub-menu-item">Invoice</Link></li>
-                                        <li className={`${manu === '/user-social' ? 'active' : '' }`}><Link href="/user-social" className="sub-menu-item">Social</Link></li>
-                                        <li className={`${manu === '/user-notification' ? 'active' : '' }`}><Link href="/user-notification" className="sub-menu-item">Notification</Link></li>
-                                        <li className={`${manu === '/user-setting' ? 'active' : '' }`}><Link href="/user-setting" className="sub-menu-item">Setting</Link></li>
-                                    </ul> 
-                                </li>
-                        
-                                <li className={`has-submenu parent-menu-item ${['/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support'].includes(manu) ? 'active' : ''}`}>
-                                    <Link href="" onClick={()=>setSubManu(subManu === '/help-item' ? '' : '/help-item')}>Helpcenter </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/help-item','/helpcenter','/helpcenter-faqs','/helpcenter-guides','/helpcenter-support'].includes(subManu) ? 'open' : ''}`}>
-                                        <li className={`${manu === '/helpcenter' ? 'active' : '' }`}><Link href="/helpcenter" className="sub-menu-item">Overview</Link></li>
-                                        <li className={`${manu === '/helpcenter-faqs' ? 'active' : '' }`}><Link href="/helpcenter-faqs" className="sub-menu-item">FAQs</Link></li>
-                                        <li className={`${manu === '/helpcenter-guides' ? 'active' : '' }`}><Link href="/helpcenter-guides" className="sub-menu-item">Guides</Link></li>
-                                        <li className={`${manu === '/helpcenter-support' ? 'active' : '' }`}><Link href="/helpcenter-support" className="sub-menu-item">Support</Link></li>
-                                    </ul>  
-                                </li>
-
-                                <li className={`has-submenu parent-menu-item ${['/auth-item', '/login','/signup','/forgot-password','/lock-screen'].includes(manu) ? 'active' : ''}`}><Link href="" onClick={()=>setSubManu(subManu === '/auth-item' ? '' : '/auth-item')}> Auth Pages </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/auth-item', '/login','/signup','/forgot-password','/lock-screen'].includes(subManu) ? 'open' : ''}`}>
-                                        <li><Link href="/login" className="sub-menu-item"> Login</Link></li>
-                                        <li><Link href="/signup" className="sub-menu-item"> Signup</Link></li>
-                                        <li><Link href="/forgot-password" className="sub-menu-item"> Forgot Password</Link></li>
-                                        <li><Link href="/lock-screen" className="sub-menu-item"> Lock Screen</Link></li>
-                                    </ul> 
-                                </li>
-
-                                <li className={`has-submenu parent-menu-item ${['/utility-item', '/terms','/privacy'].includes(manu) ? 'active' : ''}`}><Link href="" onClick={()=>setSubManu(subManu === '/utility-item' ? '' : '/utility-item')}> Utility </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/utility-item', '/terms','/privacy'].includes(subManu) ? 'open' : ''}`}>
-                                        <li className={`${manu === '/terms' ? 'active' : '' }`}><Link href="/terms" className="sub-menu-item">Terms of Services</Link></li>
-                                        <li className={`${manu === '/privacy' ? 'active' : '' }`}><Link href="/privacy" className="sub-menu-item">Privacy Policy</Link></li>
-                                    </ul>  
-                                </li>
-
-                                <li className={`has-submenu parent-menu-item ${['/special-item', '/comingsoon','/maintenance','/404'].includes(manu) ? 'active' : ''}`}><Link href="" onClick={()=>setSubManu(subManu === '/special-item' ? '' : '/special-item')}> Special </Link><span className="submenu-arrow"></span>
-                                    <ul className={`submenu ${['/special-item', '/comingsoon','/maintenance','/404'].includes(subManu) ? 'open' : ''}`}>
-                                        <li><Link href="/comingsoon" className="sub-menu-item"> Coming Soon</Link></li>
-                                        <li><Link href="/maintenance" className="sub-menu-item"> Maintenance</Link></li>
-                                        <li><Link href="/404" className="sub-menu-item"> 404!</Link></li>
-                                    </ul> 
-                                </li>
-                            </ul>
-                        </li> */}
-
-                        {/* <li className={`has-submenu parent-menu-item ${['/blogs', '/blog-standard','/blog-detail', '/blog-item'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/blog-item' ? '' : '/blog-item')}>Blog</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${['/blogs', '/blog-standard','/blog-detail','/blog-item'].includes(subManu) ? 'open' : ''}`}>
-                                <li className={`${manu === '/blogs' ? 'active' : '' }`}><Link href="/blogs" className="sub-menu-item"> Blogs</Link></li>
-                                <li className={`${manu === '/blog-standard' ? 'active' : '' }`}><Link href="/blog-standard" className="sub-menu-item"> Blog Standard</Link></li>
-                                <li className={`${manu === '/blog-detail' ? 'active' : '' }`}><Link href="/blog-detail" className="sub-menu-item"> Blog Detail</Link></li>
-                            </ul> 
-                        </li> */}
-
-                        {/* <li className={`${manu === '/contact' ? 'active' : '' }`}><Link href="/contact" className="sub-menu-item">Contact Us</Link></li> */}
                     </ul>
                 </div>
             </div>
