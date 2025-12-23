@@ -135,7 +135,7 @@ export const topTourPackages = [
     {
         id:1,
         image: '/images/tours/nusa-penida-day-tour/1.webp',        
-        place: 'Nusa Penida, Bali',
+        place: 'Klungkung, Bali',
         title: 'Nusa Penida Day Tour',
         amount:'1.100.000',
         route: '/tours/nusa-penida-day-tour',

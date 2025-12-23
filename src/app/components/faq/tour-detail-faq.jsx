@@ -1,14 +1,13 @@
 'use client'
 import React, { useState } from "react";
-import { FiChevronUp } from 'react-icons/fi'
-import { faqData } from "../../data/data";
+import { FiChevronUp } from 'react-icons/fi';
 
-export default function TourDetailFaq(){
+export default function TourDetailFaq({ faqData }){
     let [activeTab, setActiveTab] = useState(1)
 
     return(
         <div className="mt-6">
-            {faqData.slice(0,4).map((item,index)=>{
+            {faqData.map((item,index)=>{
                 return(
                     <div className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4 first:mt-0" key={index}>
                         <h2 className="text-base font-semibold">

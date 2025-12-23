@@ -11,6 +11,8 @@ import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "r
 import { } from "@/app/data/data";
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
+import TourItinerary from "@/app/components/tour-itinerary";
+import TourInclusions from "@/app/components/tour-inclusions";
 
 export const tourDetailAbout = [
     {
@@ -21,12 +23,12 @@ export const tourDetailAbout = [
     {
         icon: FiActivity,
         name: 'Type',
-        title: 'Adventure'
+        title: 'Tour, Adventure'
     },
     {
         icon: FiUsers,
         name: 'Group Size',
-        title: 'Max 50 Peoples'
+        title: '15 Peoples'
     },
     {
         icon: FiGlobe,
@@ -35,10 +37,104 @@ export const tourDetailAbout = [
     },
     {
         icon: FiDollarSign,
-        name: 'Price',
-        title: 'From Rp. 1.100.000'
+        name: 'Start Price',
+        title: 'From IDR 1.100.000'
     },
 ];
+
+export const faqData = [
+    {
+        id:1,
+        title:'Is this tour private?',
+        desc:'Yes. You will have your own private car and driver for the entire day.'
+    },
+    {
+        id:2,
+        title:'Can I customize tour itinerary?',
+        desc:'Absolutely. You can add East Nusa Penida or snorkeling sessions. but discuss first with operator maybe need a more payment.'
+    },
+    {
+        id:3,
+        title:'Is it suitable for children or elderly?',
+        desc:'Yes. All locations are accessible without hiking down Kelingking.'
+    },
+    {
+        id:4,
+        title:'Is hotel pickup and drop-off available in all areas of Bali?',
+        desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
+    },
+];
+
+export const itineraryData = [
+    {
+        time: "06:00",
+        title: "Hotel Pick-up",
+        desc: "Pick-up from Nusa Dua, Sanur, Kuta, Seminyak, or Ubud."
+    },
+    {
+        time: "07:30",
+        title: "Sanur Beach Harbour",
+        desc: "Fast boat departure to Nusa Penida."
+    },
+    {
+        time: "08:15",
+        title: "Nusa Penida Arrival",
+        desc: "Meet local guide and start the tour."
+    },
+    {
+        time: "08:30",
+        title: "Broken Beach (Pasih Uug)",
+        desc: "Visit the famous natural rock arch."
+    },
+    {
+        time: "09:15",
+        title: "Angel’s Billabong",
+        desc: "Explore the natural infinity pool."
+    },
+    {
+        time: "10:30",
+        title: "Kelingking Beach",
+        desc: "Photo stop and optional short trek."
+    },
+    {
+        time: "12:00",
+        title: "Lunch Break",
+        desc: "Lunch at a local restaurant (Indonesian food)."
+    },
+    {
+        time: "13:30",
+        title: "Crystal Bay",
+        desc: "Relax, swim, or enjoy the beach."
+    },
+    {
+        time: "15:30",
+        title: "Nusa Penida Port",
+        desc: "Transfer back to the port."
+    },
+    {
+        time: "16:30",
+        title: "Fast Boat to Sanur",
+        desc: "Return trip to Sanur."
+    },
+    {
+        time: "17:30",
+        title: "Hotel Drop-off",
+        desc: "Drop-off at your hotel. Tour ends."
+    }
+];
+
+export const inclusionsData = {
+    included: [
+        "Private Car & Driver",
+        "English-Speaking Local Guide",
+        "Lunch (Indonesian Food)",
+        "Return Fast Boat Ticket",
+    ],
+    excluded: [
+        "Meals Fee",
+        "Personal Expenses",
+    ]
+};
 
 export default function NusaPenidaDayTour(){
 
@@ -52,7 +148,7 @@ export default function NusaPenidaDayTour(){
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
-        <section className="relative table w-full items-center py-36 bg-[url('/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
+        <section className="relative table w-full items-center py-36 bg-[url('/images/tours/nusa-penida-day-tour/1.webp')] bg-top bg-no-repeat bg-cover">
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
@@ -75,7 +171,7 @@ export default function NusaPenidaDayTour(){
                         <TourImageOne images={images}/>
 
                         <h5 className="text-2xl font-semibold mt-5">Nusa Penida Day Tour</h5>
-                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>Karangasem, Bali</p>
+                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>Klungkung, Bali</p>
 
                         <ul className="list-none">
                             {tourDetailAbout.map((item,index)=>{
@@ -96,14 +192,63 @@ export default function NusaPenidaDayTour(){
                         <div className="mt-6">
                             <h5 className="text-lg font-semibold">Tour Descriptions:</h5>
 
-                            <p className="text-slate-400 mt-6">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words. This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script.</p>
-                            <p className="text-slate-400 mt-3">The advantage of its Latin origin and the relative meaninglessness of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's attention from the layout.</p>
+                            <p className="text-slate-400 mt-6">
+                                Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.
+                            </p>
+                            <p className="text-slate-400 mt-3">
+                                This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.    
+                            </p>
+                            <p className="text-slate-400 mt-3">
+                                The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.
+                            </p>
                         </div>
+
+                        <div className="mt-6">
+                            <h5 className="text-lg font-semibold">Tour Highlights:</h5>
+
+                            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
+                                    <h6 className="font-medium min-h-[48px]">
+                                        Private Car & Driver
+                                    </h6>
+                                    <p className="text-slate-400 mt-2">
+                                        Explore comfortably with an expert local island driver.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
+                                    <h6 className="font-medium min-h-[48px]">
+                                        Fast Boat Tickets Included
+                                    </h6>
+                                    <p className="text-slate-400 mt-2">
+                                        Round-trip fast boat from Sanur to Nusa Penida.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
+                                    <h6 className="font-medium min-h-[48px]">
+                                        Top Destinations
+                                    </h6>
+                                    <p className="text-slate-400 mt-2">
+                                        Visit Kelingking, Broken Beach, Angel Billabong, and Crystal Bay.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="mt-6">
+                            <h5 className="text-lg font-semibold">Tour Itinerary:</h5>
+
+                            <TourItinerary itineraryData={itineraryData}/>
+                        </div>
+
+                        <TourInclusions inclusionsData={inclusionsData}/>
 
                         <div className="mt-6">
                             <h5 className="text-lg font-semibold">Questions & Answers:</h5>
 
-                            <TourDetailFaq/>
+                            <TourDetailFaq faqData={faqData}/>
                         </div>
                     </div>
                     <DetailSidebar/>
