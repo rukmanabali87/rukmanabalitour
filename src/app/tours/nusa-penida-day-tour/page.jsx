@@ -13,6 +13,7 @@ import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
 import TourItinerary from "@/app/components/tour-itinerary";
 import TourInclusions from "@/app/components/tour-inclusions";
+import Client from "@/app/components/client";
 
 export const tourDetailAbout = [
     {
@@ -250,6 +251,8 @@ export default function NusaPenidaDayTour(){
 
                             <TourDetailFaq faqData={faqData}/>
                         </div>
+
+                        <Client/>
                     </div>
                     <DetailSidebar/>
                 </div>

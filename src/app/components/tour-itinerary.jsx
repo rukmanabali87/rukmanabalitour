@@ -6,7 +6,7 @@ export default function TourItinerary({ itineraryData = [] }) {
         <ul className="relative mt-6 border-l-4 border-[#397A3D] pl-6 space-y-4">
             {itineraryData.map((item, i) => (
                 <li key={i} className="relative">
-                    <span className="absolute -left-[33px] top-1.5 w-3 h-3 bg-[#397A3D] rounded-full"></span>
+                    <span className="absolute -left-[32px] top-1.5 w-3 h-3 bg-[#397A3D] rounded-full"></span>
 
                     <h6 className="font-medium">
                         {item.time} | {item.title}
