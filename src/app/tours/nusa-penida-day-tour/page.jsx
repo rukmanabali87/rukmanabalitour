@@ -209,7 +209,7 @@ export default function NusaPenidaDayTour(){
 
                             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
-                                    <h6 className="font-medium min-h-[48px]">
+                                    <h6 className="font-medium min-h-[48px] ">
                                         Private Car & Driver
                                     </h6>
                                     <p className="text-slate-400 mt-2">
@@ -227,7 +227,7 @@ export default function NusaPenidaDayTour(){
                                 </div>
 
                                 <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
-                                    <h6 className="font-medium min-h-[48px]">
+                                    <h6 className="font-medium min-h-[48px] ">
                                         Top Destinations
                                     </h6>
                                     <p className="text-slate-400 mt-2">

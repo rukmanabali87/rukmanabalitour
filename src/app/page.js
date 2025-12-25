@@ -12,6 +12,7 @@ import Client from "./components/client";
 import Blogs from "./components/blogs";
 import Footer from "./components/footer";
 import Switcher from "./components/switcher";
+import WhyChooseUs from "./components/why-choose-us";
 import {packages, topTourPackages, tourPackages} from './data/data';
 import {FiMapPin} from 'react-icons/fi';
 
@@ -79,7 +80,7 @@ export default function Home() {
                                     </div>
                                 )}
                             </div>
-
+                                
                             <div className="p-4">
                                 <p className="flex items-center text-slate-400 font-medium mb-2"><FiMapPin className="text-[#397A3D] size-4 me-1"></FiMapPin> {item.place}</p>
                                 <Link href={item.route} className="text-lg font-medium hover:text-[#397A3D] duration-500 ease-in-out">{item.title}</Link>
@@ -111,6 +112,8 @@ export default function Home() {
                 <Link href="/grid" className="text-slate-400 hover:text-[#397A3D] inline-block">See More Tours <i className="mdi mdi-arrow-right align-middle"></i></Link>
             </div>
         </div>
+
+        <WhyChooseUs/>
 
         <Client/>
 

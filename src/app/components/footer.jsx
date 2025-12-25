@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import TripAdvisorWidget from "./tripadvisor-widget";
+
 import { footerCompany, footerSocial } from "../data/data";
 import {FiMapPin, FiMail, FiPhone, FiFacebook, FiInstagram} from 'react-icons/fi';
 import { FaBuilding, FaTiktok } from "react-icons/fa";
@@ -19,6 +21,10 @@ export default function Footer(){
                                         <Image src='/images/logo-rubt-light.png' width={133} height={28} alt=""/>
                                     </Link>
                                     <p className="mt-6 text-gray-300">Planning for a trip? We will organize your trip with the best places and within best budget!</p>
+
+                                    <section className="mt-10">
+                                        <TripAdvisorWidget />
+                                    </section>
                                 </div>
 
                                 <div className="lg:col-span-3 md:col-span-4">
@@ -50,7 +56,7 @@ export default function Footer(){
                                         <div className="flex mt-4">
                                             <FaBuilding className="size-4 text-[#397A3D] me-2 mt-1"></FaBuilding>
                                             <div className="">
-                                                <h6 className="text-gray-300">Legal: PT. Rejeki Utama Kencana</h6>
+                                                <h6 className="text-gray-300">PT. Rejeki Utama Kencana</h6>
                                             </div>
                                         </div>
                                     </div>
