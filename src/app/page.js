@@ -47,6 +47,18 @@ export default function Home() {
                         Ready for a tropical escape? We&apos;ll design the perfect island journey just for you.
                     </p>
                 </div>
+
+                <div className="lg:col-span-4 md:col-span-5 flex justify-center md:justify-end">
+                    <div className="flex items-center h-full">
+                        <Image
+                            src="/images/tripadvisor/1.png"
+                            alt="TripAdvisor Travelers' Choice Award"
+                            width={220}
+                            height={160}
+                            className="invert opacity-90 hover:opacity-100 transition"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     </section>
