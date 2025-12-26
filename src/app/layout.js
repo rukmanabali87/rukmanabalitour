@@ -2,6 +2,7 @@ import { DM_Sans, Dancing_Script } from "next/font/google";
 import Script from "next/script";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
+import WhatsappButton from "./components/whatsapp-button";
 
 const dm_sans = DM_Sans({
    subsets: ["latin"],
@@ -24,6 +25,8 @@ export default function RootLayout({ children }) {
       <body className={`${dm_sans.variable} ${dancing_script.variable}  bg-white dark:bg-slate-900`}>
         
         {children}
+
+        <WhatsappButton />
 
         {/* Midtrans Snap JS (WAJIB pakai next/script) */}
         <Script
