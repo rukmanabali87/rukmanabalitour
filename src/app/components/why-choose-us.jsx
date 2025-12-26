@@ -25,7 +25,7 @@ export default function WhyChooseUs(){
 
                     {/* Card 1 */}
                     <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <TbReportMoney className="h-12 w-12 mx-auto mb-4 text-slate-700" />
+                        <TbReportMoney className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             Transparent Pricing
                         </h4>
@@ -36,7 +36,7 @@ export default function WhyChooseUs(){
 
                     {/* Card 2 */}
                     <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <FiUsers className="h-12 w-12 mx-auto mb-4 text-slate-700" />
+                        <FiUsers className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             Experienced Local Team
                         </h4>
@@ -47,7 +47,7 @@ export default function WhyChooseUs(){
 
                     {/* Card 3 */}
                     <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <MdDashboardCustomize className="h-12 w-12 mx-auto mb-4 text-slate-700" />
+                        <MdDashboardCustomize className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             Fully Customizable Tours
                         </h4>
@@ -58,7 +58,7 @@ export default function WhyChooseUs(){
 
                     {/* Card 4 */}
                     <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <RiCustomerService2Line className="h-12 w-12 mx-auto mb-4 text-slate-700" />
+                        <RiCustomerService2Line className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             24/7 Customer Support
                         </h4>

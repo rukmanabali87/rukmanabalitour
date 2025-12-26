@@ -2,11 +2,15 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import TripAdvisorWidget from "./tripadvisor-widget";
-
 import { footerCompany, footerSocial } from "../data/data";
-import {FiMapPin, FiMail, FiPhone, FiFacebook, FiInstagram} from 'react-icons/fi';
+import {FiMapPin, FiMail, FiPhone} from 'react-icons/fi';
 import { FaBuilding, FaTiktok } from "react-icons/fa";
+
+const paymentMethods = [
+    {src:'/images/payments/visa.jpg', alt:'Visa'},
+    {src:'/images/payments/mastercard.jpg', alt:'Mastercard'},
+    {src:'/images/payments/paypal.jpg', alt:'Paypal'},
+];
 
 export default function Footer(){
     return(
@@ -21,10 +25,9 @@ export default function Footer(){
                                         <Image src='/images/logo-rubt-light.png' width={133} height={28} alt=""/>
                                     </Link>
                                     <p className="mt-6 text-gray-300">Planning for a trip? We will organize your trip with the best places and within best budget!</p>
-
-                                    <section className="mt-10">
-                                        <TripAdvisorWidget />
-                                    </section>
+                                    <div className="mt-4 flex items-start">
+                                        <Image src="/images/tripadvisor/1.png" width={120} height={60} alt="TripAdvisor Travelers Choice Award" className="opacity-90 invert"/>
+                                    </div>
                                 </div>
 
                                 <div className="lg:col-span-3 md:col-span-4">
@@ -87,6 +90,21 @@ export default function Footer(){
                                             )
                                         })}
                                         </ul>
+                                    </div>
+                                    <div className="lg:ms-8 mt-6">
+                                        <h5 className="tracking-[1px] text-gray-100 font-semibold">Accepted Payment</h5>
+                                        <div className="mt-6 flex items-center gap-3">
+                                            {paymentMethods.map((item, index) => (
+                                                <Image
+                                                    key={index}
+                                                    src={item.src}
+                                                    alt={item.alt}
+                                                    width={50}
+                                                    height={30}
+                                                    className="opacity-80 hover:opacity-100 transition"
+                                                />
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

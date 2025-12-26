@@ -3,10 +3,7 @@ import Link from "next/link";
 
 import Tagline from "./components/tagline";
 import Navbar from "./components/navbar";
-import VideoModalOne from "./components/video-modal-one";
 import Form from "./components/form";
-import TopDestinationOne from "./components/top-destination-one";
-import HeroSliderOne from "./components/hero-slider-one";
 import About from "./components/about";
 import Client from "./components/client";
 import Blogs from "./components/blogs";
@@ -24,7 +21,9 @@ export default function Home() {
     {/* <HeroSliderOne/> */}
     <section className="relative w-full h-screen overflow-hidden">
         {/* Fallback Image */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg/10.webp')" }}/>
+        <div className="absolute inset-0 -z-20">
+            <Image src="/images/bg/10.webp" alt="Hero Background" fill priority className="object-cover object-center"/>
+        </div>
 
         {/* Video */}
         <video autoPlay muted loop playsInline preload="none" className="absolute inset-0 w-full h-full object-cover">
