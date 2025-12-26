@@ -22,7 +22,7 @@ export default function Home() {
     <section className="relative w-full h-screen overflow-hidden">
         {/* Fallback Image */}
         <div className="absolute inset-0 -z-20">
-            <Image src="/images/bg/10.webp" alt="Hero Background" fill priority className="object-cover object-center"/>
+            <Image src="/images/bg/10.webp" alt="Landing Page Background" fill priority className="object-cover object-center"/>
         </div>
 
         {/* Video */}

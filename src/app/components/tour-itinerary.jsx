@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from "react";
 
-export default function TourItinerary({ itineraryData = [] }) {
+export default function TourItinerary({ items = [] }) {
     return (
         <ul className="relative mt-6 border-l-4 border-[#397A3D] pl-6 space-y-4">
-            {itineraryData.map((item, i) => (
+            {items.map((item, i) => (
                 <li key={i} className="relative">
                     <span className="absolute -left-[32px] top-1.5 w-3 h-3 bg-[#397A3D] rounded-full"></span>
 

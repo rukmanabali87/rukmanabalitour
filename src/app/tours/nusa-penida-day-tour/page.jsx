@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,10 +9,13 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
+import { FaCar } from "react-icons/fa";
+import { MdDirectionsBoat } from "react-icons/md";
+import { PiIslandFill } from "react-icons/pi";
 
-import { } from "@/app/data/data";
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
+import TourHighlights from "@/app/components/tour-highlights";
 import TourItinerary from "@/app/components/tour-itinerary";
 import TourInclusions from "@/app/components/tour-inclusions";
 import Client from "@/app/components/client";
@@ -64,6 +68,24 @@ export const faqData = [
         id:4,
         title:'Is hotel pickup and drop-off available in all areas of Bali?',
         desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
+    },
+];
+
+export const highlightsData = [
+    {
+        icon: FaCar,
+        title: "Private Car & Driver",
+        desc: "Explore comfortably with an expert local island driver.",
+    },
+    {
+        icon: MdDirectionsBoat,
+        title: "Fast Boat Tickets Included",
+        desc: "Round-trip fast boat from Sanur to Nusa Penida.",
+    },
+    {
+        icon: PiIslandFill,
+        title: "Top Destinations",
+        desc: "Visit Kelingking, Broken Beach, Angel's Billabong, and Crystal Bay.",
     },
 ];
 
@@ -206,51 +228,23 @@ export default function NusaPenidaDayTour(){
                         </div>
 
                         <div className="mt-6">
-                            <h5 className="text-lg font-semibold">Tour Highlights:</h5>
-
-                            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
-                                    <h6 className="font-medium min-h-[48px] ">
-                                        Private Car & Driver
-                                    </h6>
-                                    <p className="text-slate-400 mt-2">
-                                        Explore comfortably with an expert local island driver.
-                                    </p>
-                                </div>
-
-                                <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
-                                    <h6 className="font-medium min-h-[48px]">
-                                        Fast Boat Tickets Included
-                                    </h6>
-                                    <p className="text-slate-400 mt-2">
-                                        Round-trip fast boat from Sanur to Nusa Penida.
-                                    </p>
-                                </div>
-
-                                <div className="p-5 border rounded-xl shadow-sm bg-white flex flex-col">
-                                    <h6 className="font-medium min-h-[48px] ">
-                                        Top Destinations
-                                    </h6>
-                                    <p className="text-slate-400 mt-2">
-                                        Visit Kelingking, Broken Beach, Angel Billabong, and Crystal Bay.
-                                    </p>
-                                </div>
-                            </div>
+                            <h5 className="text-lg font-semibold mb-6">Tour Highlights:</h5>
+                
+                            <TourHighlights items={highlightsData} />
                         </div>
-
 
                         <div className="mt-6">
                             <h5 className="text-lg font-semibold">Tour Itinerary:</h5>
 
-                            <TourItinerary itineraryData={itineraryData}/>
+                            <TourItinerary items={itineraryData}/>
                         </div>
 
-                        <TourInclusions inclusionsData={inclusionsData}/>
+                        <TourInclusions items={inclusionsData}/>
 
                         <div className="mt-6">
                             <h5 className="text-lg font-semibold">Questions & Answers:</h5>
 
-                            <TourDetailFaq faqData={faqData}/>
+                            <TourDetailFaq items={faqData}/>
                         </div>
 
                         <Client/>

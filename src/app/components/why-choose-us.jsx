@@ -1,9 +1,7 @@
 'use client'
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 
-import {FiDollarSign, FiUsers, FiSliders, FiHeadphones, FiCheckCircle} from 'react-icons/fi';
+import { FiUsers } from 'react-icons/fi';
 import { TbReportMoney } from 'react-icons/tb';
 import { MdDashboardCustomize } from 'react-icons/md';
 import { RiCustomerService2Line } from "react-icons/ri";
@@ -24,8 +22,8 @@ export default function WhyChooseUs(){
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-8 text-center">
 
                     {/* Card 1 */}
-                    <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <TbReportMoney className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
+                    <div className="p-6 rounded-md shadow dark:shadow-gray-700 transition">
+                        <TbReportMoney className="h-12 w-12 mx-auto mb-6 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             Transparent Pricing
                         </h4>
@@ -35,8 +33,8 @@ export default function WhyChooseUs(){
                     </div>
 
                     {/* Card 2 */}
-                    <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <FiUsers className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
+                    <div className="p-6 rounded-md shadow dark:shadow-gray-700 transition">
+                        <FiUsers className="h-12 w-12 mx-auto mb-6 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             Experienced Local Team
                         </h4>
@@ -46,8 +44,8 @@ export default function WhyChooseUs(){
                     </div>
 
                     {/* Card 3 */}
-                    <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <MdDashboardCustomize className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
+                    <div className="p-6 rounded-md shadow dark:shadow-gray-700 transition">
+                        <MdDashboardCustomize className="h-12 w-12 mx-auto mb-6 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             Fully Customizable Tours
                         </h4>
@@ -57,8 +55,8 @@ export default function WhyChooseUs(){
                     </div>
 
                     {/* Card 4 */}
-                    <div className="p-6 rounded-2xl shadow dark:shadow-gray-700 transition">
-                        <RiCustomerService2Line className="h-12 w-12 mx-auto mb-4 text-[#397A3D]" />
+                    <div className="p-6 rounded-md shadow dark:shadow-gray-700 transition">
+                        <RiCustomerService2Line className="h-12 w-12 mx-auto mb-6 text-[#397A3D]" />
                         <h4 className="text-xl font-semibold min-h-[70px]">
                             24/7 Customer Support
                         </h4>
@@ -66,11 +64,8 @@ export default function WhyChooseUs(){
                             Our friendly support team is available around the clock to assist you before, during, and after your trip.
                         </p>
                     </div>
-
                 </div>
-
-
             </div>
         </section>
-    )
-}
+    );
+};

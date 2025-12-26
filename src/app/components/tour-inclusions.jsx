@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import { FaCheck, FaTimes } from 'react-icons/fa';
 
-export default function TourInclusions({ inclusionsData }) {
-    if (!inclusionsData) return null;
+export default function TourInclusions({ items }) {
+    if (!items) return null;
 
     return (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {Object.entries(inclusionsData).map(([type, items]) => (
+            {Object.entries(items).map(([type, items]) => (
                 <div key={type}>
                     <h5 className="text-lg font-semibold mb-4 capitalize">
                         {type}:

@@ -10,6 +10,7 @@ const paymentMethods = [
     {src:'/images/payments/visa.jpg', alt:'Visa'},
     {src:'/images/payments/mastercard.jpg', alt:'Mastercard'},
     {src:'/images/payments/paypal.jpg', alt:'Paypal'},
+    {src:'/images/payments/american-express.jpg', alt:'American Express'},
 ];
 
 export default function Footer(){
