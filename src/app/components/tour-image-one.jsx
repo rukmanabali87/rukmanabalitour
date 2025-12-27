@@ -10,6 +10,10 @@ import "yet-another-react-lightbox/styles.css";
 
 export default function TourImageOne({ images = [] }){
 
+    if (!Array.isArray(images) || images.length < 4) {
+        return null;
+    }
+
     let [photoIndex, setActiveIndex] = useState(0);
     let [isOpen, setOpen] = useState(false);
 

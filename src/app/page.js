@@ -10,7 +10,7 @@ import Blogs from "./components/blogs";
 import Footer from "./components/footer";
 import Switcher from "./components/switcher";
 import WhyChooseUs from "./components/why-choose-us";
-import {packages, topTourPackages, tourPackages} from './data/data';
+import { topTourPackages } from './data/data';
 import {FiMapPin} from 'react-icons/fi';
 
 export default function Home() {
