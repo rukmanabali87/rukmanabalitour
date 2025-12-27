@@ -18,8 +18,8 @@ export default function Home() {
     <>
     <Tagline/>
     <Navbar navclass="defaultscroll is-sticky tagline-height" navlight={true} manuclass="!justify-end nav-light"/>
-    {/* <HeroSliderOne/> */}
-    <section className="relative w-full h-screen overflow-hidden">
+    
+    <section className="relative w-full min-h-[100svh] md:h-screen overflow-hidden">
         {/* Fallback Image */}
         <div className="absolute inset-0 -z-20">
             <Image src="/images/bg/10.webp" alt="Landing Page Background" fill priority className="object-cover object-center"/>
@@ -31,19 +31,19 @@ export default function Home() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-slate-900/40"></div>
-        <div className="container relative h-full flex items-center">
-            <div className="grid md:grid-cols-12 grid-cols-1 items-center w-full gap-[30px]">
-                <div className="lg:col-span-8 md:col-span-7">
-                    <h5 className="text-3xl !font-dancing text-white mb-4">
+        <div className="absolute inset-0 bg-slate-900/50 md:bg-slate-900/40"></div>
+        <div className="container relative h-full flex items-start md:items-center pt-28 sm:pt-32 md:pt-0">
+            <div className="grid md:grid-cols-12 grid-cols-1 items-center w-full gap-6 md:gap-[30px]">
+                <div className="lg:col-span-8 md:col-span-7 text-center md:text-left">
+                    <h5 className="text-xl sm:text-2xl md:text-3xl !font-dancing text-white mb-4">
                         Explore Bali&apos;s Wonders
                     </h5>
 
-                    <h4 className="font-bold text-white lg:leading-normal leading-tight text-4xl lg:text-6xl mb-6">
+                    <h4 className="font-bold text-white leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6">
                         Escape the Ordinary, <br /> with Rukmana Bali Tour
                     </h4>
 
-                    <p className="text-white/80 text-xl max-w-xl">
+                    <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0">
                         Ready for a tropical escape? We&apos;ll design the perfect island journey just for you.
                     </p>
                 </div>
@@ -55,7 +55,7 @@ export default function Home() {
                             alt="TripAdvisor Travelers' Choice Award"
                             width={220}
                             height={160}
-                            className="invert opacity-90 hover:opacity-100 transition"
+                            className="invert w-[140px] sm:w-[180px] md:w-[220px]"
                         />
                     </div>
                 </div>

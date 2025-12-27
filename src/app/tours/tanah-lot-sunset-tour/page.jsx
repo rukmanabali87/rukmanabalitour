@@ -162,21 +162,31 @@ export const inclusionsData = {
 
 export default function NusaPenidaDayTour(){
 
-    let images = [
-        '/images/tours/nusa-penida-day-tour/1.webp',
-        '/images/tours/nusa-penida-day-tour/2.webp',
-        '/images/tours/nusa-penida-day-tour/3.webp',
-        '/images/tours/nusa-penida-day-tour/4.webp',
+    const images = [
+        {src:'/images/tours/nusa-penida-day-tour/1.webp', alt:'Kelingking Beach'},
+        {src:'/images/tours/nusa-penida-day-tour/2.webp', alt:'Broken Beach'},
+        {src:'/images/tours/nusa-penida-day-tour/3.webp', alt:'Angel\'s Billabong'},
+        {src:'/images/tours/nusa-penida-day-tour/4.webp', alt:'Crystal Bay'},
     ];
 
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
-        <section className="relative table w-full items-center py-36 bg-[url('/images/tours/nusa-penida-day-tour/1.webp')] bg-top bg-no-repeat bg-cover">
+        <section className="relative table w-full items-center py-36 bg-top bg-no-repeat bg-cover">
+            <div className="absolute inset-0 -z-20">
+                <Image
+                    src={images[0].src}
+                    alt={images[0].alt}
+                    fill
+                    priority
+                    className="object-cover object-top"
+                />
+            </div>
+
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">Nusa Penida Day Tour</h3>
+                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">Tanah Lot Sunset Tour</h3>
                 </div>
             </div>
             
@@ -184,7 +194,7 @@ export default function NusaPenidaDayTour(){
                 <ul className="tracking-[0.5px] mb-0 inline-block">
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Tours</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Nusa Penida Day Tour</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Tanah Lot Sunset Tour</li>
                 </ul>
             </div>
         </section>

@@ -162,17 +162,27 @@ export const inclusionsData = {
 
 export default function NusaPenidaDayTour(){
 
-    let images = [
-        '/images/tours/nusa-penida-day-tour/1.webp',
-        '/images/tours/nusa-penida-day-tour/2.webp',
-        '/images/tours/nusa-penida-day-tour/3.webp',
-        '/images/tours/nusa-penida-day-tour/4.webp',
+    const images = [
+        {src:'/images/tours/nusa-penida-day-tour/1.webp', alt:'Kelingking Beach'},
+        {src:'/images/tours/nusa-penida-day-tour/2.webp', alt:'Broken Beach'},
+        {src:'/images/tours/nusa-penida-day-tour/3.webp', alt:'Angel\'s Billabong'},
+        {src:'/images/tours/nusa-penida-day-tour/4.webp', alt:'Crystal Bay'},
     ];
 
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
-        <section className="relative table w-full items-center py-36 bg-[url('/images/tours/nusa-penida-day-tour/1.webp')] bg-top bg-no-repeat bg-cover">
+        <section className="relative table w-full items-center py-36 bg-top bg-no-repeat bg-cover">
+            <div className="absolute inset-0 -z-20">
+                <Image
+                    src={images[0].src}
+                    alt={images[0].alt}
+                    fill
+                    priority
+                    className="object-cover object-top"
+                />
+            </div>
+
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
