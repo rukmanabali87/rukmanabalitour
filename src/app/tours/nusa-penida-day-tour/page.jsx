@@ -24,12 +24,12 @@ export const tourDetailAbout = [
     {
         icon: FiClock,
         name: 'Duration',
-        title: '12 Hours'
+        title: '12 Hours (Approx.)'
     },
     {
         icon: FiActivity,
         name: 'Type',
-        title: 'Tour, Adventure'
+        title: 'Tour'
     },
     {
         icon: FiUsers,
@@ -91,57 +91,57 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "06:00",
+        time: "06:00 AM",
         title: "Hotel Pick-up",
         desc: "Pick-up from Nusa Dua, Sanur, Kuta, Seminyak, or Ubud."
     },
     {
-        time: "07:30",
+        time: "07:30 AM",
         title: "Sanur Beach Harbour",
         desc: "Fast boat departure to Nusa Penida."
     },
     {
-        time: "08:15",
+        time: "08:15 AM",
         title: "Nusa Penida Arrival",
         desc: "Meet local guide and start the tour."
     },
     {
-        time: "08:30",
+        time: "08:30 AM",
         title: "Broken Beach (Pasih Uug)",
         desc: "Visit the famous natural rock arch."
     },
     {
-        time: "09:15",
+        time: "09:15 AM",
         title: "Angel’s Billabong",
         desc: "Explore the natural infinity pool."
     },
     {
-        time: "10:30",
+        time: "10:30 AM",
         title: "Kelingking Beach",
         desc: "Photo stop and optional short trek."
     },
     {
-        time: "12:00",
+        time: "12:00 PM",
         title: "Lunch Break",
         desc: "Lunch at a local restaurant (Indonesian food)."
     },
     {
-        time: "13:30",
+        time: "01:30 PM",
         title: "Crystal Bay",
         desc: "Relax, swim, or enjoy the beach."
     },
     {
-        time: "15:30",
+        time: "03:30 PM",
         title: "Nusa Penida Port",
         desc: "Transfer back to the port."
     },
     {
-        time: "16:30",
+        time: "04:30 PM",
         title: "Fast Boat to Sanur",
         desc: "Return trip to Sanur."
     },
     {
-        time: "17:30",
+        time: "05:30 PM",
         title: "Hotel Drop-off",
         desc: "Drop-off at your hotel. Tour ends."
     }
@@ -149,7 +149,7 @@ export const itineraryData = [
 
 export const inclusionsData = {
     included: [
-        "Private Car & Driver",
+        "Private Air-Conditioned Car & Driver",
         "English-Speaking Local Guide",
         "Lunch (Indonesian Food)",
         "Return Fast Boat Ticket",
@@ -161,6 +161,14 @@ export const inclusionsData = {
 };
 
 export default function NusaPenidaDayTour(){
+
+    const productData = {
+        title: 'Nusa Penida Day Tour',
+        place: 'Klungkung, Bali',
+        desc1: 'Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.',
+        desc2: 'This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.',
+        desc3: 'The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.',
+    };
 
     const images = [
         {src:'/images/tours/nusa-penida-day-tour/1.webp', alt:'Kelingking Beach'},
@@ -186,7 +194,7 @@ export default function NusaPenidaDayTour(){
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">Nusa Penida Day Tour</h3>
+                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">{productData.title}</h3>
                 </div>
             </div>
             
@@ -194,7 +202,7 @@ export default function NusaPenidaDayTour(){
                 <ul className="tracking-[0.5px] mb-0 inline-block">
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Tours</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Nusa Penida Day Tour</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">{productData.title}</li>
                 </ul>
             </div>
         </section>
@@ -204,8 +212,8 @@ export default function NusaPenidaDayTour(){
                     <div className="lg:col-span-8 md:col-span-7">
                         <TourImageOne images={images}/>
 
-                        <h5 className="text-2xl font-semibold mt-5">Nusa Penida Day Tour</h5>
-                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>Klungkung, Bali</p>
+                        <h5 className="text-2xl font-semibold mt-5">{productData.title}</h5>
+                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>{productData.place}</p>
 
                         <ul className="list-none">
                             {tourDetailAbout.map((item,index)=>{
@@ -227,13 +235,13 @@ export default function NusaPenidaDayTour(){
                             <h5 className="text-lg font-semibold">Tour Descriptions:</h5>
 
                             <p className="text-slate-400 mt-6">
-                                Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.
+                                {productData.desc1}
                             </p>
                             <p className="text-slate-400 mt-3">
-                                This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.    
+                                {productData.desc2}
                             </p>
                             <p className="text-slate-400 mt-3">
-                                The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.
+                                {productData.desc3}
                             </p>
                         </div>
 

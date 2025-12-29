@@ -23,7 +23,7 @@ export const tourDetailAbout = [
     {
         icon: FiClock,
         name: 'Duration',
-        title: '6 Hours'
+        title: '6 Hours (Approx.)'
     },
     {
         icon: FiActivity,
@@ -95,42 +95,42 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "14:00",
+        time: "02:00 PM",
         title: "Hotel Pick-up",
         desc: "Pick-up from your hotel in selected areas."
     },
     {
-        time: "14:30",
+        time: "02:30 PM",
         title: "Depart to Taman Ayun Temple",
         desc: "Drive to the royal temple of the former Mengwi Kingdom."
     },
     {
-        time: "15:15",
+        time: "03:15 PM",
         title: "Taman Ayun Temple",
         desc: "Explore the UNESCO World Heritage temple and its beautiful gardens."
     },
     {
-        time: "16:00",
+        time: "04:00 PM",
         title: "Depart to Tanah Lot Temple",
         desc: "Continue the journey toward Bali’s iconic sea temple."
     },
     {
-        time: "16:45",
+        time: "04:45 PM",
         title: "Tanah Lot Temple",
         desc: "Arrive at Tanah Lot and explore the surrounding area."
     },
     {
-        time: "17:30",
+        time: "05:30 PM",
         title: "Sunset at Tanah Lot",
         desc: "Enjoy a spectacular sunset overlooking the Indian Ocean."
     },
     {
-        time: "18:15",
+        time: "06:15 PM",
         title: "Return to Hotel",
         desc: "Depart back to your hotel after sunset."
     },
     {
-        time: "20:00",
+        time: "08:00 PM",
         title: "Hotel Drop-off",
         desc: "Drop-off at your hotel. Tour ends."
     }
@@ -138,7 +138,7 @@ export const itineraryData = [
 
 export const inclusionsData = {
     included: [
-        "Private Car & Driver",
+        "Private Air-Conditioned Car & Driver",
         "English-Speaking Local Guide",
         "All entrance fees (optional)",
         "Insurance",
@@ -151,10 +151,17 @@ export const inclusionsData = {
 
 export default function TanahLotSunsetTour(){
 
+    const productData = {
+        title: 'Tanah Lot Sunset Tour',
+        place: 'Tabanan, Bali',
+        desc1: 'Experience the beauty of Bali’s culture and coastline on the Tanah Lot Sunset Tour, a perfect half-day journey featuring two of the island’s most iconic temples. The tour begins with a visit to Taman Ayun Temple, a UNESCO-listed heritage site from the former Mengwi Kingdom. Known for its classic Balinese architecture, peaceful water moat, and beautifully arranged gardens, this royal temple offers a serene introduction to Bali’s spiritual and cultural traditions.',
+        desc2: 'The highlight of the tour is Tanah Lot Temple, one of Bali’s most famous sunset spots. Perched on a dramatic offshore rock formation overlooking the Indian Ocean, Tanah Lot provides breathtaking ocean views and unforgettable sunset scenery. Stroll around the temple complex, explore the surrounding coastal area, and capture stunning photos as the sky transforms into golden and orange hues. The Tanah Lot Sunset Tour is an ideal choice for travelers seeking cultural exploration combined with Bali’s most spectacular sunset experience.',
+    };
+
     const images = [
         {src:'/images/tours/tanah-lot-sunset-tour/1.webp', alt:'Tanah Lot Temple with Sunset'},
         {src:'/images/tours/tanah-lot-sunset-tour/2.webp', alt:'Tanah Lot Temple Viewpoint'},
-        {src:'/images/tours/tanah-lot-sunset-tour/3.jpg', alt:'Tanah Lot Temple Pathway'},
+        {src:'/images/tours/tanah-lot-sunset-tour/3.jpg', alt:'Taman Ayun Temple Garden'},
         {src:'/images/tours/tanah-lot-sunset-tour/4.jpg', alt:'Taman Ayun Temple'},
     ];
 
@@ -175,7 +182,7 @@ export default function TanahLotSunsetTour(){
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">Tanah Lot Sunset Tour</h3>
+                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">{productData.title}</h3>
                 </div>
             </div>
             
@@ -183,7 +190,7 @@ export default function TanahLotSunsetTour(){
                 <ul className="tracking-[0.5px] mb-0 inline-block">
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Tours</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Tanah Lot Sunset Tour</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">{productData.title}</li>
                 </ul>
             </div>
         </section>
@@ -193,8 +200,8 @@ export default function TanahLotSunsetTour(){
                     <div className="lg:col-span-8 md:col-span-7">
                         <TourImageOne images={images}/>
 
-                        <h5 className="text-2xl font-semibold mt-5">Nusa Penida Day Tour</h5>
-                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>Klungkung, Bali</p>
+                        <h5 className="text-2xl font-semibold mt-5">{productData.title}</h5>
+                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>{productData.place}</p>
 
                         <ul className="list-none">
                             {tourDetailAbout.map((item,index)=>{
@@ -216,10 +223,10 @@ export default function TanahLotSunsetTour(){
                             <h5 className="text-lg font-semibold">Tour Descriptions:</h5>
 
                             <p className="text-slate-400 mt-6">
-                                Experience the beauty of Bali’s culture and coastline on the Tanah Lot Sunset Tour, a perfect half-day journey featuring two of the island’s most iconic temples. The tour begins with a visit to Taman Ayun Temple, a UNESCO-listed heritage site from the former Mengwi Kingdom. Known for its classic Balinese architecture, peaceful water moat, and beautifully arranged gardens, this royal temple offers a serene introduction to Bali’s spiritual and cultural traditions.
+                                {productData.desc1}
                             </p>
                             <p className="text-slate-400 mt-3">
-                                The highlight of the tour is Tanah Lot Temple, one of Bali’s most famous sunset spots. Perched on a dramatic offshore rock formation overlooking the Indian Ocean, Tanah Lot provides breathtaking ocean views and unforgettable sunset scenery. Stroll around the temple complex, explore the surrounding coastal area, and capture stunning photos as the sky transforms into golden and orange hues. The Tanah Lot Sunset Tour is an ideal choice for travelers seeking cultural exploration combined with Bali’s most spectacular sunset experience.    
+                                {productData.desc2}
                             </p>
                         </div>
 

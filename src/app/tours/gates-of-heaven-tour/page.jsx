@@ -8,9 +8,10 @@ import DetailSidebar from "@/app/components/detail-sidebar";
 import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
-import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers, FiCamera } from "react-icons/fi";
-import { FaCar, FaLandmark, FaCameraRetro } from "react-icons/fa";
+import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
+import { FaMapMarkedAlt, FaCar} from "react-icons/fa";
 import { PiIslandFill } from "react-icons/pi";
+import { MdTempleHindu } from "react-icons/md";
 
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
@@ -19,11 +20,12 @@ import TourItinerary from "@/app/components/tour-itinerary";
 import TourInclusions from "@/app/components/tour-inclusions";
 import Client from "@/app/components/client";
 
+
 export const tourDetailAbout = [
     {
         icon: FiClock,
         name: 'Duration',
-        title: '6 Hours'
+        title: '8 Hours (Approx.)'
     },
     {
         icon: FiActivity,
@@ -43,7 +45,7 @@ export const tourDetailAbout = [
     {
         icon: FiDollarSign,
         name: 'Start Price',
-        title: 'From IDR 327.000'
+        title: 'From IDR 601.000'
     },
 ];
 
@@ -77,60 +79,55 @@ export const highlightsData = [
         desc: "Comfortable travel with a professional local driver.",
     },
     {
-        icon: FaLandmark,
-        title: "Cultural Heritage Site",
-        desc: "Visit Taman Ayun Temple, a UNESCO World Heritage Site.",
+        icon: MdTempleHindu,
+        title: "Lempuyang Gates of Heaven",
+        desc: "Iconic temple gate with Mount Agung views.",
     },
     {
-        icon: PiIslandFill,
-        title: "Sunset at Tanah Lot",
-        desc: "Witness a spectacular sunset at Bali’s iconic sea temple.",
-    },
-    {
-        icon: FaCameraRetro,
-        title: "Ocean View Scenery",
-        desc: "Enjoy stunning coastal views and photo opportunities.",
+        icon: FaMapMarkedAlt,
+        title: "Cultural & Scenic Journey",
+        desc: "A relaxing blend of culture, nature, and beautiful landscapes.",
     },
 ];
 
 export const itineraryData = [
     {
-        time: "14:00",
+        time: "06:00 AM",
         title: "Hotel Pick-up",
         desc: "Pick-up from your hotel in selected areas."
     },
     {
-        time: "14:30",
-        title: "Depart to Taman Ayun Temple",
-        desc: "Drive to the royal temple of the former Mengwi Kingdom."
+        time: "07:30 AM",
+        title: "Lempuyang Temple – Gates of Heaven",
+        desc: "Visit the iconic gate with Mount Agung views."
     },
     {
-        time: "15:15",
-        title: "Taman Ayun Temple",
-        desc: "Explore the UNESCO World Heritage temple and its beautiful gardens."
+        time: "09:00 AM",
+        title: "Depart to Tirta Gangga",
+        desc: "Continue the journey to East Bali."
     },
     {
-        time: "16:00",
-        title: "Depart to Tanah Lot Temple",
-        desc: "Continue the journey toward Bali’s iconic sea temple."
+        time: "09:30 AM",
+        title: "Tirta Gangga Water Palace",
+        desc: "Explore the royal water palace and gardens."
     },
     {
-        time: "16:45",
-        title: "Tanah Lot Temple",
-        desc: "Arrive at Tanah Lot and explore the surrounding area."
+        time: "10:30 AM",
+        title: "Depart to Tukad Cepung Waterfall",
+        desc: "Travel to a hidden natural spot."
     },
     {
-        time: "17:30",
-        title: "Sunset at Tanah Lot",
-        desc: "Enjoy a spectacular sunset overlooking the Indian Ocean."
+        time: "11:30 AM",
+        title: "Tukad Cepung Waterfall",
+        desc: "Enjoy the unique waterfall inside a canyon."
     },
     {
-        time: "18:15",
+        time: "12:30 PM",
         title: "Return to Hotel",
-        desc: "Depart back to your hotel after sunset."
+        desc: "Start the return journey."
     },
     {
-        time: "20:00",
+        time: "02:00 PM",
         title: "Hotel Drop-off",
         desc: "Drop-off at your hotel. Tour ends."
     }
@@ -138,7 +135,7 @@ export const itineraryData = [
 
 export const inclusionsData = {
     included: [
-        "Private Car & Driver",
+        "Private Air-Conditioned Car & Driver",
         "English-Speaking Local Guide",
         "All entrance fees (optional)",
         "Insurance",
@@ -151,11 +148,19 @@ export const inclusionsData = {
 
 export default function TanahLotSunsetTour(){
 
+    const productData = {
+        title: 'Gates of Heaven Tour',
+        place: 'Karangasem, Bali',
+        desc1: 'Gates of Heaven Tour is one of the most popular Bali day tours, offering a perfect blend of iconic landmarks, cultural heritage, and natural beauty in East Bali. This full-day tour takes you to some of Bali’s most photogenic and meaningful destinations, ideal for travelers seeking stunning scenery and authentic experiences.',
+        desc2: 'The journey begins at Lempuyang Temple – The Gates of Heaven, famous for its breathtaking views of Mount Agung framed by the temple’s majestic gate. Continue to Tirta Gangga, the former royal water palace, where elegant fountains, stone carvings, and tranquil pools create a peaceful atmosphere surrounded by lush gardens.',
+        desc3: 'The tour concludes with a visit to Tukad Cepung Waterfall, a hidden gem tucked inside a cave-like canyon. Sunlight streaming through the rocks creates a magical scene, making it one of Bali’s most unique waterfalls. The Gates of Heaven Tour is perfect for couples, photographers, and nature lovers looking to explore the spiritual and scenic side of Bali in one unforgettable day.',
+    };
+
     const images = [
-        {src:'/images/tours/gates-of-heaven-tour/1.webp', alt:'Kelingking Beach'},
-        {src:'/images/tours/gates-of-heaven-tour/2.webp', alt:'Broken Beach'},
-        {src:'/images/tours/gates-of-heaven-tour/3.webp', alt:'Angel\'s Billabong'},
-        {src:'/images/tours/gates-of-heaven-tour/4.webp', alt:'Crystal Bay'},
+        {src:'/images/tours/gates-of-heaven-tour/1.webp', alt:'Gates of Heaven at Lempuyang Temple'},
+        {src:'/images/tours/gates-of-heaven-tour/2.webp', alt:'Lempuyan Temple'},
+        {src:'/images/tours/gates-of-heaven-tour/3.jpg', alt:'Tirta Ganga Water Palace'},
+        {src:'/images/tours/gates-of-heaven-tour/4.jpg', alt:'Tukad Cepung Waterfall'},
     ];
 
     return(
@@ -175,7 +180,7 @@ export default function TanahLotSunsetTour(){
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">Tanah Lot Sunset Tour</h3>
+                    <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">{productData.title}</h3>
                 </div>
             </div>
             
@@ -183,7 +188,7 @@ export default function TanahLotSunsetTour(){
                 <ul className="tracking-[0.5px] mb-0 inline-block">
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Tours</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Tanah Lot Sunset Tour</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">{productData.title}</li>
                 </ul>
             </div>
         </section>
@@ -193,8 +198,8 @@ export default function TanahLotSunsetTour(){
                     <div className="lg:col-span-8 md:col-span-7">
                         <TourImageOne images={images}/>
 
-                        <h5 className="text-2xl font-semibold mt-5">Nusa Penida Day Tour</h5>
-                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>Klungkung, Bali</p>
+                        <h5 className="text-2xl font-semibold mt-5">{productData.title}</h5>
+                        <p className="flex items-center text-slate-400 font-medium mt-2"><FiMapPin className="size-4 me-1"></FiMapPin>{productData.place}</p>
 
                         <ul className="list-none">
                             {tourDetailAbout.map((item,index)=>{
@@ -216,10 +221,13 @@ export default function TanahLotSunsetTour(){
                             <h5 className="text-lg font-semibold">Tour Descriptions:</h5>
 
                             <p className="text-slate-400 mt-6">
-                                Experience the beauty of Bali’s culture and coastline on the Tanah Lot Sunset Tour, a perfect half-day journey featuring two of the island’s most iconic temples. The tour begins with a visit to Taman Ayun Temple, a UNESCO-listed heritage site from the former Mengwi Kingdom. Known for its classic Balinese architecture, peaceful water moat, and beautifully arranged gardens, this royal temple offers a serene introduction to Bali’s spiritual and cultural traditions.
+                                {productData.desc1}
                             </p>
                             <p className="text-slate-400 mt-3">
-                                The highlight of the tour is Tanah Lot Temple, one of Bali’s most famous sunset spots. Perched on a dramatic offshore rock formation overlooking the Indian Ocean, Tanah Lot provides breathtaking ocean views and unforgettable sunset scenery. Stroll around the temple complex, explore the surrounding coastal area, and capture stunning photos as the sky transforms into golden and orange hues. The Tanah Lot Sunset Tour is an ideal choice for travelers seeking cultural exploration combined with Bali’s most spectacular sunset experience.    
+                                {productData.desc2}
+                            </p>
+                            <p className="text-slate-400 mt-3">
+                                {productData.desc3}
                             </p>
                         </div>
 
