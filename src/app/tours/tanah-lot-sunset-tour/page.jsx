@@ -10,7 +10,6 @@ import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers, FiCamera } from "react-icons/fi";
 import { FaCar, FaLandmark, FaCameraRetro } from "react-icons/fa";
-import { MdDirectionsBoat } from "react-icons/md";
 import { PiIslandFill } from "react-icons/pi";
 
 import TourImageOne from "@/app/components/tour-image-one";
@@ -153,10 +152,10 @@ export const inclusionsData = {
 export default function TanahLotSunsetTour(){
 
     const images = [
-        {src:'/images/tours/tanah-lot-sunset-tour/1.webp', alt:'Kelingking Beach'},
-        {src:'/images/tours/tanah-lot-sunset-tour/2.webp', alt:'Broken Beach'},
-        {src:'/images/tours/tanah-lot-sunset-tour/3.webp', alt:'Angel\'s Billabong'},
-        {src:'/images/tours/tanah-lot-sunset-tour/4.webp', alt:'Crystal Bay'},
+        {src:'/images/tours/tanah-lot-sunset-tour/1.webp', alt:'Tanah Lot Temple with Sunset'},
+        {src:'/images/tours/tanah-lot-sunset-tour/2.webp', alt:'Tanah Lot Temple Viewpoint'},
+        {src:'/images/tours/tanah-lot-sunset-tour/3.jpg', alt:'Tanah Lot Temple Pathway'},
+        {src:'/images/tours/tanah-lot-sunset-tour/4.jpg', alt:'Taman Ayun Temple'},
     ];
 
     return(
