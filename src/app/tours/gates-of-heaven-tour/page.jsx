@@ -10,7 +10,6 @@ import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
 import { FaMapMarkedAlt, FaCar} from "react-icons/fa";
-import { PiIslandFill } from "react-icons/pi";
 import { MdTempleHindu } from "react-icons/md";
 
 import TourImageOne from "@/app/components/tour-image-one";
