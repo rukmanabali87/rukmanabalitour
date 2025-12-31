@@ -9,7 +9,7 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
-import { FaMapMarkedAlt, FaCar} from "react-icons/fa";
+import { FaImage, FaUserCheck, FaUsers } from "react-icons/fa";
 import { MdTempleHindu } from "react-icons/md";
 
 import TourImageOne from "@/app/components/tour-image-one";
@@ -24,12 +24,12 @@ export const tourDetailAbout = [
     {
         icon: FiClock,
         name: 'Duration',
-        title: '8 Hours (Approx.)'
+        title: '6 Hours (Approx.)'
     },
     {
         icon: FiActivity,
         name: 'Type',
-        title: 'Tour'
+        title: 'Activity'
     },
     {
         icon: FiUsers,
@@ -44,28 +44,48 @@ export const tourDetailAbout = [
     {
         icon: FiDollarSign,
         name: 'Start Price',
-        title: 'From IDR 601.000'
+        title: 'From IDR 502.000'
     },
 ];
 
 export const faqData = [
     {
-        id:1,
-        title:'Is this tour private?',
-        desc:'Yes. You will have your own private car and driver for the entire day.'
+        id: 1,
+        title: "Is Ayung River Rafting suitable for beginners?",
+        desc: "Yes. Ayung River Rafting features fun and moderate rapids, making it suitable for beginners and first-time rafters."
     },
     {
-        id:2,
-        title:'Can I customize tour itinerary?',
-        desc:'Yes. The itinerary can be adjusted based on your preferences. Please discuss your requests with the operator in advance. Additional charges may apply.'
+        id: 2,
+        title: "Is this rafting tour safe?",
+        desc: "Yes. The tour uses safety-approved equipment and is led by professional, experienced river guides."
     },
     {
-        id:3,
-        title:'Is it suitable for children or elderly?',
-        desc:'Yes. All locations are easily accessible with minimal walking and no strenuous activities.'
+        id: 3,
+        title: "How long is the rafting experience?",
+        desc: "The rafting adventure lasts approximately 2 hours, depending on river conditions and group pace."
     },
     {
-        id:4,
+        id: 4,
+        title: "What should I wear and bring?",
+        desc: "We recommend wearing comfortable outdoor clothing, river sandals or shoes, and bringing a change of clothes. Sunscreen is also recommended."
+    },
+    {
+        id: 5,
+        title: "Is lunch included in the tour?",
+        desc: "Yes. An Indonesian buffet lunch is included after the rafting activity."
+    },
+    {
+        id: 6,
+        title: "Are hotel transfers included?",
+        desc: "Yes. Return hotel transfers are included from selected areas."
+    },
+    {
+        id: 7,
+        title: "Is Ayung River Rafting suitable for children?",
+        desc: "Yes. This activity is suitable for children aged 7 years and above, and all participants must be in good health."
+    },
+    {
+        id:8,
         title:'Is hotel pickup and drop-off available in all areas of Bali?',
         desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
     },
@@ -73,74 +93,84 @@ export const faqData = [
 
 export const highlightsData = [
     {
-        icon: FaCar,
-        title: "Private Car & Driver",
-        desc: "Comfortable travel with a professional local driver.",
+        icon: FiActivity,
+        title: "Exciting White Water Rafting",
+        desc: "Enjoy fun and moderate rapids along Bali’s longest river."
     },
     {
-        icon: MdTempleHindu,
-        title: "Lempuyang Gates of Heaven",
-        desc: "Iconic temple gate with Mount Agung views.",
+        icon: FaImage,
+        title: "Stunning Natural Scenery",
+        desc: "Paddle through lush rainforest, waterfalls, and scenic river views."
     },
     {
-        icon: FaMapMarkedAlt,
-        title: "Cultural & Scenic Journey",
-        desc: "A relaxing blend of culture, nature, and beautiful landscapes.",
+        icon: FaUserCheck,
+        title: "Professional Rafting Guides",
+        desc: "Experience a safe and enjoyable adventure with trained local guides."
+    },
+    {
+        icon: FaUsers,
+        title: "Suitable for All Levels",
+        desc: "Perfect for beginners, families, and adventure lovers."
     },
 ];
 
 export const itineraryData = [
     {
-        time: "06:00 AM",
+        time: "08:00 AM",
         title: "Hotel Pick-up",
-        desc: "Pick-up from your hotel in selected areas."
-    },
-    {
-        time: "07:30 AM",
-        title: "Lempuyang Temple – Gates of Heaven",
-        desc: "Visit the iconic gate with Mount Agung views."
+        desc: "Pick-up from your hotel by an English-speaking driver."
     },
     {
         time: "09:00 AM",
-        title: "Depart to Tirta Gangga",
-        desc: "Continue the journey to East Bali."
+        title: "Arrival",
+        desc: "Arrive at Ayung Dewata Rafting base camp."
+    },
+    {
+        time: "09:15 AM",
+        title: "Safety Briefing",
+        desc: "Safety briefing, gear fitting, and preparation before rafting."
     },
     {
         time: "09:30 AM",
-        title: "Tirta Gangga Water Palace",
-        desc: "Explore the royal water palace and gardens."
-    },
-    {
-        time: "10:30 AM",
-        title: "Depart to Tukad Cepung Waterfall",
-        desc: "Travel to a hidden natural spot."
+        title: "Rafting Adventure",
+        desc: "Start the Ayung River Rafting adventure for approximately 2 hours."
     },
     {
         time: "11:30 AM",
-        title: "Tukad Cepung Waterfall",
-        desc: "Enjoy the unique waterfall inside a canyon."
+        title: "Refresh & Shower",
+        desc: "Finish rafting, shower, and change clothes."
     },
     {
-        time: "12:30 PM",
-        title: "Return to Hotel",
-        desc: "Start the return journey."
+        time: "12:00 PM",
+        title: "Lunch",
+        desc: "Enjoy lunch at the rafting restaurant."
+    },
+    {
+        time: "01:00 PM",
+        title: "Return",
+        desc: "Depart from the rafting site."
     },
     {
         time: "02:00 PM",
-        title: "Hotel Drop-off",
-        desc: "Drop-off at your hotel. Tour ends."
-    }
+        title: "Drop-off",
+        desc: "Drop-off back at your hotel. Tour ends."
+    },
 ];
 
 export const inclusionsData = {
     included: [
         "Private Air-Conditioned Car & Driver",
         "English-Speaking Local Guide",
-        "All entrance fees (optional)",
+        "Return Hotel Transfer",
+        "Safety-Approved Rafting Equipment",
+        "Professional River Guide",
+        "Waterproof Bag",
+        "Shower, Towel & Locker Facilities",
+        "Changing Room & Toilet",
+        "Indonesian Buffet Lunch",
         "Insurance",
     ],
     excluded: [
-        "Meals Fee",
         "Personal Expenses",
     ]
 };
@@ -150,16 +180,15 @@ export default function AyungRiverRafting(){
     const productData = {
         title: 'Ayung River Rafting',
         place: 'Ubud, Bali',
-        desc1: 'Gates of Heaven Tour is one of the most popular Bali day tours, offering a perfect blend of iconic landmarks, cultural heritage, and natural beauty in East Bali. This full-day tour takes you to some of Bali’s most photogenic and meaningful destinations, ideal for travelers seeking stunning scenery and authentic experiences.',
-        desc2: 'The journey begins at Lempuyang Temple – The Gates of Heaven, famous for its breathtaking views of Mount Agung framed by the temple’s majestic gate. Continue to Tirta Gangga, the former royal water palace, where elegant fountains, stone carvings, and tranquil pools create a peaceful atmosphere surrounded by lush gardens.',
-        desc3: 'The tour concludes with a visit to Tukad Cepung Waterfall, a hidden gem tucked inside a cave-like canyon. Sunlight streaming through the rocks creates a magical scene, making it one of Bali’s most unique waterfalls. The Gates of Heaven Tour is perfect for couples, photographers, and nature lovers looking to explore the spiritual and scenic side of Bali in one unforgettable day.',
+        desc1: 'Ayung River Rafting is the perfect way to experience Bali’s natural beauty and adventure in one unforgettable trip. Paddle through fun and moderate rapids along Bali’s longest river, surrounded by lush rainforest, hidden waterfalls, and impressive stone carvings along the riverbanks. Located in Ubud, this rafting experience offers a scenic and exciting journey suitable for all adventure levels.',
+        desc2: 'The Ayung River Rafting tour is led by professional and friendly guides who ensure safety and enjoyment throughout the ride. Whether you are a first-time rafter or an experienced adventurer, this tour delivers a perfect blend of adrenaline, breathtaking scenery, and cultural charm, making it one of Bali’s most popular outdoor activities.',
     };
 
     const images = [
-        {src:'/images/tours/gates-of-heaven-tour/1.webp', alt:'Gates of Heaven at Lempuyang Temple'},
-        {src:'/images/tours/gates-of-heaven-tour/2.webp', alt:'Lempuyan Temple'},
-        {src:'/images/tours/gates-of-heaven-tour/3.jpg', alt:'Tirta Ganga Water Palace'},
-        {src:'/images/tours/gates-of-heaven-tour/4.jpg', alt:'Tukad Cepung Waterfall'},
+        {src:'/images/activities/ayung-river-rafting/1.webp', alt:'Ayung River Rafting People'},
+        {src:'/images/activities/ayung-river-rafting/2.webp', alt:'Ayung River Rafting Activity'},
+        {src:'/images/activities/ayung-river-rafting/3.webp', alt:'Ayung River Rafting People in Action'},
+        {src:'/images/activities/ayung-river-rafting/4.webp', alt:'Ayung River Rafting Group Photo'},
     ];
 
     return(
@@ -185,7 +214,7 @@ export default function AyungRiverRafting(){
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Tours</Link></li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Activities</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">{productData.title}</li>
                 </ul>
@@ -224,9 +253,6 @@ export default function AyungRiverRafting(){
                             </p>
                             <p className="text-slate-400 mt-3">
                                 {productData.desc2}
-                            </p>
-                            <p className="text-slate-400 mt-3">
-                                {productData.desc3}
                             </p>
                         </div>
 

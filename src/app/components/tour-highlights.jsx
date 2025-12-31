@@ -14,7 +14,7 @@ export default function TourHighlights({ items = [] }){
                         </span>
 
                         <div>
-                            <h6 className="font-extrabold text-lg transition-colors duration-300 group-hover:text-[#397A3D]">
+                            <h6 className="font-semibold text-lg transition-colors duration-300 group-hover:text-[#397A3D]">
                                 {item.title}
                             </h6>
                             <p className="text-gray-400">
