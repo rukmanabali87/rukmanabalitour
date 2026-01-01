@@ -9,8 +9,7 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
-import { FaMapMarkedAlt, FaCar} from "react-icons/fa";
-import { MdTempleHindu } from "react-icons/md";
+import { FaMapMarkedAlt, FaCheckCircle, FaMapPin } from "react-icons/fa";
 
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
@@ -24,12 +23,12 @@ export const tourDetailAbout = [
     {
         icon: FiClock,
         name: 'Duration',
-        title: '8 Hours (Approx.)'
+        title: '6 Hours (Approx.)'
     },
     {
         icon: FiActivity,
         name: 'Type',
-        title: 'Tour'
+        title: 'Activity'
     },
     {
         icon: FiUsers,
@@ -44,28 +43,43 @@ export const tourDetailAbout = [
     {
         icon: FiDollarSign,
         name: 'Start Price',
-        title: 'From IDR 601.000'
+        title: 'From IDR 685.000'
     },
 ];
 
 export const faqData = [
     {
-        id:1,
-        title:'Is this tour private?',
-        desc:'Yes. You will have your own private car and driver for the entire day.'
+        id: 1,
+        title: "Is this snorkeling tour suitable for beginners?",
+        desc: "Yes. Blue Lagoon snorkeling is beginner-friendly with calm waters and professional guides assisting you throughout the activity."
     },
     {
-        id:2,
-        title:'Can I customize tour itinerary?',
-        desc:'Yes. The itinerary can be adjusted based on your preferences. Please discuss your requests with the operator in advance. Additional charges may apply.'
+        id: 2,
+        title: "Do I need to know how to swim?",
+        desc: "Basic swimming skills are recommended, but life jackets are provided for extra safety and comfort."
     },
     {
-        id:3,
-        title:'Is it suitable for children or elderly?',
-        desc:'Yes. All locations are easily accessible with minimal walking and no strenuous activities.'
+        id: 3,
+        title: "What snorkeling spots will be visited?",
+        desc: "You will snorkel at two locations: Blue Lagoon Beach and Tanjung Jepun, each offering clear water and colorful marine life."
     },
     {
-        id:4,
+        id: 4,
+        title: "Is hotel pick-up and drop-off included?",
+        desc: "Yes. Hotel pick-up and drop-off are included from selected areas in Bali. Additional charges may apply for locations outside the coverage area."
+    },
+    {
+        id: 5,
+        title: "What should I bring for this tour?",
+        desc: "We recommend bringing swimwear, a change of clothes, sunscreen, and extra cash for personal expenses."
+    },
+    {
+        id: 6,
+        title: "Are underwater photos and videos included?",
+        desc: "Underwater photos and videos are available as an optional add-on and can be arranged on the spot."
+    },
+    {
+        id:7,
         title:'Is hotel pickup and drop-off available in all areas of Bali?',
         desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
     },
@@ -73,62 +87,62 @@ export const faqData = [
 
 export const highlightsData = [
     {
-        icon: FaCar,
-        title: "Private Car & Driver",
-        desc: "Comfortable travel with a professional local driver.",
-    },
-    {
-        icon: MdTempleHindu,
-        title: "Lempuyang Gates of Heaven",
-        desc: "Iconic temple gate with Mount Agung views.",
+        icon: FaMapPin,
+        title: "Top Snorkeling Spots",
+        desc: "Snorkel at Blue Lagoon Beach and Tanjung Jepun Beach."
     },
     {
         icon: FaMapMarkedAlt,
-        title: "Cultural & Scenic Journey",
-        desc: "A relaxing blend of culture, nature, and beautiful landscapes.",
+        title: "Clear Water & Marine Life",
+        desc: "Enjoy calm waters, coral reefs, and tropical fish."
     },
+    {
+        icon: FaCheckCircle,
+        title: "Comfortable Half-Day Tour",
+        desc: "Hotel transfer, equipment, and Indonesian lunch included."
+    }
 ];
 
 export const itineraryData = [
     {
-        time: "06:00 AM",
+        time: "08:00 AM",
         title: "Hotel Pick-up",
-        desc: "Pick-up from your hotel in selected areas."
-    },
-    {
-        time: "07:30 AM",
-        title: "Lempuyang Temple – Gates of Heaven",
-        desc: "Visit the iconic gate with Mount Agung views."
-    },
-    {
-        time: "09:00 AM",
-        title: "Depart to Tirta Gangga",
-        desc: "Continue the journey to East Bali."
+        desc: "Pick-up from your hotel or designated meeting point by a professional driver."
     },
     {
         time: "09:30 AM",
-        title: "Tirta Gangga Water Palace",
-        desc: "Explore the royal water palace and gardens."
+        title: "Arrival at Padang Bai",
+        desc: "Arrive at Padang Bai and head to the snorkeling meeting point."
     },
     {
-        time: "10:30 AM",
-        title: "Depart to Tukad Cepung Waterfall",
-        desc: "Travel to a hidden natural spot."
+        time: "09:45 AM",
+        title: "Registration & Briefing",
+        desc: "Registration process, safety briefing, and snorkeling equipment preparation."
     },
     {
-        time: "11:30 AM",
-        title: "Tukad Cepung Waterfall",
-        desc: "Enjoy the unique waterfall inside a canyon."
+        time: "10:00 AM",
+        title: "Blue Lagoon Snorkeling",
+        desc: "Enjoy snorkeling at Blue Lagoon Beach with clear water and colorful marine life."
     },
     {
-        time: "12:30 PM",
-        title: "Return to Hotel",
-        desc: "Start the return journey."
+        time: "11:00 AM",
+        title: "Tanjung Jepun Snorkeling",
+        desc: "Continue snorkeling at Tanjung Jepun, known for calm waters and coral reefs."
+    },
+    {
+        time: "12:00 PM",
+        title: "Lunch",
+        desc: "Enjoy a set-menu traditional Indonesian lunch at a local restaurant."
+    },
+    {
+        time: "01:00 PM",
+        title: "Return Transfer",
+        desc: "Depart from Padang Bai and return to your hotel."
     },
     {
         time: "02:00 PM",
         title: "Hotel Drop-off",
-        desc: "Drop-off at your hotel. Tour ends."
+        desc: "Estimated arrival back at your hotel. Tour ends."
     }
 ];
 
@@ -136,11 +150,16 @@ export const inclusionsData = {
     included: [
         "Private Air-Conditioned Car & Driver",
         "English-Speaking Local Guide",
-        "All entrance fees (optional)",
+        "2 snorkeling spots",
+        "Snorkeling gear",
+        "Mineral water",
+        "Shower & changing room",
+        "Set menu traditional lunch",
+        "Underwater photos & videos (add-on)",
         "Insurance",
     ],
     excluded: [
-        "Meals Fee",
+        "Swimwear",
         "Personal Expenses",
     ]
 };
@@ -150,16 +169,15 @@ export default function BlueLagoonSnorkeling(){
     const productData = {
         title: 'Blue Lagoon Snorkeling',
         place: 'Karangasem, Bali',
-        desc1: 'Gates of Heaven Tour is one of the most popular Bali day tours, offering a perfect blend of iconic landmarks, cultural heritage, and natural beauty in East Bali. This full-day tour takes you to some of Bali’s most photogenic and meaningful destinations, ideal for travelers seeking stunning scenery and authentic experiences.',
-        desc2: 'The journey begins at Lempuyang Temple – The Gates of Heaven, famous for its breathtaking views of Mount Agung framed by the temple’s majestic gate. Continue to Tirta Gangga, the former royal water palace, where elegant fountains, stone carvings, and tranquil pools create a peaceful atmosphere surrounded by lush gardens.',
-        desc3: 'The tour concludes with a visit to Tukad Cepung Waterfall, a hidden gem tucked inside a cave-like canyon. Sunlight streaming through the rocks creates a magical scene, making it one of Bali’s most unique waterfalls. The Gates of Heaven Tour is perfect for couples, photographers, and nature lovers looking to explore the spiritual and scenic side of Bali in one unforgettable day.',
+        desc1: 'Blue Lagoon Snorkeling offers a relaxing snorkeling experience at one of Bali’s most popular snorkeling destinations, located in Padang Bai. The tour visits two snorkeling spots, Blue Lagoon Beach and Tanjung Jepun Beach, known for their clear waters, healthy coral reefs, and diverse tropical fish. With calm sea conditions and full snorkeling equipment provided, this activity is suitable for beginners and participants of all experience levels.',
+        desc2: 'The Blue Lagoon Snorkeling tour includes hotel pick-up and drop-off from selected areas in Bali, professional assistance during the activity, and a traditional Indonesian lunch at Puri Rai Restaurant. Designed for comfort and convenience, this half-day tour allows guests to enjoy Bali’s marine life in a safe, well-organized, and enjoyable snorkeling experience.',
     };
 
     const images = [
-        {src:'/images/tours/gates-of-heaven-tour/1.webp', alt:'Gates of Heaven at Lempuyang Temple'},
-        {src:'/images/tours/gates-of-heaven-tour/2.webp', alt:'Lempuyan Temple'},
-        {src:'/images/tours/gates-of-heaven-tour/3.jpg', alt:'Tirta Ganga Water Palace'},
-        {src:'/images/tours/gates-of-heaven-tour/4.jpg', alt:'Tukad Cepung Waterfall'},
+        {src:'/images/activities/blue-lagoon-snorkeling/1.webp', alt:'Blue Lagoon Snorkeling'},
+        {src:'/images/activities/blue-lagoon-snorkeling/2.webp', alt:'Blue Lagoon Snorkeling'},
+        {src:'/images/activities/blue-lagoon-snorkeling/3.webp', alt:'Blue Lagoon Snorkeling'},
+        {src:'/images/activities/blue-lagoon-snorkeling/4.webp', alt:'Blue Lagoon Snorkeling'},
     ];
 
     return(
@@ -172,7 +190,7 @@ export default function BlueLagoonSnorkeling(){
                     alt={images[0].alt}
                     fill
                     priority
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                 />
             </div>
 
@@ -224,9 +242,6 @@ export default function BlueLagoonSnorkeling(){
                             </p>
                             <p className="text-slate-400 mt-3">
                                 {productData.desc2}
-                            </p>
-                            <p className="text-slate-400 mt-3">
-                                {productData.desc3}
                             </p>
                         </div>
 
