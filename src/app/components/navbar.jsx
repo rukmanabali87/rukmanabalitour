@@ -95,14 +95,14 @@ export default function classNavbar({navclass, navlight, manuclass}){
                             <Link href="/" onClick={()=>{ setManu('/'); setSubManu('/'); setToggle(false); }} className="sub-menu-item">Home</Link>
                         </li>
 
-                        <li className={`has-submenu parent-menu-item ${['/tours/nusa-penida-day-tour', '/tours/tanah-lot-sunset-tour', '/tours/gates-of-heaven-tour', '/tours/east-of-nusa-penida-day-tour', '/tours/bali-car-rental', '/tours/uluwatu-sunset-tour', '/tours/ubud-tanah-lot-tour', '/tours/bali-dolphin-tour', '/tours/bali-romantic-tour', '/tours/ubud-highlights-tour'].includes(manu) ? 'active' : ''}`}>
+                        <li className={`has-submenu parent-menu-item ${['/tours/nusa-penida-day-tour', '/tours/tanah-lot-sunset-tour', '/tours/gates-of-heaven-tour', '/tours/east-of-nusa-penida-day-tour', '/tours/bali-private-car-hire', '/tours/uluwatu-sunset-tour', '/tours/ubud-tanah-lot-tour', '/tours/bali-dolphin-tour', '/tours/bali-romantic-tour', '/tours/ubud-highlights-tour'].includes(manu) ? 'active' : ''}`}>
                             <Link href="" onClick={()=>setSubManu(subManu === '/tours-item' ? '' : '/tours-item')}>Tours</Link><span className="menu-arrow"></span>
                             <ul className={`submenu ${subManu === '/tours-item' ? 'open' : ''}`}>
                                 <li className={`${manu === '/tours/nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours/nusa-penida-day-tour" className="sub-menu-item">Nusa Penida Day Tour</Link></li>
                                 <li className={`${manu === '/tours/tanah-lot-sunset-tour' ? 'active' : ''}`}><Link href="/tours/tanah-lot-sunset-tour" className="sub-menu-item">Tanah Lot Sunset Tour</Link></li>
                                 <li className={`${manu === '/tours/gates-of-heaven-tour' ? 'active' : ''}`}><Link href="/tours/gates-of-heaven-tour" className="sub-menu-item">Gates of Heaven Tour</Link></li>
                                 <li className={`${manu === '/tours/east-of-nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours/east-of-nusa-penida-day-tour" className="sub-menu-item">East of Nusa Penida Day Tour</Link></li>
-                                <li className={`${manu === '/tours/bali-car-rental' ? 'active' : ''}`}><Link href="/tours/bali-car-rental" className="sub-menu-item">Bali Car Rental</Link></li>
+                                <li className={`${manu === '/tours/bali-private-car-hire' ? 'active' : ''}`}><Link href="/tours/bali-private-car-hire" className="sub-menu-item">Bali Private Car Hire</Link></li>
                                 <li className={`${manu === '/tours/uluwatu-sunset-tour' ? 'active' : ''}`}><Link href="/tours/uluwatu-sunset-tour" className="sub-menu-item">Uluwatu Sunset Tour</Link></li>
                                 <li className={`${manu === '/tours/ubud-tanah-lot-tour' ? 'active' : ''}`}><Link href="/tours/ubud-tanah-lot-tour" className="sub-menu-item">Ubud Tanah Lot Tour</Link></li>
                                 <li className={`${manu === '/tours/bali-dolphin-tour' ? 'active' : ''}`}><Link href="/tours/bali-dolphin-tour" className="sub-menu-item">Bali Dolphin Tour</Link></li>

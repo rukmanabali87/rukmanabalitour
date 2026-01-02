@@ -9,8 +9,7 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
-import { FaMapPin, FaCameraRetro } from "react-icons/fa";
-import { FaPersonWalkingLuggage } from "react-icons/fa6";
+import { FaMapMarkedAlt, FaUserCheck, FaCarSide } from "react-icons/fa";
 
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
@@ -24,7 +23,7 @@ export const tourDetailAbout = [
     {
         icon: FiClock,
         name: 'Duration',
-        title: '12 Hours (Approx.)'
+        title: 'Hourly Charter'
     },
     {
         icon: FiActivity,
@@ -34,7 +33,7 @@ export const tourDetailAbout = [
     {
         icon: FiUsers,
         name: 'Group Size',
-        title: '15 Peoples'
+        title: '50 Peoples'
     },
     {
         icon: FiGlobe,
@@ -44,38 +43,33 @@ export const tourDetailAbout = [
     {
         icon: FiDollarSign,
         name: 'Start Price',
-        title: 'From IDR 1.281.000'
+        title: 'From IDR 257.000'
     },
 ];
 
 export const faqData = [
     {
         id: 1,
-        title: "Is this a full-day tour?",
-        desc: "Yes, this is a full-day tour starting early morning and returning to your hotel in the late afternoon."
+        title: "What is Bali Private Car Hire?",
+        desc: "A flexible service that lets you customize your itinerary and travel at your own pace with a private vehicle and driver."
     },
     {
         id: 2,
-        title: "Is lunch included in the tour?",
-        desc: "Yes, an Indonesian lunch at a local restaurant is included."
+        title: "Which vehicles are available?",
+        desc: "Choose from City Cars, MPVs, Family or Luxury Minivans, and Premium Minibuses depending on your group size and comfort preference."
     },
     {
         id: 3,
-        title: "Is this tour suitable for children or elderly?",
-        desc: "Yes, but some locations involve stairs and uneven paths, so basic mobility is recommended."
+        title: "Is the route fixed or customizable?",
+        desc: "The route is fully customizable. You decide which attractions to visit, the order, and how long to stay at each location."
     },
     {
         id: 4,
-        title: "What should I bring for the tour?",
-        desc: "Comfortable shoes, sunscreen, hat, camera, and personal essentials are recommended."
+        title: "Can I hire the car for a few hours or a full day?",
+        desc: "Yes, the service is available hourly or for a full day, with an experienced driver included for a smooth journey."
     },
     {
-        id: 5,
-        title: "Can I customize the itinerary?",
-        desc: "Minor adjustments may be possible depending on conditions and should be discussed in advance."
-    },
-    {
-        id:6,
+        id:5,
         title:'Is hotel pickup and drop-off available in all areas of Bali?',
         desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
     },
@@ -83,87 +77,87 @@ export const faqData = [
 
 export const highlightsData = [
     {
-        icon: FaMapPin,
-        title: "Iconic East Nusa Penida",
-        desc: "Atuh Beach, Diamond Beach & Tree House views."
+        icon: FaMapMarkedAlt,
+        title: "Flexible Custom Route",
+        desc: "Plan your own itinerary and travel at your preferred pace."
     },
     {
-        icon: FaPersonWalkingLuggage,
-        title: "Comfortable Day Trip",
-        desc: "Hotel pick-up, fast boat & local guide."
+        icon: FaCarSide,
+        title: "Vehicle Options for Every Group",
+        desc: "City car to premium minibus, tailored to your needs."
     },
     {
-        icon: FaCameraRetro,
-        title: "Photo-Worthy Landscapes",
-        desc: "Cliffs, beaches & ocean panoramas."
+        icon: FaUserCheck,
+        title: "Comfortable Private Service",
+        desc: "Air-conditioned vehicle with an experienced local driver."
     },
 ];
 
 export const itineraryData = [
     {
-        time: "06:30 AM",
-        title: "Hotel Pick-up",
-        desc: "Pick-up from your hotel and transfer to Sanur Beach Harbour."
+        time: "Pass By",
+        title: "Ubud",
+        desc: "Cultural villages, rice fields, and local life."
     },
     {
-        time: "07:30 AM",
-        title: "Fast Boat Check-in",
-        desc: "Check-in and boarding fast boat at Sanur Harbour."
+        time: "Pass By",
+        title: "Tanah Lot",
+        desc: "Iconic sea temple and coastal views."
     },
     {
-        time: "08:00 AM",
-        title: "Depart to Nusa Penida",
-        desc: "Fast boat departure from Sanur to Nusa Penida (approx. 45 minutes)."
+        time: "Pass By",
+        title: "Uluwatu",
+        desc: "Clifftop temple with ocean panoramas."
     },
     {
-        time: "08:45 AM",
-        title: "Arrive at Nusa Penida",
-        desc: "Arrive at Nusa Penida Island and meet your local guide."
+        time: "Pass By",
+        title: "Garuda Wisnu Kencana",
+        desc: "Cultural park with a massive iconic statue."
     },
     {
-        time: "09:15 AM",
-        title: "Atuh Beach Visit",
-        desc: "Enjoy scenic cliff views and a relaxing beach walk at Atuh Beach."
+        time: "Pass By",
+        title: "Ulun Danu Beratan Temple",
+        desc: "Floating temple and lake scenery."
     },
     {
-        time: "10:30 AM",
-        title: "Diamond Beach Exploration",
-        desc: "Explore Diamond Beach and capture stunning coastal photos."
+        time: "Pass By",
+        title: "Sacred Monkey Forest",
+        desc: "Jungle area with free-roaming monkeys."
     },
     {
-        time: "12:00 PM",
-        title: "Lunch Break",
-        desc: "Enjoy an included Indonesian lunch at a local restaurant."
+        time: "Pass By",
+        title: "Tirta Empul Temple",
+        desc: "Sacred water temple and holy springs."
     },
     {
-        time: "01:00 PM",
-        title: "Tree House Visit",
-        desc: "Photo stop at Tree House (Rumah Pohon Molenteng) with panoramic views."
+        time: "Pass By",
+        title: "Tegenungan Waterfall",
+        desc: "Tropical waterfall and river views."
     },
     {
-        time: "02:30 PM",
-        title: "Return to Harbour",
-        desc: "Depart for Nusa Penida Harbour."
+        time: "Pass By",
+        title: "Ubud Art Market",
+        desc: "Traditional crafts and local market."
     },
     {
-        time: "03:00 PM",
-        title: "Return Fast Boat Check-in",
-        desc: "Check-in and board fast boat back to Bali."
+        time: "Pass By",
+        title: "Tegalalang Rice Terrace",
+        desc: "Iconic layered rice fields."
     },
     {
-        time: "03:30 PM",
-        title: "Depart to Bali",
-        desc: "Fast boat departure from Nusa Penida to Sanur."
+        time: "Pass By",
+        title: "Jatiluwih Green Land",
+        desc: "Wide rice terraces and highland views."
     },
     {
-        time: "04:15 PM",
-        title: "Arrive in Sanur",
-        desc: "Arrive at Sanur Harbour and transfer back to hotel."
+        time: "Pass By",
+        title: "Lempuyang Temple",
+        desc: "Gate of Heaven and Mount Agung views."
     },
     {
-        time: "05:00 PM",
-        title: "Hotel Drop-off",
-        desc: "Arrive at your hotel and end of tour."
+        time: "Pass By",
+        title: "Tirta Gangga",
+        desc: "Royal water palace and gardens."
     }
 ];
 
@@ -171,32 +165,32 @@ export const inclusionsData = {
     included: [
         "Private Air-Conditioned Car & Driver",
         "English-Speaking Local Guide",
-        "Hotel pick-up & drop-off in Bali",
-        "Return fast boat ticket",
-        "Indonesian lunch",
-        "All entrance tickets",
+        "Fully customizable route",
+        "Mineral water bottles",
+        "Petrol / fuel",
         "Insurance",
     ],
     excluded: [
-        "Personal Expenses",
+        "Entrance tickets to attractions",
+        "Meals and personal expenses",
     ]
 };
 
 export default function TanahLotSunsetTour(){
 
     const productData = {
-        title: 'East of Nusa Penida Day Tour',
-        place: 'Klungkung, Bali',
-        desc1: 'The East of Nusa Penida Day Tour is a perfect choice for travelers who want to explore the most scenic and unspoiled eastern side of Nusa Penida Island. This full-day tour starts with a convenient hotel pick-up in Bali, followed by a fast boat ride from Sanur to Nusa Penida. Accompanied by a local guide, you will discover dramatic coastal cliffs, turquoise waters, and breathtaking viewpoints that make East Nusa Penida one of Bali’s most photogenic destinations.',
-        desc2: 'During this East Nusa Penida tour, you will visit iconic spots such as Atuh Beach and Diamond Beach, famous for their white sand, crystal-clear ocean, and stunning cliffside panoramas. These locations are ideal for sightseeing, short beach walks, and capturing memorable photos. A lunch break at a local restaurant is available (optional), allowing you to relax and enjoy the island atmosphere before continuing your journey.',
-        desc3: 'The highlight of the East of Nusa Penida Day Tour is a visit to the famous Tree House (Rumah Pohon Molenteng), offering panoramic views over the ocean and rugged cliffs—one of the most Instagrammable spots on the island. After a full day exploring the best of East Nusa Penida, you will return to Bali by fast boat and be transferred back to your hotel, completing an unforgettable Nusa Penida day trip experience.',
+        title: 'Bali Private Car Hire',
+        place: 'Bali',
+        desc1: 'Bali Private Car Hire is a flexible and comfortable transportation service designed to suit different travel styles, group sizes, and itineraries. Guests can choose from a wide range of vehicles, including City Cars for solo travelers or couples, Standard MPVs for small groups, Family Minivans for added space, Luxury Minivans for premium comfort, and Premium Minibuses for larger groups. Each vehicle is well-maintained and air-conditioned, ensuring a smooth and relaxing journey while exploring Bali.',
+        desc2: 'One of the main advantages of this Bali Private Car Hire service is its fully customizable route. Travelers have complete freedom to decide where to go, how long to stay at each destination, and which attractions to include. Whether passing through cultural hubs like Ubud, iconic landmarks such as Tanah Lot and Uluwatu, or scenic highland areas like Tegalalang and Jatiluwih, the itinerary can be tailored to match personal interests, travel pace, and time preferences.',
+        desc3: 'With flexible hourly options and an experienced local driver, Bali Private Car Hire offers a convenient and adaptable way to explore the island. Guests can enjoy views of temples, rice terraces, waterfalls, lakes, and cultural sites without being tied to a fixed schedule. This private car charter is ideal for travelers seeking comfort, privacy, and full control over their Bali journey.',
     };
 
     const images = [
-        {src:'/images/tours/east-of-nusa-penida-day-tour/1.jpg', alt:'Tree House at East of Nusa Penida'},
-        {src:'/images/tours/east-of-nusa-penida-day-tour/2.jpg', alt:'Diamond Beach Viewpoint'},
-        {src:'/images/tours/east-of-nusa-penida-day-tour/3.jpg', alt:'Atuh Beach Landscape'},
-        {src:'/images/tours/east-of-nusa-penida-day-tour/4.jpg', alt:'Sanur Harbour'},
+        {src:'/images/tours/bali-private-car-hire/1.jpg', alt:'Toyota Alphard'},
+        {src:'/images/tours/bali-private-car-hire/2.jpg', alt:'Toyota Avanza'},
+        {src:'/images/tours/bali-private-car-hire/3.jpg', alt:'Toyota Innova'},
+        {src:'/images/tours/bali-private-car-hire/4.jpg', alt:'Agya Car'},
     ];
 
     return(
