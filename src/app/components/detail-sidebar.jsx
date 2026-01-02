@@ -46,7 +46,7 @@ export default function DetailSidebar(){
                 </div>
 
                 <div className="mt-4">
-                    <button className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] text-white rounded-md w-full">Check Availability</button>
+                    <button className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] hover:bg-emerald-800 text-white rounded-md w-full">Check Availability</button>
                 </div>
             </div>
         </div>
