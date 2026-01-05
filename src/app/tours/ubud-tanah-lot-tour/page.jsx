@@ -164,7 +164,7 @@ export default function TanahLotSunsetTour(){
     };
 
     const images = [
-        {src:'/images/tours/ubud-tanah-lot-tour/1.jpg', alt:'Tanag Lot Temple'},
+        {src:'/images/tours/ubud-tanah-lot-tour/1.jpg', alt:'Tanah Lot Temple'},
         {src:'/images/tours/ubud-tanah-lot-tour/2.jpg', alt:'Tegenungan Waterfall'},
         {src:'/images/tours/ubud-tanah-lot-tour/3.jpg', alt:'Tegalalang Rice Terrace'},
         {src:'/images/tours/ubud-tanah-lot-tour/4.jpg', alt:'Ubud Traditional Art Market'},
