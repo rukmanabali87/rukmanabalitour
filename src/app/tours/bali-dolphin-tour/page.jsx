@@ -9,9 +9,8 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
-import { PiSunHorizonFill, PiSunHorizonDuotone } from "react-icons/pi";
+import { PiSunHorizonDuotone } from "react-icons/pi";
 import { FaImages } from "react-icons/fa";
-import { MdTempleHindu } from "react-icons/md";
 import { GiWaterfall } from "react-icons/gi";
 
 import TourImageOne from "@/app/components/tour-image-one";
