@@ -9,7 +9,6 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
-import { PiBankDuotone } from "react-icons/pi";
 import { FaMotorcycle, FaWater, FaLeaf, FaCarSide } from "react-icons/fa";
 
 import TourImageOne from "@/app/components/tour-image-one";
