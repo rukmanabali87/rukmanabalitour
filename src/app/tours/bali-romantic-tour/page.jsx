@@ -143,7 +143,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function TanahLotSunsetTour(){
+export default function BaliRomanticTour(){
 
     const productData = {
         title: 'Bali Romantic Tour',

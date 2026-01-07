@@ -153,7 +153,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function TanahLotSunsetTour(){
+export default function UbudTanahLotTour(){
 
     const productData = {
         title: 'Ubud Tanah Lot Tour',
@@ -180,7 +180,7 @@ export default function TanahLotSunsetTour(){
                     alt={images[0].alt}
                     fill
                     priority
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                 />
             </div>
 

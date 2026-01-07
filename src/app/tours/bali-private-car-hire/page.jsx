@@ -176,7 +176,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function TanahLotSunsetTour(){
+export default function BaliPrivateCarHire(){
 
     const productData = {
         title: 'Bali Private Car Hire',

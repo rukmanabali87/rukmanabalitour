@@ -9,9 +9,8 @@ import Footer from "@/app/components/footer";
 import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
-import { PiSunHorizonDuotone, PiBankDuotone } from "react-icons/pi";
-import { FaWater, FaFeather, FaImages } from "react-icons/fa";
-import { GiSeaCliff } from "react-icons/gi";
+import { PiBankDuotone } from "react-icons/pi";
+import { FaFeather, FaImages } from "react-icons/fa";
 
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
@@ -152,7 +151,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function TanahLotSunsetTour(){
+export default function UbudHighlightsTour(){
 
     const productData = {
         title: 'Ubud Highlights Tour',

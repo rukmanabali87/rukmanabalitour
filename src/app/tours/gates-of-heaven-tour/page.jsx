@@ -145,7 +145,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function TanahLotSunsetTour(){
+export default function GatesOfHeavenTour(){
 
     const productData = {
         title: 'Gates of Heaven Tour',

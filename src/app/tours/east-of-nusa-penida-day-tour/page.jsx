@@ -182,7 +182,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function TanahLotSunsetTour(){
+export default function EastOfNusaPenidaDayTour(){
 
     const productData = {
         title: 'East of Nusa Penida Day Tour',
