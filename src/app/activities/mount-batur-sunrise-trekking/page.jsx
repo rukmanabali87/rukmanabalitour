@@ -10,8 +10,6 @@ import Switcher from "@/app/components/switcher";
 
 import { FiActivity, FiClock, FiDollarSign, FiGlobe, FiMapPin, FiUsers } from "react-icons/fi";
 import { FaMountain, FaSun, FaCoffee } from "react-icons/fa";
-import { TbCliffJumping } from "react-icons/tb";
-import { GiWaterfall } from "react-icons/gi";
 
 import TourImageOne from "@/app/components/tour-image-one";
 import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
@@ -84,19 +82,16 @@ export const faqData = [
 
 export const highlightsData = [
     {
-        id: 1,
         icon: FaMountain,
         title: "Mount Batur Sunrise Trek",
         desc: "Hike an active volcano with a licensed local guide."
     },
     {
-        id: 2,
         icon: FaSun,
         title: "Sunrise & Breakfast at the Summit",
         desc: "Enjoy sunrise views with a light breakfast on top."
     },
     {
-        id: 3,
         icon: FaCoffee,
         title: "Coffee Plantation Visit",
         desc: "Taste local coffee or tea after the trek."
@@ -161,7 +156,7 @@ export const inclusionsData = {
     ]
 };
 
-export default function JumpingSlidingAlingAlingWaterfall(){
+export default function MountBaturSunriseTrekking(){
 
     const productData = {
         title: 'Mount Batur Sunrise Trekking',
