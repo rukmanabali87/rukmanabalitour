@@ -100,27 +100,27 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "09:00",
+        time: "09:00 AM",
         title: "Arrival & Registration",
         desc: "Check-in and prepare at Bintang Beach Club."
     },
     {
-        time: "09:30",
+        time: "09:30 AM",
         title: "Safety Briefing",
         desc: "Instruction by professional instructors."
     },
     {
-        time: "10:00",
+        time: "10:00 AM",
         title: "Sea Walker Experience",
         desc: "30-minute underwater walking session."
     },
     {
-        time: "11:00",
+        time: "11:00 AM",
         title: "Shower & Change",
         desc: "Use locker and shower facilities."
     },
     {
-        time: "12:30",
+        time: "12:30 PM",
         title: "Tour Ends / Return Transfer",
         desc: "Optional hotel transfer."
     },
@@ -151,10 +151,10 @@ export default function SeaWalkerBali(){
     };
 
     const images = [
-        {src:'/images/activities/sea-walker-bali/1.jpg', alt:'Sunrise in Mount Batur Bali'},
-        {src:'/images/activities/sea-walker-bali/2.jpg', alt:'Mount Batur Viewpoint Bali'},
-        {src:'/images/activities/sea-walker-bali/3.jpg', alt:'Hiking Mount Batur Bali'},
-        {src:'/images/activities/sea-walker-bali/4.jpg', alt:'Mount Batur in Top of the Mountain'},
+        {src:'/images/activities/sea-walker-bali/1.jpg', alt:'Sea Walker Bali Activity'},
+        {src:'/images/activities/sea-walker-bali/2.jpg', alt:'Underwater Sea Walking Bali'},
+        {src:'/images/activities/sea-walker-bali/3.jpg', alt:'Feeding Tropical Fish Bali'},
+        {src:'/images/activities/sea-walker-bali/4.jpg', alt:'Sea Walker Helmet Bali'},
     ];
 
     return(

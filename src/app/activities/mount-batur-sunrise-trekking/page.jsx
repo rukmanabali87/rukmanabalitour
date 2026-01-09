@@ -100,42 +100,42 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "01:00",
+        time: "01:00 AM",
         title: "Hotel Pick-up",
         desc: "Pick-up by private air-conditioned car."
     },
     {
-        time: "03:00",
+        time: "03:00 AM",
         title: "Arrival at Basecamp",
         desc: "Meet trekking guide and prepare."
     },
     {
-        time: "03:30",
+        time: "03:30 AM",
         title: "Start Trekking",
         desc: "Begin hiking Mount Batur."
     },
     {
-        time: "06:00",
+        time: "06:00 AM",
         title: "Summit & Sunrise",
         desc: "Watch sunrise and enjoy breakfast."
     },
     {
-        time: "07:00",
+        time: "07:00 AM",
         title: "Descend to Basecamp",
         desc: "Trek back down safely."
     },
     {
-        time: "09:00",
+        time: "09:00 AM",
         title: "Coffee Plantation Visit",
         desc: "Coffee or tea tasting."
     },
     {
-        time: "10:00",
+        time: "10:00 AM",
         title: "Return Transfer",
         desc: "Drive back to hotel."
     },
     {
-        time: "11:00",
+        time: "11:00 AM",
         title: "Arrive at Hotel",
         desc: "Tour ends."
     },

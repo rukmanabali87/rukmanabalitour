@@ -102,50 +102,50 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "08:00",
+        time: "08:00 AM",
         title: "Hotel Pick-up",
         desc: "Private hotel pick-up."
     },
     {
-        time: "11:00",
+        time: "11:00 AM",
         title: "Arrival at Aling-Aling",
         desc: "Meet local guide and prepare."
     },
     {
-        time: "11:15",
+        time: "11:15 AM",
         title: "Safety Briefing",
         desc: "Jumping and sliding instructions."
     },
     {
-        time: "11:30",
+        time: "11:30 AM",
         title: "Jumping & Sliding",
         desc: "Waterfall adventure and swimming."
     },
     {
-        time: "13:30",
+        time: "01:30 PM",
         title: "Change & Rest",
         desc: "Shower and change clothes."
     },
     {
-        time: "14:00",
+        time: "02:00 PM",
         title: "Lunch Break (Optional)",
         desc: "Lunch at local restaurant."
     },
     {
-        time: "15:00",
+        time: "03:00 PM",
         title: "Wanagiri Photo Stop",
         desc: "Twin lakes viewpoint."
     },
     {
-        time: "16:00",
+        time: "04:00 PM",
         title: "Return Transfer",
         desc: "Drive back to hotel."
     },
     {
-        time: "18:00",
+        time: "06:00 PM",
         title: "Arrive at Hotel",
         desc: "Tour ends."
-    }
+    },
 ];
 
 export const inclusionsData = {

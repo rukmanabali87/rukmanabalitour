@@ -110,52 +110,52 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "08:00",
+        time: "08:00 AM",
         title: "Hotel Pick-up",
         desc: "Private hotel pick-up with air-conditioned vehicle and English-speaking driver."
     },
     {
-        time: "10:00",
+        time: "10:00 AM",
         title: "Quad Bike Safety Briefing",
         desc: "Registration, safety briefing, and equipment preparation at the ATV basecamp."
     },
     {
-        time: "10:15",
+        time: "10:15 AM",
         title: "Quad Bike Adventure (Approx. 2 Hours)",
         desc: "Enjoy an exciting ATV ride through muddy tracks, rice fields, bamboo forest, and tropical jungle."
     },
     {
-        time: "12:15",
+        time: "12:15 PM",
         title: "Shower & Change",
         desc: "Time to clean up and change clothes after the quad bike experience."
     },
     {
-        time: "12:45",
+        time: "12:45 PM",
         title: "Transfer to Rafting Point",
         desc: "Continue to the Ayung River rafting starting point."
     },
     {
-        time: "13:00",
+        time: "01:00 PM",
         title: "Rafting Safety Briefing",
         desc: "Meet your professional rafting guide and receive safety instructions."
     },
     {
-        time: "13:15",
+        time: "01:15 PM",
         title: "Ayung River Rafting (Approx. 2 Hours)",
         desc: "White water rafting through rainforest, waterfalls, and scenic river gorges."
     },
     {
-        time: "15:15",
+        time: "03:15 PM",
         title: "Buffet Lunch",
         desc: "Enjoy an Indonesian buffet lunch with valley views."
     },
     {
-        time: "16:15",
+        time: "04:15 PM",
         title: "Return to Hotel",
         desc: "Private transfer back to your hotel."
     },
     {
-        time: "18:00",
+        time: "06:00 PM",
         title: "Arrive at Hotel",
         desc: "End of Bali Quad Bike and Rafting tour."
     },

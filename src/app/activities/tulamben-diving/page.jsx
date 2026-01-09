@@ -105,47 +105,47 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "08:00",
+        time: "08:00 AM",
         title: "Hotel Pick-up",
         desc: "Private hotel pick-up from Ubud or selected south Bali areas."
     },
     {
-        time: "10:30",
+        time: "10:30 AM",
         title: "Arrival at Tulamben & Registration",
         desc: "Arrival at dive center, registration, and equipment preparation."
     },
     {
-        time: "10:45",
+        time: "10:45 AM",
         title: "Dive Briefing",
         desc: "Safety briefing and dive instructions with professional guide."
     },
     {
-        time: "11:00",
+        time: "11:00 AM",
         title: "Dive Session 1 – USS Liberty Shipwreck (Approx. 30 Minutes)",
         desc: "Explore the famous World War II shipwreck covered with corals."
     },
     {
-        time: "11:45",
+        time: "11:45 AM",
         title: "Surface Interval",
         desc: "Short rest and preparation for the second dive."
     },
     {
-        time: "12:30",
+        time: "12:30 PM",
         title: "Dive Session 2 – Coral Garden (Approx. 30 Minutes)",
         desc: "Enjoy calm waters, coral formations, and marine life."
     },
     {
-        time: "13:15",
+        time: "01:15 PM",
         title: "Indonesian Lunch",
         desc: "Lunch at a local restaurant near the dive site."
     },
     {
-        time: "14:00",
+        time: "02:00 PM",
         title: "Return Transfer",
         desc: "Private transfer back to your hotel."
     },
     {
-        time: "16:00",
+        time: "04:00 PM",
         title: "Arrive at Hotel",
         desc: "End of Tulamben Diving tour."
     },

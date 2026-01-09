@@ -111,42 +111,42 @@ export const highlightsData = [
 
 export const itineraryData = [
     {
-        time: "09:00",
+        time: "09:00 AM",
         title: "Arrival & Registration",
         desc: "Arrive at Tanjung Benoa Beach, registration, and preparation."
     },
     {
-        time: "09:15",
+        time: "09:15 AM",
         title: "Safety Briefing",
         desc: "Receive safety instructions and equipment explanation for all activities."
     },
     {
-        time: "09:30",
+        time: "09:30 AM",
         title: "Parasailing Adventure",
         desc: "Enjoy 1 round of parasailing with beautiful ocean views."
     },
     {
-        time: "10:15",
+        time: "10:15 AM",
         title: "Jet Ski Ride",
         desc: "Experience an exciting 15-minute jet ski ride."
     },
     {
-        time: "10:45",
+        time: "10:45 AM",
         title: "Banana Boat Ride",
         desc: "Have fun on a 15-minute banana boat ride."
     },
     {
-        time: "11:15",
+        time: "11:15 AM",
         title: "Donut Boat Ride",
         desc: "Enjoy a thrilling 15-minute donut boat ride."
     },
     {
-        time: "12:00",
+        time: "12:00 PM",
         title: "Free Time & Change",
         desc: "Free time to shower, change clothes, and relax."
     },
     {
-        time: "13:00",
+        time: "01:00 PM",
         title: "Tour Ends",
         desc: "End of Bali Water Sports Package."
     },
