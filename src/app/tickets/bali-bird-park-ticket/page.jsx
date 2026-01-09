@@ -28,7 +28,7 @@ export const tourDetailAbout = [
     {
         icon: FiActivity,
         name: 'Type',
-        title: 'Activity'
+        title: 'Tickets'
     },
     {
         icon: FiUsers,
