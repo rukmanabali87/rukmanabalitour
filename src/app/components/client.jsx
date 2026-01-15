@@ -15,6 +15,7 @@ export default function Client(){
         mouseDrag: true,
         loop: true,
         rewind: true,
+        autoHeight: false,
         autoplay: true,
         autoplayButtonOutput: false,
         autoplayTimeout: 3000,

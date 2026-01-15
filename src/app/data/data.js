@@ -284,39 +284,39 @@ export const tourPackages = [
 export const ClientData = [
     {
         image:'/images/client/01.jpg',
-        desc:'" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. "',
+        desc:'"Good activity with the best taxi driver Yogik an handsome guy he help us and he try his best to make us a good activity !!!!!!!"',
         name:'Calvin Carlo',
-        possition:'Manager'
+        possition:'Traveler'
     },
     {
         image:'/images/client/02.jpg',
-        desc:'"The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century."',
+        desc:'"Everything was perfect and on time. No surprises and great value. Everything was as described. Picked up on time. Everyone very professional"',
         name:'Christa Smith',
-        possition:'Manager'
+        possition:'Traveler'
     },
     {
         image:'/images/client/03.jpg',
-        desc:'" One disadvantage of Lorum Ipsum is that in Latin certain letters appear more frequently than others. "',
+        desc:'"Should a fab day with Bawa he drove us all day and showed us the real Bali after a lovely snorkeling trip. Will keep his number and use again.Thanks so much "',
         name:'Jemina CLone',
-        possition:'Manager'
+        possition:'Traveler'
     },
     {
         image:'/images/client/04.jpg',
-        desc:'" Thus, Lorem Ipsum has only limited suitability as a visual filler for German texts. "',
+        desc:'"Good tours experience with yogik astra he was very smart explain about bali culture and always helpfull, i really high recommended him thank you yogik"',
         name:'Smith Vodka',
-        possition:'Manager'
+        possition:'Traveler'
     },
     {
         image:'/images/client/05.jpg',
-        desc:'" There is now an abundance of readable dummy texts. These are usually used when a text is required. "',
+        desc:'"We had Mr Merry as our driver, we had so much fun, he was very knowledgeable and helpful. He was friendly, enthusiastic and easy to talk to. We had a great day exploring Ubud!"',
         name:'Cristino Murfi',
-        possition:'Manager'
+        possition:'Traveler'
     },
     {
         image:'/images/client/06.jpg',
-        desc:'" According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero. "',
+        desc:'"John was a great driver. We felt safe, the whole time.. He gave us much informations about culture and traditions of Bali. Thanks for driving."',
         name:'Cristino Murfi',
-        possition:'Manager'
+        possition:'Traveler'
     },
 ]
 
