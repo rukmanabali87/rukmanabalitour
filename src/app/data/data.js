@@ -143,7 +143,7 @@ export const allPackages = [
     {
         id:2,
         image: '/images/activities/bali-quad-atv/1.webp', 
-        place: 'Ubud, Bali',
+        place: 'Gianyar, Bali',
         title: 'Bali Quad ATV',
         amount:'1.353.000',
         route: '/activities/bali-quad-atv',
@@ -159,7 +159,7 @@ export const allPackages = [
     {
         id:4,
         image: '/images/activities/ayung-river-rafting/1.webp',       
-        place: 'Ubud, Bali',
+        place: 'Gianyar, Bali',
         title: 'Ayung River Rafting',
         amount:'502.000',
         route: '/activities/ayung-river-rafting',

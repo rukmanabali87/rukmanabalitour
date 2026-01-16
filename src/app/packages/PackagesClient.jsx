@@ -34,7 +34,15 @@ export default function PackagesClient(){
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
-        <section className="relative table w-full items-center py-36 bg-[url('/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
+        <section className="relative w-full py-36 overflow-hidden">
+            <Image
+                src="/images/bg/9.jpg"
+                alt="Bali Tour Packages"
+                fill
+                priority
+                className="object-cover object-top"
+            />
+
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
@@ -67,7 +75,7 @@ export default function PackagesClient(){
 
                                 <div className="p-4">
                                     <p className="flex items-center text-slate-400 font-medium mb-2"><FiMapPin className="text-[#397A3D] size-4 me-1"></FiMapPin> {item.place}</p>
-                                    <Link href={`/tour-detail-one/${item.id}`} className="text-lg font-medium hover:text-[#397A3D] duration-500 ease-in-out">{item.title}</Link>
+                                    <Link href={item.route} className="text-lg font-medium hover:text-[#397A3D] duration-500 ease-in-out">{item.title}</Link>
 
                                     <div className="flex items-center mt-2">
                                         <span className="text-slate-400">Rating:</span>
