@@ -181,7 +181,7 @@ export default function BaliQuadBikeAndRafting(){
 
     const productData = {
         title: 'Bali Quad Bike and Rafting',
-        place: 'Ubud, Bali',
+        place: 'Gianyar, Bali',
         desc1: 'Bali Quad Bike and Rafting is the perfect one-day adventure for thrill seekers who want to experience Bali’s wild side without the hassle. Start your journey with a professionally guided quad bike (ATV) ride through muddy off-road tracks, lush rice fields, bamboo forests, and tropical jungle landscapes in Ubud. Suitable for beginners and experienced riders, this adventure also offers a tandem ATV option, making it ideal for couples who want to ride together while enjoying the excitement.',
         desc2: 'After your quad bike adventure, continue with an unforgettable Ayung River white water rafting experience. Paddle through gentle rapids surrounded by dense rainforest, dramatic river gorges, waterfalls, and ancient stone carvings that reflect Bali’s rich cultural heritage. Led by experienced rafting guides, this safe and fun activity is perfect for families, first-timers, and adventure lovers looking for a refreshing outdoor experience.',
         desc3: 'To complete your day, relax and recharge with a delicious Indonesian buffet lunch overlooking the scenic valley. With private round-trip hotel transfers included, you can enjoy both adventures comfortably and stress-free. This Bali Quad Bike and Rafting tour offers the ideal combination of adrenaline, natural beauty, and authentic Balinese atmosphere—all in one unforgettable day.',

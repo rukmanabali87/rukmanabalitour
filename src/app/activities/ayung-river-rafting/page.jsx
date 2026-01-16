@@ -178,7 +178,7 @@ export default function AyungRiverRafting(){
 
     const productData = {
         title: 'Ayung River Rafting',
-        place: 'Ubud, Bali',
+        place: 'Gianyar, Bali',
         desc1: 'Ayung River Rafting is the perfect way to experience Bali’s natural beauty and adventure in one unforgettable trip. Paddle through fun and moderate rapids along Bali’s longest river, surrounded by lush rainforest, hidden waterfalls, and impressive stone carvings along the riverbanks. Located in Ubud, this rafting experience offers a scenic and exciting journey suitable for all adventure levels.',
         desc2: 'The Ayung River Rafting tour is led by professional and friendly guides who ensure safety and enjoyment throughout the ride. Whether you are a first-time rafter or an experienced adventurer, this tour delivers a perfect blend of adrenaline, breathtaking scenery, and cultural charm, making it one of Bali’s most popular outdoor activities.',
     };

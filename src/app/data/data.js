@@ -48,9 +48,9 @@ export const packages = [
     {
         id:1,
         image:'/images/listing/1.jpg',
-        place:'Dubai',
-        title:'Cuba Sailing Adventure',
-        amount:'$ 58 / Day'
+        place:'Klungkung, Bali',
+        title:'Nusa Penida Day Tour',
+        amount:'From IDR 1.100.000'
     },
     {
         id:2,
@@ -131,7 +131,7 @@ export const packages = [
     },
 ]
 
-export const topTourPackages = [
+export const allPackages = [
     {
         id:1,
         image: '/images/tours/nusa-penida-day-tour/1.webp',        
@@ -145,7 +145,7 @@ export const topTourPackages = [
         image: '/images/activities/bali-quad-atv/1.webp', 
         place: 'Ubud, Bali',
         title: 'Bali Quad ATV',
-        amount:'1.100.000',
+        amount:'1.353.000',
         route: '/activities/bali-quad-atv',
     },
     {
@@ -153,7 +153,7 @@ export const topTourPackages = [
         image: '/images/activities/blue-lagoon-snorkeling/1.webp',
         place: 'Karangasem, Bali',
         title: 'Blue Lagoon Snorkeling',
-        amount:'1.100.000',
+        amount:'685.000',
         route: '/activities/blue-lagoon-snorkeling',
     },
     {
@@ -161,7 +161,7 @@ export const topTourPackages = [
         image: '/images/activities/ayung-river-rafting/1.webp',       
         place: 'Ubud, Bali',
         title: 'Ayung River Rafting',
-        amount:'1.100.000',
+        amount:'502.000',
         route: '/activities/ayung-river-rafting',
     },
     {
@@ -169,7 +169,7 @@ export const topTourPackages = [
         image: '/images/tours/gates-of-heaven-tour/1.webp',  
         place: 'Karangasem, Bali',
         title: 'Gates of Heaven Tour',
-        amount:'1.100.000',
+        amount:'601.000',
         route: '/tours/gates-of-heaven-tour',
     },
     {
@@ -177,8 +177,128 @@ export const topTourPackages = [
         image: '/images/tours/tanah-lot-sunset-tour/1.webp',
         place: 'Tabanan, Bali',
         title: 'Tanah Lot Sunset Tour',
-        amount:'1.100.000',
+        amount:'327.000',
         route: '/tours/tanah-lot-sunset-tour',
+    },
+    {
+        id:7,
+        image: '/images/tours/east-of-nusa-penida-day-tour/1.jpg',
+        place: 'Klungkung, Bali',
+        title: 'East of Nusa Penida Day Tour',
+        amount:'1.281.000',
+        route: '/tours/east-of-nusa-penida-day-tour',
+    },
+    {
+        id:8,
+        image: '/images/tours/bali-private-car-hire/1.jpg',
+        place: 'Bali',
+        title: 'Bali Private Car Hire',
+        amount:'257.000',
+        route: '/tours/bali-private-car-hire',
+    },
+    {
+        id:9,
+        image: '/images/tours/uluwatu-sunset-tour/1.jpg',
+        place: 'Badung, Bali',
+        title: 'Uluwatu Sunset Tour',
+        amount:'299.000',
+        route: '/tours/uluwatu-sunset-tour',
+    },
+    {
+        id:10,
+        image: '/images/tours/ubud-tanah-lot-tour/1.jpg',
+        place: 'Tabanan-Ubud, Bali',
+        title: 'Ubud Tanah Lot Tour',
+        amount:'377.000',
+        route: '/tours/ubud-tanah-lot-tour',
+    },
+    {
+        id:11,
+        image: '/images/tours/bali-dolphin-tour/1.jpg',
+        place: 'Buleleng, Bali',
+        title: 'Bali Dolphin Tour',
+        amount:'702.000',
+        route: '/tours/bali-dolphin-tour',
+    },
+    {
+        id:12,
+        image: '/images/tours/bali-romantic-tour/1.jpg',
+        place: 'Badung, Bali',
+        title: 'Bali Romantic Tour',
+        amount:'394.000',
+        route: '/tours/bali-romantic-tour',
+    },
+    {
+        id:13,
+        image: '/images/tours/ubud-highlights-tour/1.jpg',
+        place: 'Gianyar, Bali',
+        title: 'Ubud Highlights Tour',
+        amount:'411.000',
+        route: '/tours/ubud-highlights-tour',
+    },
+    {
+        id:14,
+        image: '/images/activities/bali-quad-bike-and-rafting/1.jpg',
+        place: 'Gianyar, Bali',
+        title: 'Bali Quad Bike and Rafting',
+        amount:'1.202.000',
+        route: '/activities/bali-quad-bike-and-rafting',
+    },
+    {
+        id:15,
+        image: '/images/activities/tulamben-diving/1.jpg',
+        place: 'Karangasem, Bali',
+        title: 'Tulamben Diving',
+        amount:'1.099.000',
+        route: '/activities/tulamben-diving',
+    },
+    {
+        id:16,
+        image: '/images/activities/bali-paintball/1.jpg',
+        place: 'Badung, Bali',
+        title: 'Bali Paintball',
+        amount:'670.000',
+        route: '/activities/bali-paintball',
+    },
+    {
+        id:17,
+        image: '/images/activities/bali-water-sports-package/1.jpg',
+        place: 'Badung, Bali',
+        title: 'Bali Water Sports Package',
+        amount:'859.000',
+        route: '/activities/bali-water-sports-package',
+    },
+    {
+        id:18,
+        image: '/images/activities/jumping-sliding-aling-aling-waterfall/1.jpg',
+        place: 'Buleleng, Bali',
+        title: 'Jumping & Sliding at Aling Aling Waterfall',
+        amount:'781.000',
+        route: '/activities/jumping-sliding-aling-aling-waterfall',
+    },
+    {
+        id:19,
+        image: '/images/activities/mount-batur-sunrise-trekking/1.jpg',
+        place: 'Bangli, Bali',
+        title: 'Mount Batur Sunrise Trekking',
+        amount:'361.000',
+        route: '/activities/mount-batur-sunrise-trekking',
+    },
+    {
+        id:20,
+        image: '/images/activities/sea-walker-bali/1.jpg',
+        place: 'Badung, Bali',
+        title: 'Sea Walker Bali',
+        amount:'585.000',
+        route: '/activities/sea-walker-bali',
+    },
+    {
+        id:21,
+        image: '/images/tickets/bali-bird-park-ticket/1.jpg',
+        place: 'Gianyar, Bali',
+        title: 'Bali Bird Park Ticket',
+        amount:'655.000',
+        route: '/tickets/bali-bird-park-ticket',
     },
 ]
 

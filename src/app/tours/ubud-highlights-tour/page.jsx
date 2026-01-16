@@ -77,7 +77,7 @@ export const faqData = [
 ];
 
 export const highlightsData = [
-     {
+    {
         icon: PiBankDuotone,
         title: "Cultural Heritage",
         desc: "Explore Ubud Palace and shop local crafts at Ubud Art Market."
@@ -155,7 +155,7 @@ export default function UbudHighlightsTour(){
 
     const productData = {
         title: 'Ubud Highlights Tour',
-        place: 'Ubud, Bali',
+        place: 'Gianyar, Bali',
         desc1: 'Ubud Highlights Tour is a private day tour designed to explore the cultural and natural treasures of Ubud at a relaxed pace. With a personal driver-guide and private vehicle, you can enjoy Ubud’s top attractions comfortably without joining a group tour.',
         desc2: 'This tour includes a visit to the Ubud Monkey Forest to see macaques in their natural habitat, followed by scenic stops at Tegenungan Waterfall and the famous Tegalalang Rice Terrace. You will also explore Goa Gajah (Elephant Cave), a historic temple known for its unique stone entrance and spiritual atmosphere.',
         desc3: 'The journey continues to Ubud Traditional Art Market and Ubud Palace, where you can shop for local handicrafts and learn about Ubud’s royal heritage. Combining culture, nature, and local life, this Ubud Highlights Tour is perfect for travelers who want to experience the best of Ubud in one day.',

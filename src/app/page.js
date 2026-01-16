@@ -10,7 +10,6 @@ import Blogs from "./components/blogs";
 import Footer from "./components/footer";
 import Switcher from "./components/switcher";
 import WhyChooseUs from "./components/why-choose-us";
-// import { topTourPackages } from './data/data';
 import {FiMapPin} from 'react-icons/fi';
 
 export const topTourPackages = [
@@ -155,7 +154,7 @@ export default function Home() {
                                         <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
                                         <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
                                         <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                        <li className="inline text-black dark:text-white text-sm">5.0(30)</li>
+                                        <li className="inline text-black dark:text-white text-sm">5.0</li>
                                     </ul>
                                 </div>
                                 
@@ -171,7 +170,7 @@ export default function Home() {
             </div>
 
             <div className="mt-6 text-center">
-                <Link href="/grid" className="text-slate-400 hover:text-[#397A3D] inline-block">See More Tours <i className="mdi mdi-arrow-right align-middle"></i></Link>
+                <Link href="/packages" className="text-slate-400 hover:text-[#397A3D] inline-block">See More Tours <i className="mdi mdi-arrow-right align-middle"></i></Link>
             </div>
         </div>
 

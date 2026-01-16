@@ -173,7 +173,7 @@ export default function BaliQuadATV(){
 
     const productData = {
         title: 'Bali Quad ATV',
-        place: 'Ubud, Bali',
+        place: 'Gianyar, Bali',
         desc1: 'Bali Quad ATV Tour in Ubud offers an exciting off-road adventure through Bali’s stunning natural landscape. Ride a powerful 250cc quad bike and explore scenic jungle trails, rivers, tunnels, and muddy tracks located in Ubud. This tour is perfect for adventure seekers looking for thrilling experiences away from crowded tourist areas.',
         desc2: 'Our Bali Quad ATV Ubud experience is suitable for both beginners and experienced riders, guided by professional instructors to ensure safety and enjoyment. Whether you are traveling solo, with friends, or family, this ATV tour delivers adrenaline, breathtaking scenery, and an unforgettable adventure in Ubud.',
     };
