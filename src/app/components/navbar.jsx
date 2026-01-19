@@ -4,8 +4,6 @@ import React, { useState, useEffect, useRef  } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import {FiSearch, FiUser, FiHelpCircle, FiSettings, FiLogOut} from 'react-icons/fi'
-
 export default function classNavbar({navclass, navlight, manuclass}){
     let [scrolling, setScrolling] = useState(false);
     let [isToggle, setToggle] = useState(false);
@@ -134,8 +132,8 @@ export default function classNavbar({navclass, navlight, manuclass}){
                             </ul> 
                         </li>
                 
-                        <li className={`parent-menu-item ${manu === '/aboutus' ? 'active' : '' }`}>
-                            <Link href="/aboutus" onClick={()=>{ setManu('/aboutus'); setSubManu('/aboutus'); setToggle(false); }} className="sub-menu-item">Blogs</Link>
+                        <li className={`parent-menu-item ${manu === '/blogs' ? 'active' : '' }`}>
+                            <Link href="/blogs" onClick={()=>{ setManu('/blogs'); setSubManu('/blogs'); setToggle(false); }} className="sub-menu-item">Blogs</Link>
                         </li>
                     </ul>
                 </div>

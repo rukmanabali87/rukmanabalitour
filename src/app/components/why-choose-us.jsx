@@ -8,7 +8,7 @@ import { RiCustomerService2Line } from "react-icons/ri";
 
 export default function WhyChooseUs(){
     return(
-        <section className="py-20 bg-white dark:bg-slate-900">
+        <section className="mt-16 bg-white dark:bg-slate-900">
             <div className="container mx-auto px-4">
 
                 {/* Title */}

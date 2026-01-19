@@ -442,6 +442,113 @@ export const ClientData = [
 
 export const blogData = [
     {
+        id: 1,
+        title: "Nusa Penida Day Tour: Must-Visit Spots and Travel Tips",
+        slug: "nusa-penida-day-tour-travel-tips",
+        image: "/images/blog/nusa-penida.jpg",
+        date: "January 15, 2026",
+        author: "Rukmana Bali Tour",
+        excerpt:
+        "Explore the highlights of Nusa Penida in one day. Discover must-visit spots and useful travel tips for a smooth and unforgettable trip.",
+        content: [
+        {
+            type: "paragraph",
+            text: "Nusa Penida is one of Bali’s most breathtaking destinations, known for its dramatic cliffs, turquoise waters, and untouched natural beauty. Located just a short boat ride from mainland Bali, this island offers an unforgettable escape for travelers who want to experience Bali beyond the usual tourist spots. A Nusa Penida Day Tour is the perfect way to explore the highlights of the island in a single day—comfortably and efficiently."
+        },
+
+        {
+            type: "heading",
+            text: "Why Choose a Nusa Penida Day Tour?"
+        },
+        {
+            type: "paragraph",
+            text: "With limited time during your Bali holiday, a day tour allows you to visit the most iconic locations without the stress of planning transportation, routes, or schedules. By joining a guided day tour, you can focus on enjoying the scenery while experienced local guides handle the logistics. This is especially ideal for first-time visitors who want a smooth and well-organized experience."
+        },
+
+        {
+            type: "heading",
+            text: "Must-Visit Spots on a Nusa Penida Day Tour"
+        },
+
+        {
+            type: "heading",
+            text: "1. Kelingking Beach"
+        },
+        {
+            type: "paragraph",
+            text: "Often referred to as the “T-Rex Cliff,” Kelingking Beach is the most famous landmark in Nusa Penida. From the viewpoint, you’ll enjoy a stunning panoramic view of the cliff shaped like a dinosaur overlooking crystal-clear waters. For adventurous travelers, a hike down to the beach offers an even more rewarding experience."
+        },
+
+        {
+            type: "heading",
+            text: "2. Broken Beach (Pasih Uug)"
+        },
+        {
+            type: "paragraph",
+            text: "Broken Beach features a unique natural arch formed by the collapse of a limestone cave. The circular cove and calm blue waters make this spot perfect for photos and sightseeing. Although swimming is not allowed here, the scenery alone is worth the visit."
+        },
+
+        {
+            type: "heading",
+            text: "3. Angel’s Billabong"
+        },
+        {
+            type: "paragraph",
+            text: "Located near Broken Beach, Angel’s Billabong is a natural infinity pool formed by the ocean tides. On calm days, visitors can enjoy the clear water and admire the beautiful rock formations. Always follow your guide’s instructions, as waves can be unpredictable."
+        },
+
+        {
+            type: "heading",
+            text: "4. Crystal Bay"
+        },
+        {
+            type: "paragraph",
+            text: "Crystal Bay is one of the best places on the island to relax and enjoy the beach. With its white sand and clear water, it’s a great spot for swimming, snorkeling, or simply unwinding after exploring the island’s cliffs."
+        },
+
+        {
+            type: "heading",
+            text: "Helpful Travel Tips for Nusa Penida"
+        },
+        {
+            type: "list",
+            items: [
+            "Start early to maximize your time and avoid crowds",
+            "Wear comfortable clothing and sturdy shoes",
+            "Bring sunscreen, a hat, and drinking water",
+            "Respect nature and local culture at all times",
+            "Choose a reliable and professional tour operator"
+            ]
+        },
+
+        {
+            type: "quote",
+            text: "Travel is not only about visiting places, but about creating meaningful memories — and Bali is the perfect place to start that journey."
+        },
+
+        {
+            type: "heading",
+            text: "Explore Nusa Penida with Rukmana Bali Tour"
+        },
+        {
+            type: "paragraph",
+            text: "With Rukmana Bali Tour, your Nusa Penida Day Tour is designed for comfort, safety, and unforgettable experiences. Our private and guided tours include experienced drivers, local insights, and flexible itineraries tailored to your travel style. Whether you’re traveling solo, with a partner, or as a family, we ensure every moment of your journey is enjoyable and hassle-free."
+        },
+
+        {
+            type: "heading",
+            text: "Final Thoughts"
+        },
+        {
+            type: "paragraph",
+            text: "A Nusa Penida Day Tour is more than just a sightseeing trip—it’s a chance to connect with Bali’s raw natural beauty. From iconic cliffs to tranquil beaches, Nusa Penida offers a perfect balance of adventure and relaxation. Let Rukmana Bali Tour take you there and turn your day trip into a truly memorable experience."
+        }
+        ]
+    }
+];
+
+export const blogData2 = [
+    {
         id:1,
         image:'/images/blog/1.jpg',
         date:'13th Sep 2024',
