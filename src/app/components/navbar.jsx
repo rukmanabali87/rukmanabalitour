@@ -132,8 +132,8 @@ export default function classNavbar({navclass, navlight, manuclass}){
                             </ul> 
                         </li>
                 
-                        <li className={`parent-menu-item ${manu === '/blogs' ? 'active' : '' }`}>
-                            <Link href="/blogs" onClick={()=>{ setManu('/blogs'); setSubManu('/blogs'); setToggle(false); }} className="sub-menu-item">Blogs</Link>
+                        <li className={`parent-menu-item ${manu === '/blogs' || manu.startsWith('/blog-detail') ? 'active' : ''}`}>
+                            <Link href="/blogs" onClick={() => { setManu('/blogs'); setSubManu('/blogs'); setToggle(false); }} className="sub-menu-item">Blogs</Link>
                         </li>
                     </ul>
                 </div>

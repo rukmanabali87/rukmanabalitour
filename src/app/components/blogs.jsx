@@ -23,15 +23,17 @@ export default function Blogs(){
                 {blogData.slice(0, 3).map((item, index) => (
                     <div className="group relative overflow-hidden" key={index}>
                         <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                            <Image
-                                src={item.image}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                className="group-hover:scale-110 group-hover:rotate-3 duration-500"
-                                alt={item.title}
-                            />
+                            <Link href={`/blog-detail/${item.slug}`} className="block overflow-hidden">
+                                <Image
+                                    src={item.image}
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                    className="group-hover:scale-110 group-hover:rotate-3 duration-500"
+                                    alt={item.title}
+                                />
+                            </Link>
                         </div>
 
                         <div className="mt-6">
