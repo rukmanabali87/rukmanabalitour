@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -9,11 +8,7 @@ import About from '../components/about'
 import Footer from '../components/footer';
 import Switcher from '../components/switcher';
 
-import { teamData } from "../data/data";
-
-import {FiFacebook, FiInstagram, FiLinkedin} from "react-icons/fi"
 import { HiChevronRight } from "react-icons/hi";
-import TourImageSlider from '../components/tour-image-slider';
 
 export default function Aboutus(){
     return(

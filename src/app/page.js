@@ -11,7 +11,8 @@ import Footer from "./components/footer";
 import Switcher from "./components/switcher";
 import WhyChooseUs from "./components/why-choose-us";
 import {FiMapPin} from 'react-icons/fi';
-import { MdStar } from "react-icons/md";
+import { MdStar, MdArrowForward, } from "react-icons/md";
+
 
 export const topTourPackages = [
     {
@@ -182,9 +183,17 @@ export default function Home() {
                                 </div>
                                 
                                 <div className="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                    <h5 className="text-lg font-medium text-[#397A3D]">From IDR {item.amount}</h5>
+                                    <h5 className="text-lg font-medium text-[#397A3D]">
+                                        From IDR {item.amount}
+                                    </h5>
 
-                                    <Link href={item.route} className="text-slate-400 hover:text-[#397A3D]">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
+                                    <Link
+                                        href={item.route}
+                                        className="inline-flex items-center gap-1 text-slate-400 hover:text-[#397A3D]"
+                                    >
+                                        Explore Now
+                                        <MdArrowForward size={18} />
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +202,10 @@ export default function Home() {
             </div>
 
             <div className="mt-6 text-center">
-                <Link href="/packages" className="text-slate-400 hover:text-[#397A3D] inline-block">See More Tours <i className="mdi mdi-arrow-right align-middle"></i></Link>
+                <Link href="/packages" className="inline-flex items-center gap-1 text-slate-400 hover:text-[#397A3D]">
+                    See More Tours
+                    <MdArrowForward size={18} />
+                </Link>
             </div>
         </div>
 

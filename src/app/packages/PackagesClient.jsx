@@ -7,6 +7,8 @@ import { allPackages } from "../data/data";
 import { useSearchParams, useRouter } from "next/navigation";
 
 import {FiMapPin, FiChevronLeft, FiChevronRight} from 'react-icons/fi'
+import { MdStar, MdArrowForward, } from "react-icons/md";
+import { HiChevronRight } from "react-icons/hi";
 import Switcher from "../components/switcher";
 import Footer from "../components/footer";
 
@@ -53,7 +55,7 @@ export default function PackagesClient(){
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link href="/">Rukmana Bali Tour</Link></li>
-                    <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
+                    <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><HiChevronRight className="text-xl inline-block align-middle" /></li>
                     <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Tour Packages</li>
                 </ul>
             </div>
@@ -89,20 +91,40 @@ export default function PackagesClient(){
 
                                     <div className="flex items-center mt-2">
                                         <span className="text-slate-400">Rating:</span>
-                                        <ul className="text-lg font-medium text-amber-400 list-none ms-2 space-x-1">
-                                            <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                            <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                            <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                            <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                            <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                            <li className="inline text-black dark:text-white text-sm">5.0</li>
+                                        <ul className="flex items-center text-amber-400 list-none ms-2">
+                                            <li className="inline-flex items-center">
+                                                <MdStar className="text-lg" />
+                                            </li>
+                                            <li className="inline-flex items-center">
+                                                <MdStar className="text-lg" />
+                                            </li>
+                                            <li className="inline-flex items-center">
+                                                <MdStar className="text-lg" />
+                                            </li>
+                                            <li className="inline-flex items-center">
+                                                <MdStar className="text-lg" />
+                                            </li>
+                                            <li className="inline-flex items-center">
+                                                <MdStar className="text-lg" />
+                                            </li>
+                                            <li className="text-black dark:text-white text-sm ms-1">
+                                                5.0
+                                            </li>
                                         </ul>
                                     </div>
                                     
                                     <div className="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
-                                        <h5 className="text-lg font-medium text-[#397A3D]">From IDR {item.amount}</h5>
+                                        <h5 className="text-lg font-medium text-[#397A3D]">
+                                            From IDR {item.amount}
+                                        </h5>
 
-                                        <Link href={item.route} className="text-slate-400 hover:text-[#397A3D]">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
+                                        <Link
+                                            href={item.route}
+                                            className="inline-flex items-center gap-1 text-slate-400 hover:text-[#397A3D]"
+                                        >
+                                            Explore Now
+                                            <MdArrowForward size={18} />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
