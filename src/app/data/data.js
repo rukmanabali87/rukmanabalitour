@@ -810,7 +810,7 @@ export const footerCompany = [
         link:'/aboutus'
     },
     {
-        name:'Blog',
+        name:'Blogs',
         link:'/blogs'
     },
 ]

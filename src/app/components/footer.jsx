@@ -4,7 +4,8 @@ import Image from "next/image";
 
 import { footerCompany, footerSocial } from "../data/data";
 import {FiMapPin, FiMail, FiPhone} from 'react-icons/fi';
-import { FaBuilding, FaTiktok } from "react-icons/fa";
+import { FaBuilding } from "react-icons/fa";
+import { MdChevronRight } from "react-icons/md";
 
 const paymentMethods = [
     {src:'/images/payments/visa.jpg', alt:'Visa'},
@@ -36,7 +37,7 @@ export default function Footer(){
                                         <h5 className="tracking-[1px] text-gray-100 font-semibold">Office</h5>
                                         {/* <h5 className="tracking-[1px] text-gray-100 mt-6">PT. Rejeki Utama Kencana</h5> */}
 
-                                        <div className="flex mt-4">
+                                        <div className="flex mt-7">
                                             <FiMapPin className="size-4 text-[#397A3D] me-2 mt-1"></FiMapPin>
                                             <div className="">
                                                 <h6 className="text-gray-300">Jl. Mangut No.19, Carangsari,<br/> Kec. Petang, Kabupaten Badung, Bali 80353</h6>
@@ -70,10 +71,18 @@ export default function Footer(){
                                     <div className="lg:ms-8">
                                         <h5 className="tracking-[1px] text-gray-100 font-semibold">Company</h5>
                                         <ul className="list-none footer-list mt-6">
-                                            {footerCompany.map((item,index)=>{
-                                                return(
-                                                    <li className="mt-[10px] first:mt-0" key={index}><Link href={item.link} className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i className="mdi mdi-chevron-right"></i> {item.name}</Link></li>
-                                                )
+                                            {footerCompany.map((item, index) => {
+                                                return (
+                                                <li className="mt-[10px] first:mt-0" key={index}>
+                                                    <Link
+                                                    href={item.link}
+                                                    className="flex items-center text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                                                    >
+                                                    <MdChevronRight className="text-base me-1 flex-shrink-0" />
+                                                    <span>{item.name}</span>
+                                                    </Link>
+                                                </li>
+                                                );
                                             })}
                                         </ul>
                                     </div>

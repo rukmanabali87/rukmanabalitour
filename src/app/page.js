@@ -11,6 +11,7 @@ import Footer from "./components/footer";
 import Switcher from "./components/switcher";
 import WhyChooseUs from "./components/why-choose-us";
 import {FiMapPin} from 'react-icons/fi';
+import { MdStar } from "react-icons/md";
 
 export const topTourPackages = [
     {
@@ -158,13 +159,25 @@ export default function Home() {
 
                                 <div className="flex items-center mt-2">
                                     <span className="text-slate-400">Rating:</span>
-                                    <ul className="text-lg font-medium text-amber-400 list-none ms-2 space-x-1">
-                                        <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                        <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                        <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                        <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                        <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
-                                        <li className="inline text-black dark:text-white text-sm">5.0</li>
+                                    <ul className="flex items-center text-amber-400 list-none ms-2">
+                                        <li className="inline-flex items-center">
+                                            <MdStar className="text-lg" />
+                                        </li>
+                                        <li className="inline-flex items-center">
+                                            <MdStar className="text-lg" />
+                                        </li>
+                                        <li className="inline-flex items-center">
+                                            <MdStar className="text-lg" />
+                                        </li>
+                                        <li className="inline-flex items-center">
+                                            <MdStar className="text-lg" />
+                                        </li>
+                                        <li className="inline-flex items-center">
+                                            <MdStar className="text-lg" />
+                                        </li>
+                                        <li className="text-black dark:text-white text-sm ms-1">
+                                            5.0
+                                        </li>
                                     </ul>
                                 </div>
                                 

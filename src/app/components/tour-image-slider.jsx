@@ -35,7 +35,7 @@ export default function TourImageSlider(){
 
     const settings = {
         container: '.tiny-twelve-item',
-        controls: true,
+        controls: false,
         mouseDrag: true,
         loop: true,
         rewind: true,
@@ -99,7 +99,7 @@ export default function TourImageSlider(){
                 />
 
                 <div className="absolute top-2/4 -translate-y-2/4 start-2/4 ltr:-translate-x-2/4 rtl:translate-x-2/4 text-center">
-                    <Link href="https://www.instagram.com/shreethemes/" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-md border border-primary bg-primary text-white"><FiInstagram className="size-4"></FiInstagram></Link>
+                    <Link href="https://www.instagram.com/rukmanabalitour/" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-md border border-primary bg-primary text-white"><FiInstagram className="size-4"></FiInstagram></Link>
                 </div>
             </div>
         </div>
