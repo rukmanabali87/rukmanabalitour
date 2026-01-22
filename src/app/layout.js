@@ -1,18 +1,17 @@
 import { DM_Sans, Dancing_Script } from "next/font/google";
 import Script from "next/script";
 import "./assets/css/tailwind.css";
-// import "./assets/css/materialdesignicons.min.css";
 import WhatsappButton from "./components/whatsapp-button";
 
 const dm_sans = DM_Sans({
-   subsets: ["latin"],
-   variable: '--font-dm-sans',
-  });
+    subsets: ["latin"],
+    variable: '--font-dm-sans',
+});
 
-  const dancing_script = Dancing_Script({
+const dancing_script = Dancing_Script({
     subsets: ["latin"],
     variable: '--font-dancing_script',
-   });
+});
 
 export const metadata = {
   title: "Rukmana Bali Tour",
@@ -28,12 +27,6 @@ export default function RootLayout({ children }) {
 
         <WhatsappButton />
 
-        {/* Midtrans Snap JS (WAJIB pakai next/script) */}
-        <Script
-          src="https://app.sandbox.midtrans.com/snap/snap.js"
-          data-client-key={process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY}
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

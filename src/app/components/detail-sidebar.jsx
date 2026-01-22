@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import Script from "next/script";
 
 import { FiCalendar, FiUser } from "react-icons/fi";
 import DatePicker from "react-datepicker";
@@ -42,6 +43,7 @@ export default function DetailSidebar({ price = 299000 }) {
     };
 
     return (
+        <>
         <div className="lg:col-span-4 md:col-span-5">
             <div className="p-4 rounded-md shadow dark:shadow-gray-700 sticky top-20">
                 <div className='flex flex-col'>
@@ -98,5 +100,12 @@ export default function DetailSidebar({ price = 299000 }) {
                 </div>
             </div>
         </div>
+
+        <Script
+            src="https://app.sandbox.midtrans.com/snap/snap.js"
+            data-client-key={process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY}
+            strategy="lazyOnload"
+        />
+        </>
     );
 }

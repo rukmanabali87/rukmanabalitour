@@ -50,6 +50,12 @@ export const tourDetailAbout = [
     },
 ];
 
+export const priceData = [
+    {
+        amount: 702000,
+    }
+];
+
 export const faqData = [
     {
         id: 1,
