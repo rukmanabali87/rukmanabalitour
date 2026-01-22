@@ -2,28 +2,43 @@ import Midtrans from "midtrans-client";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-    const body = await req.json();
+    try {
+        const body = await req.json();
+        const { orderId, amount, name, email } = body;
 
-    const snap = new Midtrans.Snap({
+        if (!orderId || !amount) {
+        return NextResponse.json(
+            { error: "Invalid request" },
+            { status: 400 }
+        );
+        }
+
+        const snap = new Midtrans.Snap({
         isProduction: false,
         serverKey: process.env.MIDTRANS_SERVER_KEY,
-    });
+        });
 
-    const parameter = {
-    transaction_details: {
-        order_id: "ORDER-" + Date.now(),
-        gross_amount: body.amount,
-    },
-    customer_details: {
-        first_name: body.name,
-        email: body.email,
-    },
-    };
+        const parameter = {
+        transaction_details: {
+            order_id: orderId,
+            gross_amount: amount,
+        },
+        customer_details: {
+            first_name: name || "Guest",
+            email: email || "guest@email.com",
+        },
+        };
 
-    try {
         const transaction = await snap.createTransaction(parameter);
-        return NextResponse.json(transaction);
+
+        return NextResponse.json({
+        token: transaction.token,
+        });
     } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        console.error("Midtrans error:", error);
+        return NextResponse.json(
+        { error: error.message },
+        { status: 500 }
+        );
     }
 }

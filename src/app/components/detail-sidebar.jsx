@@ -1,14 +1,47 @@
 'use client'
 import React, { useState } from 'react';
 
-import {FiCalendar, FiUser, FiUsers} from "react-icons/fi"
-
+import { FiCalendar, FiUser } from "react-icons/fi";
 import DatePicker from "react-datepicker";
-import "../../../node_modules/react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css";
 
-export default function DetailSidebar(){
+export default function DetailSidebar({ price = 299000 }) {
     const [startDate, setStartDate] = useState(new Date());
-    return(
+    const [traveler, setTraveler] = useState(1);
+    const [loading, setLoading] = useState(false);
+
+    const handleBooking = async () => {
+        try {
+            setLoading(true);
+
+            const res = await fetch("/api/midtrans", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    orderId: `ORDER-${Date.now()}`,
+                    amount: price * traveler,
+                    name: "Guest",
+                    email: "guest@email.com",
+                }),
+            });
+
+            const data = await res.json();
+
+            if (window.snap) {
+                window.snap.pay(data.token);
+            } else {
+                alert("Midtrans Snap belum siap");
+            }
+
+        } catch (error) {
+            console.error(error);
+            alert("Terjadi kesalahan");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
         <div className="lg:col-span-4 md:col-span-5">
             <div className="p-4 rounded-md shadow dark:shadow-gray-700 sticky top-20">
                 <div className='flex flex-col'>
@@ -23,8 +56,12 @@ export default function DetailSidebar(){
 
                         <div className="md:w-2/3 mt-4 md:mt-0">
                             <div className="form-icon relative w-full h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded border border-gray-100 dark:border-gray-800 flex items-center">
-                                <FiCalendar className="w-4 absolute top-3 start-4"></FiCalendar>
-                                <DatePicker className="w-full ps-12 py-2 px-3 h-10 outline-none border-0 focus:outline-none focus:ring-0" selected={startDate} onChange={(date) => setStartDate(date)} />
+                                <FiCalendar className="w-4 absolute top-3 start-4" />
+                                <DatePicker
+                                    className="w-full ps-12 py-2 px-3 h-10 outline-none border-0 focus:outline-none focus:ring-0"
+                                    selected={startDate}
+                                    onChange={(date) => setStartDate(date)}
+                                />
                             </div>
                         </div>
                     </div>
@@ -35,20 +72,31 @@ export default function DetailSidebar(){
                         </div>
 
                         <div className="md:w-2/3 mt-4 md:mt-0">
-                            <form>
-                                <div className="form-icon relative">
-                                    <FiUser className="w-4 h-4 absolute top-3 start-4"></FiUser>
-                                    <input type="number" className="w-full ps-12 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="No. of person" id="Noperson" name="number" required=""/>
-                                </div>
-                            </form>
+                            <div className="form-icon relative">
+                                <FiUser className="w-4 h-4 absolute top-3 start-4" />
+                                <input
+                                    type="number"
+                                    min="1"
+                                    value={traveler}
+                                    onChange={(e) => setTraveler(Number(e.target.value))}
+                                    className="w-full ps-12 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                                    placeholder="No. of person"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="mt-4">
-                    <button className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] hover:bg-emerald-800 text-white rounded-md w-full">Check Availability</button>
+                    <button
+                        onClick={handleBooking}
+                        disabled={loading}
+                        className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] hover:bg-emerald-800 text-white rounded-md w-full disabled:opacity-60"
+                    >
+                        {loading ? "Processing..." : "Check Availability"}
+                    </button>
                 </div>
             </div>
         </div>
-    )
+    );
 }
