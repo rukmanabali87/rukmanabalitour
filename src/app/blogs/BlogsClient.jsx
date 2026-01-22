@@ -37,21 +37,21 @@ export default function BlogsClient() {
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
         <section className="relative w-full py-36 overflow-hidden">
             <Image
-            src="/images/bg/8.jpg"
-            alt="Travel Blogs"
-            fill
-            priority
-            className="object-cover object-center"
+                src="/images/bg/8.jpg"
+                alt="Travel Blogs"
+                fill
+                priority
+                className="object-cover object-center"
             />
 
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
 
             <div className="container relative">
-            <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white">
-                Travel Blogs
-                </h3>
-            </div>
+                <div className="grid grid-cols-1 pb-8 text-center mt-10">
+                    <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white">
+                    Travel Blogs
+                    </h3>
+                </div>
             </div>
 
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
