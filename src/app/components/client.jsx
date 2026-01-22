@@ -3,6 +3,10 @@ import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
+if (typeof window !== "undefined") {
+    require("tiny-slider/dist/tiny-slider.css");
+}
+
 import { ClientData } from "../data/data";
 
 const TinySlider = dynamic(()=>import('tiny-slider-react'),{ssr:false})
