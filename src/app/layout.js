@@ -1,7 +1,7 @@
 import { DM_Sans, Dancing_Script } from "next/font/google";
 import Script from "next/script";
 import "./assets/css/tailwind.css";
-import "./assets/css/materialdesignicons.min.css";
+// import "./assets/css/materialdesignicons.min.css";
 import WhatsappButton from "./components/whatsapp-button";
 
 const dm_sans = DM_Sans({
