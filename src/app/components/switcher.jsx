@@ -1,8 +1,8 @@
 'use client'
 import React,{useEffect, useState} from "react";
-import Link from "next/link";
 
-import {FiSun, FiMoon} from 'react-icons/fi'
+import { FiSun, FiMoon, FiArrowUp } from 'react-icons/fi'
+
 export default function Switcher(){
     let [visible, setVisible] = useState(false) 
 
@@ -39,12 +39,12 @@ export default function Switcher(){
     const toggleVisible = () => { 
         const scrolled = document.documentElement.scrollTop; 
         if (scrolled > 300){ 
-          setVisible(true) 
+            setVisible(true) 
         }  
         else if (scrolled <= 300){ 
-          setVisible(false) 
+            setVisible(false) 
         } 
-      }; 
+    }; 
 
     
 
@@ -80,7 +80,7 @@ export default function Switcher(){
             }
             className="back-to-top fixed text-lg rounded-md z-10 bottom-5 end-5 size-8 text-center bg-[#397A3D]/40 hover:bg-[#397A3D] text-white justify-center items-center"
             style={{ display: visible ? "inline-flex" : "none" }}>
-            <i className="mdi mdi-arrow-up"></i>
+            <FiArrowUp size={18} />
         </button>
         </>
     )
