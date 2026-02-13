@@ -86,7 +86,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                         </Link>
                     </div>
                 </div>
-
+                
                 <div id="navigation" style={{display: isToggle === true ? 'block' : 'none'}}>
                     <ul className={`navigation-menu ${manuclass}`}>
                         <li className={`parent-menu-item ${manu === '/' ? 'active' : '' }`}>
