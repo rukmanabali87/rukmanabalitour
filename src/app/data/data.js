@@ -50,14 +50,16 @@ export const toursData = [
         slug: "nusa-penida-day-tour",
 
         productData: {
-        title: "Nusa Penida Day Tour",
-        place: "Klungkung, Bali",
-        desc1:
-            "Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.",
-        desc2:
-            "This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.",
-        desc3:
-            "The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.",
+            title: "Nusa Penida Day Tour",
+            place: "Klungkung, Bali",
+            desc: 
+                [ 
+                    "Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.", 
+
+                    "This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.",
+
+                    "The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.",
+                ]
         },
 
         images: [
@@ -194,102 +196,92 @@ export const toursData = [
         productData: {
         title: "Tanah Lot Sunset Tour",
         place: "Tabanan, Bali",
-        desc1:
-            "Experience the beauty of Bali’s culture and coastline on the Tanah Lot Sunset Tour, a perfect half-day journey featuring two of the island’s most iconic temples. The tour begins with a visit to Taman Ayun Temple, a UNESCO-listed heritage site from the former Mengwi Kingdom. Known for its classic Balinese architecture, peaceful water moat, and beautifully arranged gardens, this royal temple offers a serene introduction to Bali’s spiritual and cultural traditions.",
-        desc2:
-            "The highlight of the tour is Tanah Lot Temple, one of Bali’s most famous sunset spots. Perched on a dramatic offshore rock formation overlooking the Indian Ocean, Tanah Lot provides breathtaking ocean views and unforgettable sunset scenery. Stroll around the temple complex, explore the surrounding coastal area, and capture stunning photos as the sky transforms into golden and orange hues. The Tanah Lot Sunset Tour is an ideal choice for travelers seeking cultural exploration combined with Bali’s most spectacular sunset experience.",
-        desc3:
-            "The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.",
+        desc: 
+            [ 
+                "Experience the beauty of Bali’s culture and coastline on the Tanah Lot Sunset Tour, a perfect half-day journey featuring two of the island’s most iconic temples. The tour begins with a visit to Taman Ayun Temple, a UNESCO-listed heritage site from the former Mengwi Kingdom. Known for its classic Balinese architecture, peaceful water moat, and beautifully arranged gardens, this royal temple offers a serene introduction to Bali’s spiritual and cultural traditions.", 
+
+                "The highlight of the tour is Tanah Lot Temple, one of Bali’s most famous sunset spots. Perched on a dramatic offshore rock formation overlooking the Indian Ocean, Tanah Lot provides breathtaking ocean views and unforgettable sunset scenery. Stroll around the temple complex, explore the surrounding coastal area, and capture stunning photos as the sky transforms into golden and orange hues. The Tanah Lot Sunset Tour is an ideal choice for travelers seeking cultural exploration combined with Bali’s most spectacular sunset experience.",
+            ]
         },
 
         images: [
-            { src: "/images/tours/nusa-penida-day-tour/1.webp", alt: "Kelingking Beach" },
-            { src: "/images/tours/nusa-penida-day-tour/2.webp", alt: "Broken Beach" },
-            { src: "/images/tours/nusa-penida-day-tour/3.webp", alt: "Angel's Billabong" },
-            { src: "/images/tours/nusa-penida-day-tour/4.webp", alt: "Crystal Bay" },
+            { src: "/images/tours/tanah-lot-sunset-tour/1.webp", alt: "Tanah Lot View Sunset" },
+            { src: "/images/tours/tanah-lot-sunset-tour/2.webp", alt: "Tanah Lot Temple" },
+            { src: "/images/tours/tanah-lot-sunset-tour/3.jpg", alt: "Taman Ayun ViewTemple" },
+            { src: "/images/tours/tanah-lot-sunset-tour/4.jpg", alt: "Taman Ayun Temple" },
         ],
 
         tourDetailAbout: [
-            { icon: "clock", name: "Duration", title: "12 Hours (Approx.)" },
+            { icon: "clock", name: "Duration", title: "6 Hours (Approx.)" },
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.281.000" },
+            { icon: "dollar", name: "Start Price", title: "From IDR 327.000" },
         ],
 
         highlightsData: [
             {
                 icon: "car",
                 title: "Private Car & Driver",
-                desc: "Explore comfortably with an expert local island driver.",
+                desc: "Comfortable travel with a professional local driver.",
             },
             {
-                icon: "fastBoat",
-                title: "Fast Boat Tickets Included",
-                desc: "Round-trip fast boat from Sanur to Nusa Penida.",
+                icon: "landmark",
+                title: "Cultural Heritage Site",
+                desc: "Visit Taman Ayun Temple, a UNESCO World Heritage Site.",
             },
             {
                 icon: "island",
-                title: "Top Destinations",
-                desc: "Visit Kelingking, Broken Beach, Angel Billabong, and Crystal Bay.",
+                title: "Sunset at Tanah Lot",
+                desc: "Witness a spectacular sunset at Bali’s iconic sea temple.",
+            },
+            {
+                icon: "camera",
+                title: "Ocean View Scenery",
+                desc: "Enjoy stunning coastal views and photo opportunities.",
             },
         ],
 
         itineraryData: [
             {
-                time: "06:00 AM",
+                time: "02:00 PM",
                 title: "Hotel Pick-up",
-                desc: "Pick-up from your hotel in Nusa Dua, Sanur, Kuta, Seminyak, or Ubud."
+                desc: "Pick-up from your hotel in selected areas."
             },
             {
-                time: "07:30 AM",
-                title: "Sanur Beach Harbour",
-                desc: "Arrive at Sanur Harbour and prepare for fast boat departure."
+                time: "02:30 PM",
+                title: "Depart to Taman Ayun Temple",
+                desc: "Drive to the royal temple of the former Mengwi Kingdom."
             },
             {
-                time: "08:15 AM",
-                title: "Nusa Penida Arrival",
-                desc: "Meet your local guide at Nusa Penida and begin the island tour."
+                time: "03:15 PM",
+                title: "Taman Ayun Temple",
+                desc: "Explore the UNESCO World Heritage temple and its beautiful gardens."
             },
             {
-                time: "08:30 AM",
-                title: "Broken Beach (Pasih Uug)",
-                desc: "Visit the iconic natural rock arch overlooking the ocean."
+                time: "04:00 PM",
+                title: "Depart to Tanah Lot Temple",
+                desc: "Continue the journey toward Bali’s iconic sea temple."
             },
             {
-                time: "09:15 AM",
-                title: "Angel’s Billabong",
-                desc: "Explore the stunning natural infinity pool by the sea."
-            },
-            {
-                time: "10:30 AM",
-                title: "Kelingking Beach",
-                desc: "Photo stop at the famous T-Rex cliff and optional short trek."
-            },
-            {
-                time: "12:00 PM",
-                title: "Lunch Break",
-                desc: "Enjoy Indonesian lunch at a local restaurant."
-            },
-            {
-                time: "01:30 PM",
-                title: "Crystal Bay",
-                desc: "Relax on the beach, swim, or enjoy the clear waters."
-            },
-            {
-                time: "03:30 PM",
-                title: "Nusa Penida Port",
-                desc: "Transfer back to the port for return departure."
-            },
-            {
-                time: "04:30 PM",
-                title: "Fast Boat to Sanur",
-                desc: "Return by fast boat from Nusa Penida to Sanur."
+                time: "04:45 PM",
+                title: "Tanah Lot Temple",
+                desc: "Arrive at Tanah Lot and explore the surrounding area."
             },
             {
                 time: "05:30 PM",
+                title: "Sunset at Tanah Lot",
+                desc: "Enjoy a spectacular sunset overlooking the Indian Ocean."
+            },
+            {
+                time: "06:15 PM",
+                title: "Return to Hotel",
+                desc: "Depart back to your hotel after sunset."
+            },
+            {
+                time: "08:00 PM",
                 title: "Hotel Drop-off",
-                desc: "Arrive back in Bali and drop-off at your hotel."
+                desc: "Drop-off at your hotel. Tour ends."
             },
         ],
 
@@ -297,8 +289,8 @@ export const toursData = [
             included: [
                 "Private Air-Conditioned Car & Driver",
                 "English-Speaking Local Guide",
-                "Lunch (Indonesian Food)",
-                "Return Fast Boat Ticket",
+                "All entrance fees (optional)",
+                "Insurance",
             ],
             excluded: [
                 "Meals Fee",
@@ -315,12 +307,12 @@ export const toursData = [
             {
                 id:2,
                 title:'Can I customize tour itinerary?',
-                desc:'Absolutely. You can add East Nusa Penida or snorkeling sessions. but discuss first with operator maybe need a more payment.'
+                desc:'Yes. The itinerary can be adjusted based on your preferences. Please discuss your requests with the operator in advance. Additional charges may apply.'
             },
             {
                 id:3,
                 title:'Is it suitable for children or elderly?',
-                desc:'Yes. All locations are accessible without hiking down Kelingking.'
+                desc:'Yes. All locations are easily accessible with minimal walking and no strenuous activities.'
             },
             {
                 id:4,
@@ -330,50 +322,53 @@ export const toursData = [
         ],
     },
     {
-        id: 1,
-        slug: "nusa-penida-day-tour",
+        id: 3,
+        slug: "gates-of-heaven-tour",
 
         productData: {
-        title: "Nusa Penida Day Tour",
-        place: "Klungkung, Bali",
-        desc1:
-            "Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.",
-        desc2:
-            "This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.",
-        desc3:
-            "The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.",
+            title: "Gates of Heaven Tour",
+            place: "Karangasem, Bali",
+            desc: 
+                [ 
+                    "Gates of Heaven Tour is one of the most popular Bali day tours, offering a perfect blend of iconic landmarks, cultural heritage, and natural beauty in East Bali. This full-day tour takes you to some of Bali’s most photogenic and meaningful destinations, ideal for travelers seeking stunning scenery and authentic experiences.", 
+
+                    "The journey begins at Lempuyang Temple – The Gates of Heaven, famous for its breathtaking views of Mount Agung framed by the temple’s majestic gate. Continue to Tirta Gangga, the former royal water palace, where elegant fountains, stone carvings, and tranquil pools create a peaceful atmosphere surrounded by lush gardens.",
+
+                    "The tour concludes with a visit to Tukad Cepung Waterfall, a hidden gem tucked inside a cave-like canyon. Sunlight streaming through the rocks creates a magical scene, making it one of Bali’s most unique waterfalls. The Gates of Heaven Tour is perfect for couples, photographers, and nature lovers looking to explore the spiritual and scenic side of Bali in one unforgettable day.",
+
+                ]
         },
 
         images: [
-            { src: "/images/tours/nusa-penida-day-tour/1.webp", alt: "Kelingking Beach" },
-            { src: "/images/tours/nusa-penida-day-tour/2.webp", alt: "Broken Beach" },
-            { src: "/images/tours/nusa-penida-day-tour/3.webp", alt: "Angel's Billabong" },
-            { src: "/images/tours/nusa-penida-day-tour/4.webp", alt: "Crystal Bay" },
+            { src: "/images/tours/gates-of-heaven-tour/1.webp", alt: "Gates of Heaven at Lempuyang Temple" },
+            { src: "/images/tours/gates-of-heaven-tour/2.webp", alt: "Lempuyan Temple" },
+            { src: "/images/tours/gates-of-heaven-tour/3.jpg", alt: "Tirta Ganga Water Palace" },
+            { src: "/images/tours/gates-of-heaven-tour/4.jpg", alt: "Tukad Cepung Waterfall" },
         ],
 
         tourDetailAbout: [
-            { icon: "clock", name: "Duration", title: "12 Hours (Approx.)" },
+            { icon: "clock", name: "Duration", title: "8 Hours (Approx.)" },
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.281.000" },
+            { icon: "dollar", name: "Start Price", title: "From IDR 601.000" },
         ],
 
         highlightsData: [
             {
                 icon: "car",
                 title: "Private Car & Driver",
-                desc: "Explore comfortably with an expert local island driver.",
+                desc: "Comfortable travel with a professional local driver.",
             },
             {
-                icon: "fastBoat",
-                title: "Fast Boat Tickets Included",
-                desc: "Round-trip fast boat from Sanur to Nusa Penida.",
+                icon: "temple",
+                title: "Lempuyang Gates of Heaven",
+                desc: "Iconic temple gate with Mount Agung views.",
             },
             {
-                icon: "island",
-                title: "Top Destinations",
-                desc: "Visit Kelingking, Broken Beach, Angel Billabong, and Crystal Bay.",
+                icon: "mapPin",
+                title: "Cultural & Scenic Journey",
+                desc: "A relaxing blend of culture, nature, and beautiful landscapes.",
             },
         ],
 
@@ -381,57 +376,42 @@ export const toursData = [
             {
                 time: "06:00 AM",
                 title: "Hotel Pick-up",
-                desc: "Pick-up from your hotel in Nusa Dua, Sanur, Kuta, Seminyak, or Ubud."
+                desc: "Pick-up from your hotel in selected areas."
             },
             {
                 time: "07:30 AM",
-                title: "Sanur Beach Harbour",
-                desc: "Arrive at Sanur Harbour and prepare for fast boat departure."
+                title: "Lempuyang Temple – Gates of Heaven",
+                desc: "Visit the iconic gate with Mount Agung views."
             },
             {
-                time: "08:15 AM",
-                title: "Nusa Penida Arrival",
-                desc: "Meet your local guide at Nusa Penida and begin the island tour."
+                time: "09:00 AM",
+                title: "Depart to Tirta Gangga",
+                desc: "Continue the journey to East Bali."
             },
             {
-                time: "08:30 AM",
-                title: "Broken Beach (Pasih Uug)",
-                desc: "Visit the iconic natural rock arch overlooking the ocean."
-            },
-            {
-                time: "09:15 AM",
-                title: "Angel’s Billabong",
-                desc: "Explore the stunning natural infinity pool by the sea."
+                time: "09:30 AM",
+                title: "Tirta Gangga Water Palace",
+                desc: "Explore the royal water palace and gardens."
             },
             {
                 time: "10:30 AM",
-                title: "Kelingking Beach",
-                desc: "Photo stop at the famous T-Rex cliff and optional short trek."
+                title: "Depart to Tukad Cepung Waterfall",
+                desc: "Travel to a hidden natural spot."
             },
             {
-                time: "12:00 PM",
-                title: "Lunch Break",
-                desc: "Enjoy Indonesian lunch at a local restaurant."
+                time: "11:30 AM",
+                title: "Tukad Cepung Waterfall",
+                desc: "Enjoy the unique waterfall inside a canyon."
             },
             {
-                time: "01:30 PM",
-                title: "Crystal Bay",
-                desc: "Relax on the beach, swim, or enjoy the clear waters."
+                time: "12:30 PM",
+                title: "Return to Hotel",
+                desc: "Start the return journey."
             },
             {
-                time: "03:30 PM",
-                title: "Nusa Penida Port",
-                desc: "Transfer back to the port for return departure."
-            },
-            {
-                time: "04:30 PM",
-                title: "Fast Boat to Sanur",
-                desc: "Return by fast boat from Nusa Penida to Sanur."
-            },
-            {
-                time: "05:30 PM",
+                time: "02:00 PM",
                 title: "Hotel Drop-off",
-                desc: "Arrive back in Bali and drop-off at your hotel."
+                desc: "Drop-off at your hotel. Tour ends."
             },
         ],
 
@@ -439,8 +419,8 @@ export const toursData = [
             included: [
                 "Private Air-Conditioned Car & Driver",
                 "English-Speaking Local Guide",
-                "Lunch (Indonesian Food)",
-                "Return Fast Boat Ticket",
+                "All entrance fees (optional)",
+                "Insurance",
             ],
             excluded: [
                 "Meals Fee",
@@ -457,12 +437,12 @@ export const toursData = [
             {
                 id:2,
                 title:'Can I customize tour itinerary?',
-                desc:'Absolutely. You can add East Nusa Penida or snorkeling sessions. but discuss first with operator maybe need a more payment.'
+                desc:'Yes. The itinerary can be adjusted based on your preferences. Please discuss your requests with the operator in advance. Additional charges may apply.'
             },
             {
                 id:3,
                 title:'Is it suitable for children or elderly?',
-                desc:'Yes. All locations are accessible without hiking down Kelingking.'
+                desc:'Yes. All locations are easily accessible with minimal walking and no strenuous activities.'
             },
             {
                 id:4,

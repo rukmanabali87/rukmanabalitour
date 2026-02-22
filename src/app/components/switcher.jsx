@@ -16,25 +16,25 @@ export default function Switcher(){
         
     },[])
     
-    const changeTheme = (e) => {
-        let htmlTag = document.getElementsByTagName("html")[0]
-        if (htmlTag.className.includes("dark")) {
-            htmlTag.className = 'light'
-        } else {
-            htmlTag.className = 'dark'
-        }
-    }
+    // const changeTheme = (e) => {
+    //     let htmlTag = document.getElementsByTagName("html")[0]
+    //     if (htmlTag.className.includes("dark")) {
+    //         htmlTag.className = 'light'
+    //     } else {
+    //         htmlTag.className = 'dark'
+    //     }
+    // }
 
-    const modeChange = () =>{
-        let htmlTag = document.getElementsByTagName("html")[0]
-        const switcherRtl = document.getElementById("switchRtl")
-        if(switcherRtl.innerText === "LTR"){
-            htmlTag.dir = "ltr"
-        }
-        else{
-            htmlTag.dir = "rtl"
-        }
-    }
+    // const modeChange = () =>{
+    //     let htmlTag = document.getElementsByTagName("html")[0]
+    //     const switcherRtl = document.getElementById("switchRtl")
+    //     if(switcherRtl.innerText === "LTR"){
+    //         htmlTag.dir = "ltr"
+    //     }
+    //     else{
+    //         htmlTag.dir = "rtl"
+    //     }
+    // }
 
     const toggleVisible = () => { 
         const scrolled = document.documentElement.scrollTop; 
@@ -50,7 +50,7 @@ export default function Switcher(){
 
     return(
         <>
-        <div className="fixed top-1/4 -left-2 z-50">
+        {/* <div className="fixed top-1/4 -left-2 z-50">
             <span className="relative inline-block rotate-90">
                 <input type="checkbox" className="checkbox opacity-0 absolute" id="chk" onChange={(e)=>changeTheme(e)}/>
                 <label className="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" htmlFor="chk">
@@ -59,7 +59,7 @@ export default function Switcher(){
                     <span className="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
                 </label>
             </span>
-        </div>
+        </div> */}
 
         {/* <div className="fixed top-[40%] -left-3 z-50">
             <Link href="" id="switchRtl" onClick={()=>modeChange()}>

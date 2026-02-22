@@ -7,14 +7,12 @@ export function generateStaticParams() {
     return toursData.map((tour) => ({
         slug: tour.slug,
     }));
-    }
+};
 
-    export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
     const { slug } = await params;
 
-    const tour = toursData.find(
-        (item) => item.slug === slug
-    );
+    const tour = toursData.find((item) => item.slug === slug);
 
     if (!tour) {
         return {
@@ -23,32 +21,41 @@ export function generateStaticParams() {
         };
     }
 
+    const baseUrl = "https://rukmanabalitour.com";
+
+    const firstParagraph = tour.productData.desc?.[0] || "";
+
+    const metaDescription =
+        firstParagraph.length > 155
+        ? firstParagraph.substring(0, 152) + "..."
+        : firstParagraph;
+
     return {
         title: `${tour.productData.title} | Rukmana Bali Tour`,
-        description: tour.productData.desc1.slice(0, 155),
+        description: metaDescription,
 
         keywords: [
         tour.productData.title,
-        "Nusa Penida Tour",
-        "Nusa Penida Day Trip",
         "Bali Tour Package",
+        "Private Bali Tour",
+        "Nusa Penida Tour",
         ],
 
         alternates: {
-        canonical: `https://rukmanabalitour.com/tours2/${tour.slug}`,
+        canonical: `${baseUrl}/tours2/${tour.slug}`,
         },
 
         openGraph: {
         title: tour.productData.title,
-        description: tour.productData.desc1,
-        url: `https://rukmanabalitour.com/tours2/${tour.slug}`,
+        description: metaDescription,
+        url: `${baseUrl}/tours2/${tour.slug}`,
         siteName: "Rukmana Bali Tour",
         images: [
             {
-            url: `https://rukmanabalitour.com${tour.images[0].src}`,
+            url: `${baseUrl}${tour.images?.[0]?.src}`,
             width: 1200,
             height: 630,
-            alt: tour.images[0].alt,
+            alt: tour.images?.[0]?.alt || tour.productData.title,
             },
         ],
         locale: "en_US",
@@ -58,42 +65,43 @@ export function generateStaticParams() {
         twitter: {
         card: "summary_large_image",
         title: tour.productData.title,
-        description: tour.productData.desc1,
-        images: [`https://rukmanabalitour.com${tour.images[0].src}`],
+        description: metaDescription,
+        images: [`${baseUrl}${tour.images?.[0]?.src}`],
         },
     };
-    }
+}
 
-    export default async function TourDetail({ params }) {
+export default async function TourDetail({ params }) {
     const { slug } = await params;
 
-    const tour = toursData.find(
-        (item) => item.slug === slug
-    );
+    const tour = toursData.find((item) => item.slug === slug);
 
     if (!tour) return notFound();
 
-    // Structured Data (Tour Schema)
+    const baseUrl = "https://rukmanabalitour.com";
+
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "TouristTrip",
         name: tour.productData.title,
-        description: tour.productData.desc1,
+        description: tour.productData.desc?.join(" ") || "",
         touristType: "Travelers",
-        image: tour.images.map(
-        (img) => `https://rukmanabalitour.com${img.src}`
+        image: tour.images?.map(
+        (img) => `${baseUrl}${img.src}`
         ),
-        itinerary: tour.itineraryData.map((item) => ({
+
+        itinerary: tour.itineraryData?.map((item) => ({
         "@type": "TouristAttraction",
         name: item.title,
         description: item.desc,
         })),
+
         offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
-        price: "1281000",
+        price: tour.productData.price || "1281000",
         availability: "https://schema.org/InStock",
-        url: `https://rukmanabalitour.com/tours/${tour.slug}`,
+        url: `${baseUrl}/tours2/${tour.slug}`,
         },
     };
 

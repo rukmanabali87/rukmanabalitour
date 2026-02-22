@@ -111,9 +111,15 @@ export default function TourDetailPage({ data }) {
 
                     <div className="mt-6">
                         <h5 className="text-lg font-semibold">Tour Descriptions:</h5>
-                        <p className="text-slate-400 mt-6">{productData.desc1}</p>
-                        <p className="text-slate-400 mt-3">{productData.desc2}</p>
-                        <p className="text-slate-400 mt-3">{productData.desc3}</p>
+
+                        {productData.desc.map((text, index) => (
+                            <p
+                                key={index}
+                                className={`text-slate-400 ${index === 0 ? "mt-6" : "mt-3"}`}
+                                >
+                                {text}
+                            </p>
+                        ))}
                     </div>
 
                     <div className="mt-6">
