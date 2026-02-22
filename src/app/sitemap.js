@@ -1,4 +1,4 @@
-import { toursData } from "@/data/toursData"
+import { toursData } from "@/app/data/data"
 
 export default function sitemap() {
     const baseUrl = "https://www.rukmanabalitour.com"
