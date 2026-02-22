@@ -8,13 +8,12 @@ export default function sitemap() {
         lastModified: new Date(),
         changeFrequency: "weekly",
         priority: 0.8,
-        images: tour.images.map((img) => ({
-        url: `${baseUrl}${img.src}`,
-        title: tour.productData.title,
-        })),
+        images: tour.images.map((img) =>
+            `${baseUrl}${img.src}`
+        ),
     }));
 
-    return [
+    return [    
         {
         url: baseUrl,
         lastModified: new Date(),

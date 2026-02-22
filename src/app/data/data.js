@@ -187,6 +187,290 @@ export const toursData = [
             },
         ],
     },
+    {
+        id: 2,
+        slug: "tanah-lot-sunset-tour",
+
+        productData: {
+        title: "Tanah Lot Sunset Tour",
+        place: "Tabanan, Bali",
+        desc1:
+            "Experience the beauty of Bali’s culture and coastline on the Tanah Lot Sunset Tour, a perfect half-day journey featuring two of the island’s most iconic temples. The tour begins with a visit to Taman Ayun Temple, a UNESCO-listed heritage site from the former Mengwi Kingdom. Known for its classic Balinese architecture, peaceful water moat, and beautifully arranged gardens, this royal temple offers a serene introduction to Bali’s spiritual and cultural traditions.",
+        desc2:
+            "The highlight of the tour is Tanah Lot Temple, one of Bali’s most famous sunset spots. Perched on a dramatic offshore rock formation overlooking the Indian Ocean, Tanah Lot provides breathtaking ocean views and unforgettable sunset scenery. Stroll around the temple complex, explore the surrounding coastal area, and capture stunning photos as the sky transforms into golden and orange hues. The Tanah Lot Sunset Tour is an ideal choice for travelers seeking cultural exploration combined with Bali’s most spectacular sunset experience.",
+        desc3:
+            "The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.",
+        },
+
+        images: [
+            { src: "/images/tours/nusa-penida-day-tour/1.webp", alt: "Kelingking Beach" },
+            { src: "/images/tours/nusa-penida-day-tour/2.webp", alt: "Broken Beach" },
+            { src: "/images/tours/nusa-penida-day-tour/3.webp", alt: "Angel's Billabong" },
+            { src: "/images/tours/nusa-penida-day-tour/4.webp", alt: "Crystal Bay" },
+        ],
+
+        tourDetailAbout: [
+            { icon: "clock", name: "Duration", title: "12 Hours (Approx.)" },
+            { icon: "activity", name: "Type", title: "Tour" },
+            { icon: "users", name: "Group Size", title: "15 Peoples" },
+            { icon: "globe", name: "Languages", title: "English" },
+            { icon: "dollar", name: "Start Price", title: "From IDR 1.281.000" },
+        ],
+
+        highlightsData: [
+            {
+                icon: "car",
+                title: "Private Car & Driver",
+                desc: "Explore comfortably with an expert local island driver.",
+            },
+            {
+                icon: "fastBoat",
+                title: "Fast Boat Tickets Included",
+                desc: "Round-trip fast boat from Sanur to Nusa Penida.",
+            },
+            {
+                icon: "island",
+                title: "Top Destinations",
+                desc: "Visit Kelingking, Broken Beach, Angel Billabong, and Crystal Bay.",
+            },
+        ],
+
+        itineraryData: [
+            {
+                time: "06:00 AM",
+                title: "Hotel Pick-up",
+                desc: "Pick-up from your hotel in Nusa Dua, Sanur, Kuta, Seminyak, or Ubud."
+            },
+            {
+                time: "07:30 AM",
+                title: "Sanur Beach Harbour",
+                desc: "Arrive at Sanur Harbour and prepare for fast boat departure."
+            },
+            {
+                time: "08:15 AM",
+                title: "Nusa Penida Arrival",
+                desc: "Meet your local guide at Nusa Penida and begin the island tour."
+            },
+            {
+                time: "08:30 AM",
+                title: "Broken Beach (Pasih Uug)",
+                desc: "Visit the iconic natural rock arch overlooking the ocean."
+            },
+            {
+                time: "09:15 AM",
+                title: "Angel’s Billabong",
+                desc: "Explore the stunning natural infinity pool by the sea."
+            },
+            {
+                time: "10:30 AM",
+                title: "Kelingking Beach",
+                desc: "Photo stop at the famous T-Rex cliff and optional short trek."
+            },
+            {
+                time: "12:00 PM",
+                title: "Lunch Break",
+                desc: "Enjoy Indonesian lunch at a local restaurant."
+            },
+            {
+                time: "01:30 PM",
+                title: "Crystal Bay",
+                desc: "Relax on the beach, swim, or enjoy the clear waters."
+            },
+            {
+                time: "03:30 PM",
+                title: "Nusa Penida Port",
+                desc: "Transfer back to the port for return departure."
+            },
+            {
+                time: "04:30 PM",
+                title: "Fast Boat to Sanur",
+                desc: "Return by fast boat from Nusa Penida to Sanur."
+            },
+            {
+                time: "05:30 PM",
+                title: "Hotel Drop-off",
+                desc: "Arrive back in Bali and drop-off at your hotel."
+            },
+        ],
+
+        inclusionsData: {
+            included: [
+                "Private Air-Conditioned Car & Driver",
+                "English-Speaking Local Guide",
+                "Lunch (Indonesian Food)",
+                "Return Fast Boat Ticket",
+            ],
+            excluded: [
+                "Meals Fee",
+                "Personal Expenses",
+            ],
+        },
+
+        faqData: [
+            {
+                id:1,
+                title:'Is this tour private?',
+                desc:'Yes. You will have your own private car and driver for the entire day.'
+            },
+            {
+                id:2,
+                title:'Can I customize tour itinerary?',
+                desc:'Absolutely. You can add East Nusa Penida or snorkeling sessions. but discuss first with operator maybe need a more payment.'
+            },
+            {
+                id:3,
+                title:'Is it suitable for children or elderly?',
+                desc:'Yes. All locations are accessible without hiking down Kelingking.'
+            },
+            {
+                id:4,
+                title:'Is hotel pickup and drop-off available in all areas of Bali?',
+                desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
+            },
+        ],
+    },
+    {
+        id: 1,
+        slug: "nusa-penida-day-tour",
+
+        productData: {
+        title: "Nusa Penida Day Tour",
+        place: "Klungkung, Bali",
+        desc1:
+            "Nusa Penida Day Tour by Rukmana Bali Tour is a 12-hour full-day tour designed to explore the most iconic destinations on Nusa Penida Island. The journey starts from Sanur Beach Harbour with a fast boat transfer, offering an easy and comfortable way to discover the island’s dramatic cliffs, crystal-clear waters, and natural beauty.",
+        desc2:
+            "This Nusa Penida tour package takes you to must-see attractions including Broken Beach, famous for its natural rock arch, and the iconic Kelingking Beach, known for its breathtaking cliff views shaped like a T-Rex. You will also visit Angel’s Billabong, a natural infinity pool with clear water and stunning coastal scenery.",
+        desc3:
+            "The tour concludes at Crystal Bay, a peaceful white-sand beach ideal for relaxation. Guests may choose an optional snorkeling activity to explore the vibrant marine life. Perfect for travelers with limited time, the Nusa Penida Day Tour by Rukmana Bali Tour is an ideal way to experience the highlights of Nusa Penida in one day.",
+        },
+
+        images: [
+            { src: "/images/tours/nusa-penida-day-tour/1.webp", alt: "Kelingking Beach" },
+            { src: "/images/tours/nusa-penida-day-tour/2.webp", alt: "Broken Beach" },
+            { src: "/images/tours/nusa-penida-day-tour/3.webp", alt: "Angel's Billabong" },
+            { src: "/images/tours/nusa-penida-day-tour/4.webp", alt: "Crystal Bay" },
+        ],
+
+        tourDetailAbout: [
+            { icon: "clock", name: "Duration", title: "12 Hours (Approx.)" },
+            { icon: "activity", name: "Type", title: "Tour" },
+            { icon: "users", name: "Group Size", title: "15 Peoples" },
+            { icon: "globe", name: "Languages", title: "English" },
+            { icon: "dollar", name: "Start Price", title: "From IDR 1.281.000" },
+        ],
+
+        highlightsData: [
+            {
+                icon: "car",
+                title: "Private Car & Driver",
+                desc: "Explore comfortably with an expert local island driver.",
+            },
+            {
+                icon: "fastBoat",
+                title: "Fast Boat Tickets Included",
+                desc: "Round-trip fast boat from Sanur to Nusa Penida.",
+            },
+            {
+                icon: "island",
+                title: "Top Destinations",
+                desc: "Visit Kelingking, Broken Beach, Angel Billabong, and Crystal Bay.",
+            },
+        ],
+
+        itineraryData: [
+            {
+                time: "06:00 AM",
+                title: "Hotel Pick-up",
+                desc: "Pick-up from your hotel in Nusa Dua, Sanur, Kuta, Seminyak, or Ubud."
+            },
+            {
+                time: "07:30 AM",
+                title: "Sanur Beach Harbour",
+                desc: "Arrive at Sanur Harbour and prepare for fast boat departure."
+            },
+            {
+                time: "08:15 AM",
+                title: "Nusa Penida Arrival",
+                desc: "Meet your local guide at Nusa Penida and begin the island tour."
+            },
+            {
+                time: "08:30 AM",
+                title: "Broken Beach (Pasih Uug)",
+                desc: "Visit the iconic natural rock arch overlooking the ocean."
+            },
+            {
+                time: "09:15 AM",
+                title: "Angel’s Billabong",
+                desc: "Explore the stunning natural infinity pool by the sea."
+            },
+            {
+                time: "10:30 AM",
+                title: "Kelingking Beach",
+                desc: "Photo stop at the famous T-Rex cliff and optional short trek."
+            },
+            {
+                time: "12:00 PM",
+                title: "Lunch Break",
+                desc: "Enjoy Indonesian lunch at a local restaurant."
+            },
+            {
+                time: "01:30 PM",
+                title: "Crystal Bay",
+                desc: "Relax on the beach, swim, or enjoy the clear waters."
+            },
+            {
+                time: "03:30 PM",
+                title: "Nusa Penida Port",
+                desc: "Transfer back to the port for return departure."
+            },
+            {
+                time: "04:30 PM",
+                title: "Fast Boat to Sanur",
+                desc: "Return by fast boat from Nusa Penida to Sanur."
+            },
+            {
+                time: "05:30 PM",
+                title: "Hotel Drop-off",
+                desc: "Arrive back in Bali and drop-off at your hotel."
+            },
+        ],
+
+        inclusionsData: {
+            included: [
+                "Private Air-Conditioned Car & Driver",
+                "English-Speaking Local Guide",
+                "Lunch (Indonesian Food)",
+                "Return Fast Boat Ticket",
+            ],
+            excluded: [
+                "Meals Fee",
+                "Personal Expenses",
+            ],
+        },
+
+        faqData: [
+            {
+                id:1,
+                title:'Is this tour private?',
+                desc:'Yes. You will have your own private car and driver for the entire day.'
+            },
+            {
+                id:2,
+                title:'Can I customize tour itinerary?',
+                desc:'Absolutely. You can add East Nusa Penida or snorkeling sessions. but discuss first with operator maybe need a more payment.'
+            },
+            {
+                id:3,
+                title:'Is it suitable for children or elderly?',
+                desc:'Yes. All locations are accessible without hiking down Kelingking.'
+            },
+            {
+                id:4,
+                title:'Is hotel pickup and drop-off available in all areas of Bali?',
+                desc:'Hotel pickup and drop-off service is available from selected areas, including Ubud, Denpasar, Canggu, Seminyak, Legian, Kuta, Tuban, Jimbaran, Sanur, Tanjung Benoa, and Nusa Dua. For locations outside these pickup zones, additional charges may apply—please contact us for more details or custom pickup arrangements.'
+            },
+        ],
+    },
 ];
 
 export const packages = [
