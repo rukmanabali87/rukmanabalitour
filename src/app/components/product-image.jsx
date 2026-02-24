@@ -8,7 +8,7 @@ import {FiCamera} from 'react-icons/fi'
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-export default function TourImage({ images = [] }){
+export default function ProductImage({ images = [] }){
 
     if (!Array.isArray(images) || images.length < 4) {
         return null;

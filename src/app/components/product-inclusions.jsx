@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaCheck, FaTimes } from 'react-icons/fa';
 
-export default function TourInclusions({ items }) {
+export default function ProductInclusions({ items }) {
     if (!items) return null;
 
     return (

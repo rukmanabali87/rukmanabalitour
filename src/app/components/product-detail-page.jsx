@@ -10,14 +10,14 @@ import { FiMapPin } from "react-icons/fi";
 import { HiChevronRight } from "react-icons/hi";
 import { FiClock, FiUsers, FiGlobe, FiDollarSign, FiActivity } from "react-icons/fi";
 
-import TourImage from "@/app/components/tour-image";
-import TourDetailFaq from "@/app/components/faq/tour-detail-faq";
-import TourHighlights from "@/app/components/tour-highlights-2";
-import TourItinerary from "@/app/components/tour-itinerary";
-import TourInclusions from "@/app/components/tour-inclusions";
+import ProductImage from "@/app/components/product-image";
+import ProductDetailFaq from "@/app/components/faq/product-detail-faq";
+import ProductHighlights from "@/app/components/product-highlights";
+import ProductItinerary from "@/app/components/product-itinerary";
+import ProductInclusions from "@/app/components/product-inclusions";
 import Client from "@/app/components/client";
 
-export default function TourDetailPage({ data }) {
+export default function ProductDetailPage({ data, type }) {
 
     const iconMap = {
         clock: FiClock,
@@ -26,6 +26,28 @@ export default function TourDetailPage({ data }) {
         dollar: FiDollarSign,
         activity: FiActivity,
     };
+
+    const descriptionHeadingMap = {
+        tours: "Tour Description",
+        activities: "Activity Description",
+        tickets: "Ticket Information",
+    };
+
+    const highlightHeadingMap = {
+        tours: "Tour Highlights",
+        activities: "Activity Highlights",
+        tickets: "Ticket Highlights",
+    };
+
+    const itineraryHeadingMap = {
+        tours: "Tour Itinerary",
+        activities: "Activity Itinerary",
+        tickets: "Ticket Itinerary",
+    };
+
+    const descriptionHeading = descriptionHeadingMap[type] || "Description";
+    const highlightHeading = highlightHeadingMap[type] || "Highlights";
+    const itineraryHeading = itineraryHeadingMap[type] || "Itinerary";
     
     const {
         productData,
@@ -65,7 +87,7 @@ export default function TourDetailPage({ data }) {
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
                     <li className="inline-block uppercase text-[13px] font-bold text-white/50">
-                        <Link href="/tours">Tours</Link>
+                        <Link href="/">{type}</Link>
                     </li>
                     <li className="inline-block text-base text-white/50 mx-0.5">
                         <HiChevronRight className="text-xl inline-block align-middle" />
@@ -82,7 +104,7 @@ export default function TourDetailPage({ data }) {
                 <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                     <div className="lg:col-span-8 md:col-span-7">
 
-                    <TourImage images={images} />
+                    <ProductImage images={images} />
 
                     <h5 className="text-2xl font-semibold mt-5">{productData.title}</h5>
 
@@ -110,7 +132,7 @@ export default function TourDetailPage({ data }) {
                     </ul>
 
                     <div className="mt-6">
-                        <h5 className="text-lg font-semibold">Tour Descriptions:</h5>
+                        <h5 className="text-lg font-semibold">{descriptionHeading}:</h5>
 
                         {productData.desc.map((text, index) => (
                             <p
@@ -123,20 +145,20 @@ export default function TourDetailPage({ data }) {
                     </div>
 
                     <div className="mt-6">
-                        <h5 className="text-lg font-semibold mb-6">Tour Highlights:</h5>
-                        <TourHighlights items={highlightsData} />
+                        <h5 className="text-lg font-semibold mb-6">{highlightHeading}:</h5>
+                        <ProductHighlights items={highlightsData} />
                     </div>
 
                     <div className="mt-6">
-                        <h5 className="text-lg font-semibold">Tour Itinerary:</h5>
-                        <TourItinerary items={itineraryData} />
+                        <h5 className="text-lg font-semibold">{itineraryHeading}:</h5>
+                        <ProductItinerary items={itineraryData} />
                     </div>
 
-                    <TourInclusions items={inclusionsData} />
+                    <ProductInclusions items={inclusionsData} />
 
                     <div className="mt-6">
                         <h5 className="text-lg font-semibold">Questions & Answers:</h5>
-                        <TourDetailFaq items={faqData} />
+                        <ProductDetailFaq items={faqData} />
                     </div>
 
                     <Client />

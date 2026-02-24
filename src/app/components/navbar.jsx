@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef  } from 'react';
+import { toursData } from "@/app/data/data"
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -108,22 +109,6 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 <li className={`${manu === '/tours/ubud-highlights-tour' ? 'active' : ''}`}><Link href="/tours/ubud-highlights-tour" className="sub-menu-item">Ubud Highlights Tour</Link></li>
                             </ul> 
                         </li>
-
-                        {/* <li className={`has-submenu parent-menu-item ${['/tours2/nusa-penida-day-tour', '/tours2/tanah-lot-sunset-tour', '/tours2/gates-of-heaven-tour', '/tours2/east-of-nusa-penida-day-tour', '/tours2/bali-private-car-hire', '/tours2/uluwatu-sunset-tour', '/tours2/ubud-tanah-lot-tour', '/tours2/bali-dolphin-tour', '/tours2/bali-romantic-tour', '/tours2/ubud-highlights-tour'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/tours2-item' ? '' : '/tours2-item')}>Tours</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${subManu === '/tours2-item' ? 'open' : ''}`}>
-                                <li className={`${manu === '/tours2/nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours2/nusa-penida-day-tour" className="sub-menu-item">Nusa Penida Day Tour</Link></li>
-                                <li className={`${manu === '/tours2/tanah-lot-sunset-tour' ? 'active' : ''}`}><Link href="/tours2/tanah-lot-sunset-tour" className="sub-menu-item">Tanah Lot Sunset Tour</Link></li>
-                                <li className={`${manu === '/tours2/gates-of-heaven-tour' ? 'active' : ''}`}><Link href="/tours2/gates-of-heaven-tour" className="sub-menu-item">Gates of Heaven Tour</Link></li>
-                                <li className={`${manu === '/tours2/east-of-nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours2/east-of-nusa-penida-day-tour" className="sub-menu-item">East of Nusa Penida Day Tour</Link></li>
-                                <li className={`${manu === '/tours2/bali-private-car-hire' ? 'active' : ''}`}><Link href="/tours2/bali-private-car-hire" className="sub-menu-item">Bali Private Car Hire</Link></li>
-                                <li className={`${manu === '/tours2/uluwatu-sunset-tour' ? 'active' : ''}`}><Link href="/tours2/uluwatu-sunset-tour" className="sub-menu-item">Uluwatu Sunset Tour</Link></li>
-                                <li className={`${manu === '/tours2/ubud-tanah-lot-tour' ? 'active' : ''}`}><Link href="/tours2/ubud-tanah-lot-tour" className="sub-menu-item">Ubud Tanah Lot Tour</Link></li>
-                                <li className={`${manu === '/tours2/bali-dolphin-tour' ? 'active' : ''}`}><Link href="/tours2/bali-dolphin-tour" className="sub-menu-item">Bali Dolphin Tour</Link></li>
-                                <li className={`${manu === '/tours2/bali-romantic-tour' ? 'active' : ''}`}><Link href="/tours2/bali-romantic-tour" className="sub-menu-item">Bali Romantic Tour</Link></li>
-                                <li className={`${manu === '/tours2/ubud-highlights-tour' ? 'active' : ''}`}><Link href="/tours2/ubud-highlights-tour" className="sub-menu-item">Ubud Highlights Tour</Link></li>
-                            </ul> 
-                        </li> */}
 
                         <li className={`has-submenu parent-menu-item ${['/activities/bali-quad-atv', '/activities/ayung-river-rafting', '/activities/bali-quad-bike-and-rafting', '/activities/tulamben-diving', '/activities/blue-lagoon-snorkeling', '/activities/bali-paintball', '/activities/bali-water-sports-package', '/activities/jumping-sliding-aling-aling-waterfall', '/activities/mount-batur-sunrise-trekking', '/activities/sea-walker-bali'].includes(manu) ? 'active' : ''}`}>
                             <Link href="" onClick={()=>setSubManu(subManu === '/activities-item' ? '' : '/activities-item')}>Activities</Link><span className="menu-arrow"></span>

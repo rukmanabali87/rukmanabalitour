@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from "react";
 
-export default function TourItinerary({ items = [] }) {
+export default function ProductItinerary({ items = [] }) {
     return (
         <ul className="relative mt-6 border-l-4 border-[#397A3D] pl-6 space-y-4">
             {items.map((item, i) => (

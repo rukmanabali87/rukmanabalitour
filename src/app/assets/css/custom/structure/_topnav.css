@@ -25,14 +25,14 @@
           li{
             &.active {
               > a {
-                @apply !text-[#397A3D] dark:!text-[#397A3D];
+                @apply !text-primary dark:!text-primary;
               }
             }
           }
         }
         &.active {
           .menu-arrow {
-            @apply !border-t-transparent !border-e-[#397A3D] !border-b-[#397A3D] !border-s-transparent;
+            @apply !border-t-transparent !border-e-primary !border-b-primary !border-s-transparent;
           }
         }
       }

@@ -1,16 +1,20 @@
 'use client';
 import React from "react";
 
-import { FaMapPin, FaCameraRetro, FaCar, FaSwimmer, FaMapMarkedAlt, FaAnchor, FaUserShield, FaLandmark } from "react-icons/fa";
+import { FaDove, FaCoffee, FaCheckCircle, FaShip, FaLeaf, FaMapPin, FaCameraRetro, FaCar, FaSwimmer, FaMapMarkedAlt, FaAnchor, FaUserShield, FaLandmark, FaUserCheck, FaImages, FaFeather, FaUsers, FaFish, FaCrosshairs, FaParachuteBox, FaUmbrellaBeach  } from "react-icons/fa";
 import { FaPersonWalkingLuggage } from "react-icons/fa6";
 import { MdDirectionsBoat, MdTempleHindu  } from "react-icons/md";
-import { PiIslandFill } from "react-icons/pi";
-import { GiSeaCliff } from "react-icons/gi";
+import { PiMotorcycleFill, PiIslandFill, PiSunHorizonFill } from "react-icons/pi";
+import { GiSeaCliff, GiWaterfall, GiMountainRoad } from "react-icons/gi";
 import { LuWaves } from "react-icons/lu";
+import { FaShrimp } from "react-icons/fa6";
+import { FiActivity } from "react-icons/fi";
+import { BiSolidLandscape } from "react-icons/bi";
+import { TbCliffJumping } from "react-icons/tb";
 
 
 
-export default function TourHighlights({ items = [] }){
+export default function ProductHighlights({ items = [] }){
 
     const iconMap = {
         mapPin: FaMapPin,
@@ -27,6 +31,27 @@ export default function TourHighlights({ items = [] }){
         shield: FaUserShield,
         landmark: FaLandmark,
         temple: MdTempleHindu,
+        userCheck: FaUserCheck,
+        sunset: PiSunHorizonFill,
+        shrimp: FaShrimp,
+        images: FaImages,
+        waterfall: GiWaterfall,
+        feather: FaFeather,
+        mountain: GiMountainRoad,
+        activity: FiActivity,
+        landscape: BiSolidLandscape,
+        users: FaUsers,
+        leaf: FaLeaf,
+        mototcycle: PiMotorcycleFill,
+        ship: FaShip,
+        fish: FaFish,
+        checkCircle: FaCheckCircle,
+        crosshairs: FaCrosshairs,
+        parachute: FaParachuteBox,
+        umbrellaBeach: FaUmbrellaBeach,
+        cliffJump: TbCliffJumping,
+        coffee: FaCoffee,
+        bird: FaDove,
     };
 
     return (

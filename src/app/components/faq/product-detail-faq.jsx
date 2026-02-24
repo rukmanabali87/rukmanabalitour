@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FiChevronUp } from 'react-icons/fi';
 
-export default function TourDetailFaq({ items = [] }) {
+export default function ProductDetailFaq({ items = [] }) {
     const [activeTab, setActiveTab] = useState(null);
 
     if (!Array.isArray(items) || items.length === 0) return null;

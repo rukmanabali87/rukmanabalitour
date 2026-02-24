@@ -5,8 +5,6 @@ import Footer from "../components/footer";
 
 import { restrictions } from "../data/data";
 
-import TourDetailFaq from "../components/faq/tour-detail-faq";
-
 export default function Terms(){
     return(
         <>
@@ -54,8 +52,6 @@ export default function Terms(){
                             </ul>
 
                             <h5 className="text-xl font-semibold mt-8">Users Question & Answer :</h5>
-
-                            <TourDetailFaq/>
 
                             <div className="mt-6">
                                 <Link href="" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-primary hover:bg-primary-600 border-primary hover:border-primary-600 text-white rounded-md">Accept</Link>
