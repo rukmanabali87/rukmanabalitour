@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef  } from 'react';
-import { toursData } from "@/app/data/data"
+import { toursData, activitiesData, ticketsData } from "@/app/data/data"
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -94,7 +94,7 @@ export default function classNavbar({navclass, navlight, manuclass}){
                             <Link href="/" onClick={()=>{ setManu('/'); setSubManu('/'); setToggle(false); }} className="sub-menu-item">Home</Link>
                         </li>
 
-                        <li className={`has-submenu parent-menu-item ${['/tours/nusa-penida-day-tour', '/tours/tanah-lot-sunset-tour', '/tours/gates-of-heaven-tour', '/tours/east-of-nusa-penida-day-tour', '/tours/bali-private-car-hire', '/tours/uluwatu-sunset-tour', '/tours/ubud-tanah-lot-tour', '/tours/bali-dolphin-tour', '/tours/bali-romantic-tour', '/tours/ubud-highlights-tour'].includes(manu) ? 'active' : ''}`}>
+                        {/* <li className={`has-submenu parent-menu-item ${['/tours/nusa-penida-day-tour', '/tours/tanah-lot-sunset-tour', '/tours/gates-of-heaven-tour', '/tours/east-of-nusa-penida-day-tour', '/tours/bali-private-car-hire', '/tours/uluwatu-sunset-tour', '/tours/ubud-tanah-lot-tour', '/tours/bali-dolphin-tour', '/tours/bali-romantic-tour', '/tours/ubud-highlights-tour'].includes(manu) ? 'active' : ''}`}>
                             <Link href="" onClick={()=>setSubManu(subManu === '/tours-item' ? '' : '/tours-item')}>Tours</Link><span className="menu-arrow"></span>
                             <ul className={`submenu ${subManu === '/tours-item' ? 'open' : ''}`}>
                                 <li className={`${manu === '/tours/nusa-penida-day-tour' ? 'active' : ''}`}><Link href="/tours/nusa-penida-day-tour" className="sub-menu-item">Nusa Penida Day Tour</Link></li>
@@ -108,31 +108,62 @@ export default function classNavbar({navclass, navlight, manuclass}){
                                 <li className={`${manu === '/tours/bali-romantic-tour' ? 'active' : ''}`}><Link href="/tours/bali-romantic-tour" className="sub-menu-item">Bali Romantic Tour</Link></li>
                                 <li className={`${manu === '/tours/ubud-highlights-tour' ? 'active' : ''}`}><Link href="/tours/ubud-highlights-tour" className="sub-menu-item">Ubud Highlights Tour</Link></li>
                             </ul> 
-                        </li>
+                        </li> */}
 
-                        <li className={`has-submenu parent-menu-item ${['/activities/bali-quad-atv', '/activities/ayung-river-rafting', '/activities/bali-quad-bike-and-rafting', '/activities/tulamben-diving', '/activities/blue-lagoon-snorkeling', '/activities/bali-paintball', '/activities/bali-water-sports-package', '/activities/jumping-sliding-aling-aling-waterfall', '/activities/mount-batur-sunrise-trekking', '/activities/sea-walker-bali'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/activities-item' ? '' : '/activities-item')}>Activities</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${subManu === '/activities-item' ? 'open' : ''}`}>
-                                <li className={`${manu === '/activities/bali-quad-atv' ? 'active' : ''}`}><Link href="/activities/bali-quad-atv" className="sub-menu-item">Bali Quad ATV</Link></li>
-                                <li className={`${manu === '/activities/ayung-river-rafting' ? 'active' : ''}`}><Link href="/activities/ayung-river-rafting" className="sub-menu-item">Ayung River Rafting</Link></li>
-                                <li className={`${manu === '/activities/bali-quad-bike-and-rafting' ? 'active' : ''}`}><Link href="/activities/bali-quad-bike-and-rafting" className="sub-menu-item">Bali Quad Bike and Rafting</Link></li>
-                                <li className={`${manu === '/activities/tulamben-diving' ? 'active' : ''}`}><Link href="/activities/tulamben-diving" className="sub-menu-item">Tulamben Diving</Link></li>
-                                <li className={`${manu === '/activities/blue-lagoon-snorkeling' ? 'active' : ''}`}><Link href="/activities/blue-lagoon-snorkeling" className="sub-menu-item">Blue Lagoon Snorkeling</Link></li>
-                                <li className={`${manu === '/activities/bali-paintball' ? 'active' : ''}`}><Link href="/activities/bali-paintball" className="sub-menu-item">Bali Paintball</Link></li>
-                                <li className={`${manu === '/activities/bali-water-sports-package' ? 'active' : ''}`}><Link href="/activities/bali-water-sports-package" className="sub-menu-item">Bali Water Sports Package</Link></li>
-                                <li className={`${manu === '/activities/jumping-sliding-aling-aling-waterfall' ? 'active' : ''}`}><Link href="/activities/jumping-sliding-aling-aling-waterfall" className="sub-menu-item">Jumping Sliding Aling-Aling Waterfall</Link></li>
-                                <li className={`${manu === '/activities/mount-batur-sunrise-trekking' ? 'active' : ''}`}><Link href="/activities/mount-batur-sunrise-trekking" className="sub-menu-item">Mount Batur Sunrise Trekking</Link></li>
-                                <li className={`${manu === '/activities/sea-walker-bali' ? 'active' : ''}`}><Link href="/activities/sea-walker-bali" className="sub-menu-item">Sea Walker Bali</Link></li>
+                        <li className={`has-submenu parent-menu-item ${toursData.some((tour) => `/tours/${tour.slug}` === manu) ? "active" : "" }`}>
+                            <Link href="#" onClick={(e) => {e.preventDefault(); setSubManu(subManu === "tours-item" ? "" : "tours-item"); }}>
+                                Tours
+                            </Link>
+
+                            <span className="menu-arrow"></span>
+
+                            <ul className={`submenu ${subManu === "tours-item" ? "open" : ""}`}>
+                                {toursData.map((tour) => (
+                                    <li key={tour.id} className={ manu === `/tours/${tour.slug}` ? "active" : "" }>
+                                        <Link href={`/tours/${tour.slug}`} className="sub-menu-item">
+                                            {tour.productData.title}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </li>
 
-                        <li className={`has-submenu parent-menu-item ${['/tickets/bali-bird-park-ticket'].includes(manu) ? 'active' : ''}`}>
-                            <Link href="" onClick={()=>setSubManu(subManu === '/tickets-item' ? '' : '/tickets-item')}>Tickets</Link><span className="menu-arrow"></span>
-                            <ul className={`submenu ${subManu === '/tickets-item' ? 'open' : ''}`}>
-                                <li className={`${manu === '/tickets/bali-bird-park-ticket' ? 'active' : ''}`}><Link href="/tickets/bali-bird-park-ticket" className="sub-menu-item">Bali Bird Park Ticket</Link></li>
-                            </ul> 
+                        <li className={`has-submenu parent-menu-item ${activitiesData.some((activity) => `/activities/${activity.slug}` === manu) ? "active" : "" }`}>
+                            <Link href="#" onClick={(e) => {e.preventDefault(); setSubManu(subManu === "activities-item" ? "" : "activities-item"); }}>
+                                Activities
+                            </Link>
+
+                            <span className="menu-arrow"></span>
+
+                            <ul className={`submenu ${subManu === "activities-item" ? "open" : ""}`}>
+                                {activitiesData.map((activity) => (
+                                    <li key={activity.id} className={ manu === `/activities/${activity.slug}` ? "active" : "" }>
+                                        <Link href={`/activities/${activity.slug}`} className="sub-menu-item">
+                                            {activity.productData.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </li>
                 
+                        <li className={`has-submenu parent-menu-item ${ticketsData.some((ticket) => `/tickets/${ticket.slug}` === manu) ? "active" : "" }`}>
+                            <Link href="#" onClick={(e) => {e.preventDefault(); setSubManu(subManu === "tickets-item" ? "" : "tickets-item"); }}>
+                                Tickets
+                            </Link>
+
+                            <span className="menu-arrow"></span>
+
+                            <ul className={`submenu ${subManu === "tickets-item" ? "open" : ""}`}>
+                                {ticketsData.map((ticket) => (
+                                    <li key={ticket.id} className={ manu === `/tickets/${ticket.slug}` ? "active" : "" }>
+                                        <Link href={`/tickets/${ticket.slug}`} className="sub-menu-item">
+                                            {ticket.productData.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+
                         <li className={`parent-menu-item ${manu === '/blogs' || manu.startsWith('/blog-detail') ? 'active' : ''}`}>
                             <Link href="/blogs" onClick={() => { setManu('/blogs'); setSubManu('/blogs'); setToggle(false); }} className="sub-menu-item">Blogs</Link>
                         </li>
