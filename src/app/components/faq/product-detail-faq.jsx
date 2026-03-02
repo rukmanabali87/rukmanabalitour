@@ -19,7 +19,7 @@ export default function ProductDetailFaq({ items = [] }) {
                             type="button"
                             className={`flex justify-between items-center p-5 w-full font-medium text-start ${
                                 activeTab === item.id
-                                    ? 'bg-gray-50 dark:bg-slate-800 text-[#397A3D]'
+                                    ? 'bg-gray-50 dark:bg-slate-800 text-primary'
                                     : ''
                             }`}
                             onClick={() => setActiveTab(activeTab === item.id ? null : item.id)}

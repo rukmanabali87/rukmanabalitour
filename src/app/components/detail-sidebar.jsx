@@ -9,38 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function DetailSidebar({ price = 299000 }) {
     const [startDate, setStartDate] = useState(new Date());
     const [traveler, setTraveler] = useState(1);
-    const [loading, setLoading] = useState(false);
 
-    const handleBooking = async () => {
-        try {
-            setLoading(true);
-
-            const res = await fetch("/api/midtrans", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    orderId: `ORDER-${Date.now()}`,
-                    amount: price * traveler,
-                    name: "Guest",
-                    email: "guest@email.com",
-                }),
-            });
-
-            const data = await res.json();
-
-            if (window.snap) {
-                window.snap.pay(data.token);
-            } else {
-                alert("Midtrans Snap belum siap");
-            }
-
-        } catch (error) {
-            console.error(error);
-            alert("Terjadi kesalahan");
-        } finally {
-            setLoading(false);
-        }
-    };
 
     return (
         <>
@@ -91,21 +60,13 @@ export default function DetailSidebar({ price = 299000 }) {
 
                 <div className="mt-4">
                     <button
-                        onClick={handleBooking}
-                        disabled={loading}
                         className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] hover:bg-emerald-800 text-white rounded-md w-full disabled:opacity-60"
                     >
-                        {loading ? "Processing..." : "Check Availability"}
+                        Check Availability
                     </button>
                 </div>
             </div>
         </div>
-
-        <Script
-            src="https://app.sandbox.midtrans.com/snap/snap.js"
-            data-client-key={process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY}
-            strategy="lazyOnload"
-        />
         </>
     );
 }

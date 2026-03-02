@@ -51,7 +51,7 @@ export async function generateMetadata({ params }) {
         : firstParagraph;
 
     return {
-        title: `${product.productData.title} | Rukmana Bali Tour`,
+        title: `${product.productData.title} - Rukmana Bali Tour`,
         description: metaDescription,
 
         alternates: {
