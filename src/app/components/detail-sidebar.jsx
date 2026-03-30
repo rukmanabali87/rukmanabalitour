@@ -1,29 +1,15 @@
 'use client'
 import React, { useState } from 'react';
-import { useRouter } from "next/navigation";
+import Script from "next/script";
+
 import { FiCalendar, FiUser } from "react-icons/fi";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function DetailSidebar({ priceOptions = [], slug }) {
+export default function DetailSidebar({ price = 299000 }) {
     const [startDate, setStartDate] = useState(new Date());
     const [traveler, setTraveler] = useState(1);
-    const [showOptions, setShowOptions] = useState(false);
 
-    const router = useRouter();
-
-    function getStartPrice(option) {
-        return Math.min(...option.pricing.map(p => p.total));
-    }
-
-    function handleSelectOption(option) {
-
-        const date = startDate.toISOString().split("T")[0];
-
-        router.push(
-            `/booking/${slug}?option=${option.id}&pax=${traveler}&date=${date}`
-        );
-    }
 
     return (
         <>
@@ -46,7 +32,6 @@ export default function DetailSidebar({ priceOptions = [], slug }) {
                                     className="w-full ps-12 py-2 px-3 h-10 outline-none border-0 focus:outline-none focus:ring-0"
                                     selected={startDate}
                                     onChange={(date) => setStartDate(date)}
-                                    minDate={new Date()}
                                 />
                             </div>
                         </div>
@@ -75,35 +60,11 @@ export default function DetailSidebar({ priceOptions = [], slug }) {
 
                 <div className="mt-4">
                     <button
-                        onClick={() => setShowOptions(prev => !prev)}
-                        disabled={traveler < 1}
                         className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-[#397A3D] hover:bg-emerald-800 text-white rounded-md w-full disabled:opacity-60"
                     >
-                        Choose Option
+                        Check Availability
                     </button>
                 </div>
-
-                {/* OPTIONS */}
-                {showOptions && (
-                    <div className="mt-4 space-y-2">
-                        {priceOptions.map((option) => (
-                            <div
-                                key={option.id}
-                                onClick={() => handleSelectOption(option)}
-                                className="border border-gray-200 dark:border-gray-700 rounded-md p-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-800 transition"
-                            >
-                                <div className="flex justify-between items-center">
-                                    <span className="font-medium">
-                                        {option.name}
-                                    </span>
-                                    <span className="text-sm text-gray-600 dark:text-gray-300">
-                                        Start from IDR {getStartPrice(option).toLocaleString()}
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                )}
             </div>
         </div>
         </>

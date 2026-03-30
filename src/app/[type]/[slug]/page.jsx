@@ -1,5 +1,4 @@
 import { toursData, activitiesData, ticketsData } from "@/app/data/data";
-import { getProductWithPrice } from "@/app/data/get-product-with-price";
 import ProductDetailPage from "@/app/components/product-detail-page";
 import { notFound } from "next/navigation";
 import Script from "next/script";
@@ -33,7 +32,9 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    const product = getProductWithPrice(type, slug);
+    const product = DATA_MAP[type].find(
+        (item) => item.slug === slug
+    );
 
     if (!product) {
         return {
@@ -52,8 +53,28 @@ export async function generateMetadata({ params }) {
     return {
         title: `${product.productData.title} - Rukmana Bali Tour`,
         description: metaDescription,
+
         alternates: {
         canonical: `${baseUrl}/${type}/${product.slug}`,
+        },
+
+        openGraph: {
+        title: product.productData.title,
+        description: metaDescription,
+        url: `${baseUrl}/${type}/${product.slug}`,
+        siteName: "Rukmana Bali Tour",
+        images: [
+            {
+            url: `${baseUrl}${product.images?.[0]?.src}`,
+            width: 1200,
+            height: 630,
+            alt:
+                product.images?.[0]?.alt ||
+                product.productData.title,
+            },
+        ],
+        locale: "en_US",
+        type: "website",
         },
     };
 }
@@ -65,7 +86,9 @@ export default async function DetailPage({ params }) {
         return notFound();
     }
 
-    const product = getProductWithPrice(type, slug);
+    const product = DATA_MAP[type].find(
+        (item) => item.slug === slug
+    );
 
     if (!product) return notFound();
 
@@ -83,7 +106,7 @@ export default async function DetailPage({ params }) {
         description: it.desc,
         })),
         offers: {
-        "@type": "AggregateOffer",
+        "@type": "Offer",
         priceCurrency: "IDR",
         price:
             product.productData.price?.replace(/[^\d]/g, "") || "0",
