@@ -50,13 +50,15 @@ export default function ProductDetailPage({ data, type }) {
     const itineraryHeading = itineraryHeadingMap[type] || "Itinerary";
     
     const {
+        slug,
         productData,
         images,
         tourDetailAbout,
         highlightsData,
         itineraryData,
         inclusionsData,
-        faqData
+        faqData,
+        priceOptions,
     } = data;
 
     return (
@@ -164,7 +166,7 @@ export default function ProductDetailPage({ data, type }) {
                     <Client />
                     </div>
 
-                    <DetailSidebar />
+                    <DetailSidebar slug={data.slug} priceOptions={data.priceOptions} />
                 </div>
             </div>
         </section>
