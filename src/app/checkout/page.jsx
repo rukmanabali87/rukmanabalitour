@@ -189,7 +189,7 @@ function CheckoutContent() {
                                 <span className="font-medium">{date}</span>
                             </div>
                             <div className="flex justify-between items-center mb-3">
-                                <span className="text-slate-400">Package:</span>
+                                <span className="text-slate-400">Option:</span>
                                 <span className="font-medium text-right">{type}</span>
                             </div>
                             <div className="flex justify-between items-center mb-3">
