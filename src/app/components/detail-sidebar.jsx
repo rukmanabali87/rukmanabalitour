@@ -6,11 +6,22 @@ import { FiCalendar, FiUser } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { productPrices } from "@/app/data/price";
 
-export default function DetailSidebar({ price = 299000 }) {
+export default function DetailSidebar({ price = 299000,slug }) {
     const [startDate, setStartDate] = useState(new Date());
     const [traveler, setTraveler] = useState(1);
 
+    const currentProductPrices = productPrices[slug];
+    let unitPrice = price;
+    if (currentProductPrices) {
+        const maxPaxInData = Math.max(...Object.keys(currentProductPrices).map(Number));
+        
+        const selectedPax = traveler > maxPaxInData ? maxPaxInData : traveler;
+        
+        unitPrice = currentProductPrices[selectedPax];
+    }
+    const totalPrice = unitPrice * traveler;
 
     return (
         <div className="lg:col-span-4 md:col-span-5">
@@ -62,11 +73,20 @@ export default function DetailSidebar({ price = 299000 }) {
                     </div>
 
                     <div className="mt-4">
-                        <button
-                            className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary hover:bg-primary/80 text-white rounded-md w-full disabled:opacity-60"
-                        >
+                        <div className="mt-6 border-t dark:border-gray-800 pt-4 mb-4">
+                            <div className="flex justify-between items-center text-lg">
+                                <span className="font-semibold">Total:</span>
+                                <span className="font-bold text-primary">
+                                    Rp {totalPrice.toLocaleString("id-ID")}
+                                </span>
+                            </div>
+                            <div className="text-right text-sm text-slate-400 mt-1">
+                                (Rp {unitPrice.toLocaleString("id-ID")} / pax)
+                            </div>
+                        </div>
+                        <button className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary hover:bg-primary/80 text-white rounded-md w-full disabled:opacity-60">
                             Check Availability
-                        </button>
+                        </button> 
                     </div>
                 </div>
 

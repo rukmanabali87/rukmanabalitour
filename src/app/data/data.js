@@ -51,6 +51,7 @@ export const toursData = [
 
         productData: {
             title: "Nusa Penida Day Tour",
+            price: 1100000,
             place: "Klungkung, Bali",
             desc: 
                 [ 
@@ -195,6 +196,7 @@ export const toursData = [
 
         productData: {
         title: "Tanah Lot Sunset Tour",
+            price: 327000,
         place: "Tabanan, Bali",
         desc: 
             [ 
@@ -327,6 +329,7 @@ export const toursData = [
 
         productData: {
             title: "Gates of Heaven Tour",
+            price: 601000,
             place: "Karangasem, Bali",
             desc: 
                 [ 
@@ -457,6 +460,7 @@ export const toursData = [
 
         productData: {
             title: "East of Nusa Penida Day Tour",
+            price: 1281000,
             place: "Klungkung, Bali",
             desc: 
                 [ 
@@ -623,6 +627,7 @@ export const toursData = [
 
         productData: {
             title: "Bali Private Car Hire",
+            price: 257000,
             place: "Bali, Indonesia",
             desc: 
                 [ 
@@ -784,6 +789,7 @@ export const toursData = [
 
         productData: {
             title: "Uluwatu Sunset Tour",
+            price: 299000,
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -910,6 +916,7 @@ export const toursData = [
 
         productData: {
             title: "Ubud Tanah Lot Tour",
+            price: 377000,
             place: "Tabanan-Gianyar, Bali",
             desc: 
                 [ 
@@ -1045,6 +1052,7 @@ export const toursData = [
 
         productData: {
             title: "Bali Dolphin Tour",
+            price: 702000,
             place: "Buleleng, Bali",
             desc: 
                 [ 
@@ -1170,6 +1178,7 @@ export const toursData = [
 
         productData: {
             title: "Bali Romantic Tour",
+            price: 394000,
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -1296,6 +1305,7 @@ export const toursData = [
 
         productData: {
             title: "Ubud Highlights Tour",
+            price: 411000,
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1434,6 +1444,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Quad ATV",
+            price: 1353000,
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1584,6 +1595,7 @@ export const activitiesData = [
 
         productData: {
             title: "Ayung River Rafting",
+            price: 502000,
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1741,6 +1753,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Quad Bike and Rafting",
+            price: 1202000,
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1903,6 +1916,7 @@ export const activitiesData = [
 
         productData: {
             title: "Tulamben Diving",
+            price: 1099000,
             place: "Karangasem, Bali",
             desc: 
                 [ 
@@ -2052,6 +2066,7 @@ export const activitiesData = [
 
         productData: {
             title: "Blue Lagoon Snorkeling",
+            price: 685000,
             place: "Karangasem, Bali",
             desc: 
                 [ 
@@ -2199,6 +2214,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Paintball",
+            price: 670000,
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -2331,6 +2347,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Water Sports Package",
+            price: 859000,
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -2483,6 +2500,7 @@ export const activitiesData = [
 
         productData: {
             title: "Jumping Sliding Aling-Aling Waterfall",
+            price: 781000,
             place: "Buleleng, Bali",
             desc: 
                 [ 
@@ -2626,6 +2644,7 @@ export const activitiesData = [
 
         productData: {
             title: "Mount Batur Sunrise Trekking",
+            price: 361000,
             place: "Bangli, Bali",
             desc: 
                 [ 
@@ -2765,6 +2784,7 @@ export const activitiesData = [
 
         productData: {
             title: "Sea Walker Bali",
+            price: 585000,
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -2892,6 +2912,7 @@ export const ticketsData = [
 
         productData: {
             title: "Bali Bird Park Ticket",
+            price: 655000,
             place: "Gianyar, Bali",
             desc: 
                 [ 

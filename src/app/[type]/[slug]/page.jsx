@@ -108,8 +108,8 @@ export default async function DetailPage({ params }) {
         offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
-        price:
-            product.productData.price?.replace(/[^\d]/g, "") || "0",
+        // price:
+        //     product.productData.price?.replace(/[^\d]/g, "") || "0",
         availability: "https://schema.org/InStock",
         url: `${baseUrl}/${type}/${product.slug}`,
         },
