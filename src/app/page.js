@@ -13,6 +13,20 @@ import WhyChooseUs from "./components/why-choose-us";
 import {FiMapPin} from 'react-icons/fi';
 import { MdStar, MdArrowForward, } from "react-icons/md";
 
+import { productPrices } from "@/app/data/price";
+
+const getLowestPrice = (slug) => {
+    const productPriceData = productPrices[slug];
+    if (!productPriceData) return 0; 
+
+    const firstPackageType = Object.values(productPriceData)[0];
+    
+    const allPrices = Object.values(firstPackageType);
+    const lowestPrice = Math.min(...allPrices);
+    
+    return lowestPrice;
+};
+
 
 export const topTourPackages = [
     {
@@ -20,7 +34,7 @@ export const topTourPackages = [
         image: '/images/tours/nusa-penida-day-tour/1.webp',        
         place: 'Klungkung, Bali',
         title: 'Nusa Penida Day Tour',
-        amount:'1.100.000',
+        amount:`${getLowestPrice("nusa-penida-day-tour").toLocaleString("id-ID")}`,
         route: '/tours/nusa-penida-day-tour',
     },
     {
@@ -28,7 +42,7 @@ export const topTourPackages = [
         image: '/images/activities/bali-quad-atv/1.webp', 
         place: 'Ubud, Bali',
         title: 'Bali Quad ATV',
-        amount:'1.353.000',
+        amount:`${getLowestPrice("bali-quad-atv").toLocaleString("id-ID")}`,
         route: '/activities/bali-quad-atv',
     },
     {
@@ -36,7 +50,7 @@ export const topTourPackages = [
         image: '/images/activities/blue-lagoon-snorkeling/1.webp',
         place: 'Karangasem, Bali',
         title: 'Blue Lagoon Snorkeling',
-        amount:'685.000',
+        amount:`${getLowestPrice("blue-lagoon-snorkeling").toLocaleString("id-ID")}`,
         route: '/activities/blue-lagoon-snorkeling',
     },
     {
@@ -44,7 +58,7 @@ export const topTourPackages = [
         image: '/images/activities/ayung-river-rafting/1.webp',       
         place: 'Ubud, Bali',
         title: 'Ayung River Rafting',
-        amount:'502.000',
+        amount:`${getLowestPrice("ayung-river-rafting").toLocaleString("id-ID")}`,
         route: '/activities/ayung-river-rafting',
     },
     {
@@ -52,7 +66,7 @@ export const topTourPackages = [
         image: '/images/tours/gates-of-heaven-tour/1.webp',  
         place: 'Karangasem, Bali',
         title: 'Gates of Heaven Tour',
-        amount:'601.000',
+        amount:`${getLowestPrice("gates-of-heaven-tour").toLocaleString("id-ID")}`,
         route: '/tours/gates-of-heaven-tour',
     },
     {
@@ -60,7 +74,7 @@ export const topTourPackages = [
         image: '/images/tours/tanah-lot-sunset-tour/1.webp',
         place: 'Tabanan, Bali',
         title: 'Tanah Lot Sunset Tour',
-        amount:'327.000',
+        amount:`${getLowestPrice("tanah-lot-sunset-tour").toLocaleString("id-ID")}`,
         route: '/tours/tanah-lot-sunset-tour',
     },
 ];

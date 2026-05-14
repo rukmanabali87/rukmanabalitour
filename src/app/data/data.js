@@ -1,6 +1,20 @@
 import { FiShoppingCart, FiDribbble, FiLinkedin,FiFacebook,FiInstagram,FiTwitter,FiMail,FiClock,FiActivity, FiUsers, FiGlobe,FiDollarSign,FiYoutube,FiHelpCircle,FiBookmark,FiSettings,FiGithub,FiGitlab} from "react-icons/fi"
 import { FaTiktok } from "react-icons/fa";
 
+import { productPrices } from "@/app/data/price";
+
+const getLowestPrice = (slug) => {
+    const productPriceData = productPrices[slug];
+    if (!productPriceData) return 0;
+
+    const firstPackageType = Object.values(productPriceData)[0];
+    
+    const allPrices = Object.values(firstPackageType);
+    const lowestPrice = Math.min(...allPrices);
+    
+    return lowestPrice;
+};
+
 export const topDestination = [
     {
         image:'/images/listing/1.jpg',
@@ -51,7 +65,7 @@ export const toursData = [
 
         productData: {
             title: "Nusa Penida Day Tour",
-            price: 1100000,
+            price: getLowestPrice("nusa-penida-day-tour"),
             place: "Klungkung, Bali",
             desc: 
                 [ 
@@ -75,7 +89,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.100.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("nusa-penida-day-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -196,7 +210,7 @@ export const toursData = [
 
         productData: {
         title: "Tanah Lot Sunset Tour",
-            price: 327000,
+            price: getLowestPrice("tanah-lot-sunset-tour"),
         place: "Tabanan, Bali",
         desc: 
             [ 
@@ -218,7 +232,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 327.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("tanah-lot-sunset-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -329,7 +343,7 @@ export const toursData = [
 
         productData: {
             title: "Gates of Heaven Tour",
-            price: 601000,
+            price: getLowestPrice("gates-of-heaven-tour"),
             place: "Karangasem, Bali",
             desc: 
                 [ 
@@ -354,7 +368,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 601.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("gates-of-heaven-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -460,7 +474,7 @@ export const toursData = [
 
         productData: {
             title: "East of Nusa Penida Day Tour",
-            price: 1281000,
+            price: getLowestPrice("east-of-nusa-penida-day-tour"),
             place: "Klungkung, Bali",
             desc: 
                 [ 
@@ -484,7 +498,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.281.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("east-of-nusa-penida-day-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -627,7 +641,7 @@ export const toursData = [
 
         productData: {
             title: "Bali Private Car Hire",
-            price: 257000,
+            price: getLowestPrice("bali-private-car-hire"),
             place: "Bali, Indonesia",
             desc: 
                 [ 
@@ -651,7 +665,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "50 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 257.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-private-car-hire").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -789,7 +803,7 @@ export const toursData = [
 
         productData: {
             title: "Uluwatu Sunset Tour",
-            price: 299000,
+            price: getLowestPrice("uluwatu-sunset-tour"),
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -813,7 +827,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 299.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("uluwatu-sunset-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -916,7 +930,7 @@ export const toursData = [
 
         productData: {
             title: "Ubud Tanah Lot Tour",
-            price: 377000,
+            price: getLowestPrice("ubud-tanah-lot-tour"),
             place: "Tabanan-Gianyar, Bali",
             desc: 
                 [ 
@@ -940,7 +954,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 377.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("ubud-tanah-lot-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1052,7 +1066,7 @@ export const toursData = [
 
         productData: {
             title: "Bali Dolphin Tour",
-            price: 702000,
+            price: getLowestPrice("bali-dolphin-tour"),
             place: "Buleleng, Bali",
             desc: 
                 [ 
@@ -1076,7 +1090,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 702.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-dolphin-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1178,7 +1192,7 @@ export const toursData = [
 
         productData: {
             title: "Bali Romantic Tour",
-            price: 394000,
+            price: getLowestPrice("bali-romantic-tour"),
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -1202,7 +1216,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 394.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-romantic-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1305,7 +1319,7 @@ export const toursData = [
 
         productData: {
             title: "Ubud Highlights Tour",
-            price: 411000,
+            price: getLowestPrice("ubud-highlights-tour"),
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1329,7 +1343,7 @@ export const toursData = [
             { icon: "activity", name: "Type", title: "Tour" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 411.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("ubud-highlights-tour").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1444,7 +1458,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Quad ATV",
-            price: 1353000,
+            price: getLowestPrice("bali-quad-atv"),
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1466,7 +1480,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.353.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-quad-atv").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1595,7 +1609,7 @@ export const activitiesData = [
 
         productData: {
             title: "Ayung River Rafting",
-            price: 502000,
+            price: getLowestPrice("ayung-river-rafting"),
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1617,7 +1631,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 502.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("ayung-river-rafting").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1753,7 +1767,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Quad Bike and Rafting",
-            price: 1202000,
+            price: getLowestPrice("bali-quad-bike-and-rafting"),
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -1777,7 +1791,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.202.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-quad-bike-and-rafting").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -1916,7 +1930,7 @@ export const activitiesData = [
 
         productData: {
             title: "Tulamben Diving",
-            price: 1099000,
+            price: getLowestPrice("tulamben-diving"),
             place: "Karangasem, Bali",
             desc: 
                 [ 
@@ -1940,7 +1954,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 1.099.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("tulamben-diving").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2066,7 +2080,7 @@ export const activitiesData = [
 
         productData: {
             title: "Blue Lagoon Snorkeling",
-            price: 685000,
+            price: getLowestPrice("blue-lagoon-snorkeling"),
             place: "Karangasem, Bali",
             desc: 
                 [ 
@@ -2088,7 +2102,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 685.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("blue-lagoon-snorkeling").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2214,7 +2228,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Paintball",
-            price: 670000,
+            price: getLowestPrice("bali-paintball"),
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -2236,7 +2250,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 670.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-paintball").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2347,7 +2361,7 @@ export const activitiesData = [
 
         productData: {
             title: "Bali Water Sports Package",
-            price: 859000,
+            price: getLowestPrice("bali-water-sports-package"),
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -2369,7 +2383,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 859.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-water-sports-package").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2500,7 +2514,7 @@ export const activitiesData = [
 
         productData: {
             title: "Jumping Sliding Aling-Aling Waterfall",
-            price: 781000,
+            price: getLowestPrice("jumping-sliding-aling-aling-waterfall"),
             place: "Buleleng, Bali",
             desc: 
                 [ 
@@ -2522,7 +2536,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 781.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("jumping-sliding-aling-aling-waterfall").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2644,7 +2658,7 @@ export const activitiesData = [
 
         productData: {
             title: "Mount Batur Sunrise Trekking",
-            price: 361000,
+            price: getLowestPrice("mount-batur-sunrise-trekking"),
             place: "Bangli, Bali",
             desc: 
                 [ 
@@ -2666,7 +2680,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 361.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("mount-batur-sunrise-trekking").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2784,7 +2798,7 @@ export const activitiesData = [
 
         productData: {
             title: "Sea Walker Bali",
-            price: 585000,
+            price: getLowestPrice("sea-walker-bali"),
             place: "Badung, Bali",
             desc: 
                 [ 
@@ -2806,7 +2820,7 @@ export const activitiesData = [
             { icon: "activity", name: "Type", title: "Activity" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 585.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("sea-walker-bali").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
@@ -2912,7 +2926,7 @@ export const ticketsData = [
 
         productData: {
             title: "Bali Bird Park Ticket",
-            price: 655000,
+            price: getLowestPrice("bali-bird-park-ticket"),
             place: "Gianyar, Bali",
             desc: 
                 [ 
@@ -2934,7 +2948,7 @@ export const ticketsData = [
             { icon: "activity", name: "Type", title: "Ticket" },
             { icon: "users", name: "Group Size", title: "15 Peoples" },
             { icon: "globe", name: "Languages", title: "English" },
-            { icon: "dollar", name: "Start Price", title: "From IDR 655.000" },
+            { icon: "dollar", name: "Start Price", title: `From IDR ${getLowestPrice("bali-bird-park-ticket").toLocaleString("id-ID")}` },
         ],
 
         highlightsData: [
