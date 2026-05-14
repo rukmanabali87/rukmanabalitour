@@ -27,19 +27,27 @@ export default function DetailSidebar({ price = 299000, slug }) {
         }
     }, [slug, currentProductPrices]);
 
+    // 1. Buat variable penampung agar saat input kosong, pencarian harga tidak error
+    const effectiveTraveler = (traveler === '' || traveler < 1) ? 1 : traveler;
+
     if (currentProductPrices && packageType) {
         const typePrices = currentProductPrices[packageType]; 
         
         const maxPaxInData = Math.max(...Object.keys(typePrices).map(Number));
 
-        const selectedPax = traveler > maxPaxInData ? maxPaxInData : traveler;
+        const selectedPax = effectiveTraveler > maxPaxInData ? maxPaxInData : effectiveTraveler;
         
-        unitPrice = typePrices[selectedPax];
+        // 2. Berikan fallback || price untuk memastikan nilai tidak undefined
+        unitPrice = typePrices[selectedPax] || price;
     }
-    const totalPrice = unitPrice * traveler;
+    
+    // 3. Jika input kosong, tampilkan total harga Rp 0
+    const totalPrice = unitPrice * (traveler === '' ? 0 : traveler);
 
     const goToCheckout = () => {
-        const url = `/checkout?slug=${slug}&pax=${traveler}&type=${encodeURIComponent(packageType)}&date=${startDate.toISOString()}`;
+        // Jangan biarkan user checkout dengan data kosong, set default ke 1
+        const finalTraveler = (traveler === '' || traveler < 1) ? 1 : traveler;
+        const url = `/checkout?slug=${slug}&pax=${finalTraveler}&type=${encodeURIComponent(packageType)}&date=${startDate.toISOString()}`;
         router.push(url);
     };
 
@@ -64,7 +72,7 @@ export default function DetailSidebar({ price = 299000, slug }) {
                                 <div className="form-icon relative w-full h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded border border-gray-100 dark:border-gray-800 flex items-center">
                                     <FiCalendar className="w-4 absolute top-3 start-4" />
                                     <DatePicker
-                                        className="w-full ps-12 py-2 px-3 h-10 outline-none border-0 focus:outline-none focus:ring-0"
+                                        className="w-full ps-12 py-2 px-3 h-10 outline-none border-0 focus:outline-none focus:ring-0 bg-transparent"
                                         selected={startDate}
                                         onChange={(date) => setStartDate(date)}
                                     />
@@ -84,7 +92,11 @@ export default function DetailSidebar({ price = 299000, slug }) {
                                         type="number"
                                         min="1"
                                         value={traveler}
-                                        onChange={(e) => setTraveler(Number(e.target.value))}
+                                        // 4. Update fungsi onChange
+                                        onChange={(e) => {
+                                            const val = e.target.value;
+                                            setTraveler(val === '' ? '' : Number(val));
+                                        }}
                                         className="w-full ps-12 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
                                         placeholder="No. of person"
                                     />
@@ -128,7 +140,12 @@ export default function DetailSidebar({ price = 299000, slug }) {
                             </div>
                         </div>
 
-                        <button onClick={goToCheckout} className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary hover:bg-primary/80 text-white rounded-md w-full disabled:opacity-60">
+                        {/* 5. Disable button jika traveler kosong atau kurang dari 1 */}
+                        <button 
+                            onClick={goToCheckout} 
+                            disabled={traveler === '' || traveler < 1}
+                            className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary hover:bg-primary/80 text-white rounded-md w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                        >
                             Reserve Now
                         </button> 
                     </div>
