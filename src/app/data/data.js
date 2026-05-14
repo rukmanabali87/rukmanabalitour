@@ -3148,7 +3148,7 @@ export const allPackages = [
         image: '/images/tours/nusa-penida-day-tour/1.webp',        
         place: 'Klungkung, Bali',
         title: 'Nusa Penida Day Tour',
-        amount:'1.100.000',
+        amount: `${getLowestPrice("nusa-penida-day-tour").toLocaleString("id-ID")}`,
         route: '/tours/nusa-penida-day-tour',
     },
     {
@@ -3156,7 +3156,7 @@ export const allPackages = [
         image: '/images/activities/bali-quad-atv/1.webp', 
         place: 'Gianyar, Bali',
         title: 'Bali Quad ATV',
-        amount:'1.353.000',
+        amount: `${getLowestPrice("bali-quad-atv").toLocaleString("id-ID")}`,
         route: '/activities/bali-quad-atv',
     },
     {
@@ -3164,7 +3164,7 @@ export const allPackages = [
         image: '/images/activities/blue-lagoon-snorkeling/1.webp',
         place: 'Karangasem, Bali',
         title: 'Blue Lagoon Snorkeling',
-        amount:'685.000',
+        amount: `${getLowestPrice("blue-lagoon-snorkeling").toLocaleString("id-ID")}`,
         route: '/activities/blue-lagoon-snorkeling',
     },
     {
@@ -3172,7 +3172,7 @@ export const allPackages = [
         image: '/images/activities/ayung-river-rafting/1.webp',       
         place: 'Gianyar, Bali',
         title: 'Ayung River Rafting',
-        amount:'502.000',
+        amount: `${getLowestPrice("ayung-river-rafting").toLocaleString("id-ID")}`,
         route: '/activities/ayung-river-rafting',
     },
     {
@@ -3180,7 +3180,7 @@ export const allPackages = [
         image: '/images/tours/gates-of-heaven-tour/1.webp',  
         place: 'Karangasem, Bali',
         title: 'Gates of Heaven Tour',
-        amount:'601.000',
+        amount: `${getLowestPrice("gates-of-heaven-tour").toLocaleString("id-ID")}`,
         route: '/tours/gates-of-heaven-tour',
     },
     {
@@ -3188,7 +3188,7 @@ export const allPackages = [
         image: '/images/tours/tanah-lot-sunset-tour/1.webp',
         place: 'Tabanan, Bali',
         title: 'Tanah Lot Sunset Tour',
-        amount:'327.000',
+        amount: `${getLowestPrice("tanah-lot-sunset-tour").toLocaleString("id-ID")}`,
         route: '/tours/tanah-lot-sunset-tour',
     },
     {
@@ -3196,7 +3196,7 @@ export const allPackages = [
         image: '/images/tours/east-of-nusa-penida-day-tour/1.jpg',
         place: 'Klungkung, Bali',
         title: 'East of Nusa Penida Day Tour',
-        amount:'1.281.000',
+        amount: `${getLowestPrice("east-of-nusa-penida-day-tour").toLocaleString("id-ID")}`,
         route: '/tours/east-of-nusa-penida-day-tour',
     },
     {
@@ -3204,7 +3204,7 @@ export const allPackages = [
         image: '/images/tours/bali-private-car-hire/1.jpg',
         place: 'Bali',
         title: 'Bali Private Car Hire',
-        amount:'257.000',
+        amount: `${getLowestPrice("bali-private-car-hire").toLocaleString("id-ID")}`,
         route: '/tours/bali-private-car-hire',
     },
     {
@@ -3212,7 +3212,7 @@ export const allPackages = [
         image: '/images/tours/uluwatu-sunset-tour/1.jpg',
         place: 'Badung, Bali',
         title: 'Uluwatu Sunset Tour',
-        amount:'299.000',
+        amount: `${getLowestPrice("uluwatu-sunset-tour").toLocaleString("id-ID")}`,
         route: '/tours/uluwatu-sunset-tour',
     },
     {
@@ -3220,7 +3220,7 @@ export const allPackages = [
         image: '/images/tours/ubud-tanah-lot-tour/1.jpg',
         place: 'Tabanan-Ubud, Bali',
         title: 'Ubud Tanah Lot Tour',
-        amount:'377.000',
+        amount: `${getLowestPrice("ubud-tanah-lot-tour").toLocaleString("id-ID")}`,
         route: '/tours/ubud-tanah-lot-tour',
     },
     {
@@ -3228,7 +3228,7 @@ export const allPackages = [
         image: '/images/tours/bali-dolphin-tour/1.jpg',
         place: 'Buleleng, Bali',
         title: 'Bali Dolphin Tour',
-        amount:'702.000',
+        amount: `${getLowestPrice("bali-dolphin-tour").toLocaleString("id-ID")}`,
         route: '/tours/bali-dolphin-tour',
     },
     {
@@ -3236,7 +3236,7 @@ export const allPackages = [
         image: '/images/tours/bali-romantic-tour/1.jpg',
         place: 'Badung, Bali',
         title: 'Bali Romantic Tour',
-        amount:'394.000',
+        amount: `${getLowestPrice("bali-romantic-tour").toLocaleString("id-ID")}`,
         route: '/tours/bali-romantic-tour',
     },
     {
@@ -3244,7 +3244,7 @@ export const allPackages = [
         image: '/images/tours/ubud-highlights-tour/1.jpg',
         place: 'Gianyar, Bali',
         title: 'Ubud Highlights Tour',
-        amount:'411.000',
+        amount: `${getLowestPrice("ubud-highlights-tour").toLocaleString("id-ID")}`,
         route: '/tours/ubud-highlights-tour',
     },
     {
@@ -3252,7 +3252,7 @@ export const allPackages = [
         image: '/images/activities/bali-quad-bike-and-rafting/1.jpg',
         place: 'Gianyar, Bali',
         title: 'Bali Quad Bike and Rafting',
-        amount:'1.202.000',
+        amount: `${getLowestPrice("bali-quad-bike-and-rafting").toLocaleString("id-ID")}`,
         route: '/activities/bali-quad-bike-and-rafting',
     },
     {
@@ -3260,7 +3260,7 @@ export const allPackages = [
         image: '/images/activities/tulamben-diving/1.jpg',
         place: 'Karangasem, Bali',
         title: 'Tulamben Diving',
-        amount:'1.099.000',
+        amount: `${getLowestPrice("tulamben-diving").toLocaleString("id-ID")}`,
         route: '/activities/tulamben-diving',
     },
     {
@@ -3268,7 +3268,7 @@ export const allPackages = [
         image: '/images/activities/bali-paintball/1.jpg',
         place: 'Badung, Bali',
         title: 'Bali Paintball',
-        amount:'670.000',
+        amount: `${getLowestPrice("bali-paintball").toLocaleString("id-ID")}`,
         route: '/activities/bali-paintball',
     },
     {
@@ -3276,7 +3276,7 @@ export const allPackages = [
         image: '/images/activities/bali-water-sports-package/1.jpg',
         place: 'Badung, Bali',
         title: 'Bali Water Sports Package',
-        amount:'859.000',
+        amount: `${getLowestPrice("bali-water-sports-package").toLocaleString("id-ID")}`,
         route: '/activities/bali-water-sports-package',
     },
     {
@@ -3284,7 +3284,7 @@ export const allPackages = [
         image: '/images/activities/jumping-sliding-aling-aling-waterfall/1.jpg',
         place: 'Buleleng, Bali',
         title: 'Jumping & Sliding at Aling Aling Waterfall',
-        amount:'781.000',
+        amount: `${getLowestPrice("jumping-sliding-aling-aling-waterfall").toLocaleString("id-ID")}`,
         route: '/activities/jumping-sliding-aling-aling-waterfall',
     },
     {
@@ -3292,7 +3292,7 @@ export const allPackages = [
         image: '/images/activities/mount-batur-sunrise-trekking/1.jpg',
         place: 'Bangli, Bali',
         title: 'Mount Batur Sunrise Trekking',
-        amount:'361.000',
+        amount: `${getLowestPrice("mount-batur-sunrise-trekking").toLocaleString("id-ID")}`,
         route: '/activities/mount-batur-sunrise-trekking',
     },
     {
@@ -3300,7 +3300,7 @@ export const allPackages = [
         image: '/images/activities/sea-walker-bali/1.jpg',
         place: 'Badung, Bali',
         title: 'Sea Walker Bali',
-        amount:'585.000',
+        amount: `${getLowestPrice("sea-walker-bali").toLocaleString("id-ID")}`,
         route: '/activities/sea-walker-bali',
     },
     {
@@ -3308,7 +3308,7 @@ export const allPackages = [
         image: '/images/tickets/bali-bird-park-ticket/1.jpg',
         place: 'Gianyar, Bali',
         title: 'Bali Bird Park Ticket',
-        amount:'655.000',
+        amount: `${getLowestPrice("bali-bird-park-ticket").toLocaleString("id-ID")}`,
         route: '/tickets/bali-bird-park-ticket',
     },
 ]
