@@ -10,7 +10,7 @@ import { productPrices } from "@/app/data/price";
 
 export default function DetailSidebar({ price = 299000, slug }) {
     const [startDate, setStartDate] = useState(new Date());
-    const [traveler, setTraveler] = useState(1);
+    const [traveler, setTraveler] = useState(2);
 
     const router = useRouter();
     
@@ -28,7 +28,7 @@ export default function DetailSidebar({ price = 299000, slug }) {
     }, [slug, currentProductPrices]);
 
     // 1. Buat variable penampung agar saat input kosong, pencarian harga tidak error
-    const effectiveTraveler = (traveler === '' || traveler < 1) ? 1 : traveler;
+    const effectiveTraveler = (traveler === '' || traveler < 1) ? 2 : traveler;
 
     if (currentProductPrices && packageType) {
         const typePrices = currentProductPrices[packageType]; 
@@ -46,7 +46,7 @@ export default function DetailSidebar({ price = 299000, slug }) {
 
     const goToCheckout = () => {
         // Jangan biarkan user checkout dengan data kosong, set default ke 1
-        const finalTraveler = (traveler === '' || traveler < 1) ? 1 : traveler;
+        const finalTraveler = (traveler === '' || traveler < 1) ? 2 : traveler;
         const url = `/checkout?slug=${slug}&pax=${finalTraveler}&type=${encodeURIComponent(packageType)}&date=${startDate.toISOString()}`;
         router.push(url);
     };
