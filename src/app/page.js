@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Tagline from "./components/tagline";
 import Navbar from "./components/navbar";
-import Form from "./components/form";
+import Search from "./components/search";
 import About from "./components/about";
 import Client from "./components/client";
 import Blogs from "./components/blogs";
@@ -117,7 +117,7 @@ export default function Home() {
 
     <section className="relative py-16 bg-gray-50 dark:bg-slate-800">
         <div className="container relative">
-            <Form/>
+            <Search/>
         </div>
     </section>
     <section className="relative md:pb-24 pb-16 overflow-hidden">
