@@ -204,7 +204,7 @@ export const productPrices = {
         "Hotel Transfer (Nusa Dua Area)": {
             1: 788000,
             2: 548000,
-            3: 467000,
+            3: 469000,
             4: 429000,
             5: 405000,
             6: 469000,
