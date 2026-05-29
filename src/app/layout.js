@@ -4,13 +4,13 @@ import "./assets/css/tailwind.css";
 import WhatsappButton from "./components/whatsapp-button";
 
 const dm_sans = DM_Sans({
-    subsets: ["latin"],
-    variable: '--font-dm-sans',
+  subsets: ["latin"],
+  variable: '--font-dm-sans',
 });
 
 const dancing_script = Dancing_Script({
-    subsets: ["latin"],
-    variable: '--font-dancing_script',
+  subsets: ["latin"],
+  variable: '--font-dancing_script',
 });
 
 export const metadata = {
@@ -20,8 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="light scroll-smooth" dir="ltr">
-      <body className={`${dm_sans.variable} ${dancing_script.variable}  bg-white dark:bg-slate-900`}>
+    // 1. Tambahkan suppressHydrationWarning di html
+    <html lang="en" className="light scroll-smooth" dir="ltr" suppressHydrationWarning>
+      {/* 2. Hapus dark:bg-slate-900 dan tambahkan suppressHydrationWarning */}
+      <body 
+        className={`${dm_sans.variable} ${dancing_script.variable} bg-white`} 
+        suppressHydrationWarning
+      >
         
         {children}
 
