@@ -50,42 +50,67 @@ function CheckoutContent() {
         ? slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') 
         : 'Tour';
 
-    // 4. API Midtrans Pembayaran
+    // Ubah ke 'midtrans' jika ingin kembali
+    const PAYMENT_GATEWAY = 'xendit';
+
+    // 4. API Pembayaran (Midtrans & Xendit)
     const handleCheckout = async () => {
         if (!name || !email || !phone) {
             alert("Harap lengkapi semua data diri terlebih dahulu!");
             return;
         }
 
+        // Bungkus payload data agar tidak perlu diketik dua kali
+        const orderData = {
+            id: `${slug}-${type}`.replace(/[^a-zA-Z0-9]/g, '-').substring(0, 30), 
+            productName: `${formattedTitle} (${type})`.substring(0, 48), 
+            price: unitPrice, 
+            quantity: pax,      
+            customerName: name,
+            email: email,
+            phone: phone,
+            date: date,
+            pickupTime: pickupTime,
+            pickupPoint: pickupPoint,
+            note: note
+        };
+
         try {
-            const response = await fetch('/api/midtrans/create-transaction', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    id: `${slug}-${type}`.replace(/[^a-zA-Z0-9]/g, '-').substring(0, 30), 
-                    productName: `${formattedTitle} (${type})`.substring(0, 48), 
-                    price: unitPrice, 
-                    quantity: pax,      
-                    customerName: name,
-                    email: email,
-                    phone: phone,
-                    date: date,
-                    pickupTime: pickupTime,
-                    pickupPoint: pickupPoint,
-                    note: note
-                })
-            });
+            if (PAYMENT_GATEWAY === 'midtrans') {
+                // --- ALUR MIDTRANS ---
+                const response = await fetch('/api/midtrans/create-transaction', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData)
+                });
+                const data = await response.json();
 
-            const data = await response.json();
+                if (data.token) {
+                    window.snap.pay(data.token);
+                } else {
+                    alert("Gagal memproses ke Midtrans. Silakan coba sesaat lagi.");
+                    console.error("Midtrans Error:", data);
+                }
 
-            if (data.token) {
-                window.snap.pay(data.token);
-            } else {
-                alert("Gagal memproses ke Payment Gateway. Silakan coba sesaat lagi.");
-                console.error("Midtrans Error:", data);
+            } else if (PAYMENT_GATEWAY === 'xendit') {
+                // --- ALUR XENDIT ---
+                const response = await fetch('/api/xendit/create-invoice', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData)
+                });
+                const data = await response.json();
+
+                if (data.invoiceUrl) {
+                    window.location.href = data.invoiceUrl; // Redirect ke halaman Xendit
+                } else {
+                    alert("Gagal memproses ke Xendit. Silakan coba sesaat lagi.");
+                    console.error("Xendit Error:", data);
+                }
             }
         } catch (error) {
             console.error("Terjadi kesalahan:", error);
+            alert("Terjadi kesalahan jaringan.");
         }
     };
 
@@ -207,7 +232,7 @@ function CheckoutContent() {
                                     Pay Now
                                 </button>
                                 <p className="text-xs text-center text-slate-400 mt-3">
-                                    Secure payment powered by Midtrans.
+                                    Secure payment powered by {PAYMENT_GATEWAY === 'xendit' ? 'Xendit' : 'Midtrans'}.
                                 </p>
                             </div>
                         </div>
