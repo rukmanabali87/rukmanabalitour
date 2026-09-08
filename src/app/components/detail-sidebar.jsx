@@ -8,7 +8,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { productPrices } from "@/app/data/price";
 
-export default function DetailSidebar({ price = 299000, slug }) {
+export default function DetailSidebar({ price = 0, slug }) {
     const [startDate, setStartDate] = useState(new Date());
     const [traveler, setTraveler] = useState(2);
 
