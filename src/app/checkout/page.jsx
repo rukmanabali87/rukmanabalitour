@@ -38,6 +38,7 @@ function CheckoutContent() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [nationality, setNationality] = useState("");
     const [pickupTime, setPickupTime] = useState("");
     const [pickupPoint, setPickupPoint] = useState("");
     const [note, setNote] = useState("");
@@ -49,7 +50,7 @@ function CheckoutContent() {
 
     // 4. API Pembayaran Xendit
     const handleCheckout = async () => {
-        if (!name || !email || !phone) {
+        if (!name || !email || !phone || !nationality || !pickupTime) {
             alert("Please fill in all contact information first!");
             return;
         }
@@ -62,11 +63,15 @@ function CheckoutContent() {
             customerName: name,
             email: email,
             phone: phone,
+            nationality: nationality,
             date: date,
             pickupTime: pickupTime,
             pickupPoint: pickupPoint,
             note: note
         };
+
+        // SIMPAN DATA KE LOCAL STORAGE SEBELUM KE XENDIT
+        localStorage.setItem('rukmanaPendingOrder', JSON.stringify(orderData));
 
         try {
             const response = await fetch('/api/xendit/create-invoice', {
@@ -140,15 +145,21 @@ function CheckoutContent() {
                                     </div>
 
                                     <div>
+                                        <label className="font-semibold">Nationality <span className="text-red-500">*</span></label>
+                                        <input type="text" className="w-full mt-2 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" 
+                                            placeholder="Your Nationality" value={nationality} onChange={(e) => setNationality(e.target.value)} required />
+                                    </div>
+
+                                    <div>
                                         <label className="font-semibold">Pickup Time <span className="text-red-500">*</span></label>
                                         <input type="time" className="w-full mt-2 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" 
                                             placeholder="08.00 AM" value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} required />
                                     </div>
 
                                     <div>
-                                        <label className="font-semibold">Pickup Point <span className="text-red-500">*</span></label>
+                                        <label className="font-semibold">Pickup Point </label>
                                         <input type="text" className="w-full mt-2 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" 
-                                            placeholder="Your Hotel Name" value={pickupPoint} onChange={(e) => setPickupPoint(e.target.value)} required />
+                                            placeholder="Your Hotel Name" value={pickupPoint} onChange={(e) => setPickupPoint(e.target.value)}/>
                                     </div>
 
                                     <div>

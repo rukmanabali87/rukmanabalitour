@@ -2,15 +2,19 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
     try {
-        // Ambil data yang sama persis seperti saat menggunakan Midtrans
-        const { id, productName, price, quantity, customerName, email, phone, date, pickupTime, pickupPoint, note } = await request.json();
+        const { id, productName, price, quantity, customerName, email, phone, nationality, date, pickupTime, pickupPoint, note } = await request.json();
 
-        // Generate Order ID
         const orderId = Date.now().toString() + Math.floor(Math.random() * 10000);
         const grossAmount = price * quantity;
 
-        // Gabungkan custom fields Midtrans ke dalam description Xendit
-        const tourDescription = `Tour Date: ${date} | Time: ${pickupTime} | Pickup at: ${pickupPoint} | Note: ${note || '-'}`;
+        // Gabungkan custom fields ke dalam description Xendit
+        const tourDescription = `Nationality: ${nationality} | Date: ${date} | Time: ${pickupTime} | Pickup: ${pickupPoint || '-'} | Note: ${note || '-'}`;
+
+        // 1. Definisikan URL dasar (localhost untuk testing, domain asli untuk production)
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        
+        // 2. Buat URL redirect yang membawa data pesanan pelanggan ke halaman /success
+        const redirectUrl = `${baseUrl}/success?orderId=${orderId}`;
 
         // Format data transaksi sesuai standar Xendit Invoice
         const payload = {
@@ -18,6 +22,7 @@ export async function POST(request) {
             amount: grossAmount,
             payer_email: email,
             description: tourDescription,
+            success_redirect_url: redirectUrl, // 3. Aktifkan redirect otomatis dari Xendit
             customer: {
                 given_names: customerName,
                 email: email,
@@ -25,14 +30,13 @@ export async function POST(request) {
             },
             items: [
                 {
+                    id: id,
                     name: productName,
                     quantity: quantity,
                     price: price,
                     category: "Tour"
                 }
-            ],
-            // Opsional: Anda bisa menambahkan redirect URL setelah user selesai bayar
-            // success_redirect_url: "https://rukmanabalitour.com/success",
+            ]
         };
 
         // Encode Xendit Secret Key ke format Base64 (Syarat autentikasi API Xendit)
@@ -55,7 +59,7 @@ export async function POST(request) {
             throw new Error(data.message || "Gagal membuat invoice Xendit");
         }
 
-        // Jika Midtrans mengembalikan { token }, Xendit mengembalikan { invoiceUrl }
+        // Kembalikan invoiceUrl ke frontend
         return NextResponse.json({ invoiceUrl: data.invoice_url });
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
