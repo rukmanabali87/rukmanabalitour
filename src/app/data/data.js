@@ -3817,6 +3817,10 @@ export const footerSocial = [
 
 export const footerCompany = [
     {
+        name:'Terms & Conditions',
+        link:'/terms'
+    },
+    {
         name:'About us',
         link:'/aboutus'
     },

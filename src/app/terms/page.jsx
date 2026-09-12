@@ -1,29 +1,30 @@
-import Link from "next/link"
+import Link from "next/link";
 import Navbar from "../components/navbar";
 import Switcher from "../components/switcher";
 import Footer from "../components/footer";
+import { HiChevronRight } from "react-icons/hi";
 
 import { restrictions } from "../data/data";
 
 export default function Terms(){
     return(
         <>
-        <Navbar navclass="defaultscroll is-sticky" navlight={false} manuclass="!justify-end"/>
+        <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light"/>
 
-        <section className="relative table w-full py-32 lg:py-40 bg-gray-50 dark:bg-slate-800">
+        <section className="relative table w-full py-20 lg:py-24 bg-[#0B472D]">
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center mt-10">
-                    <h3 className="text-3xl leading-normal font-semibold">Terms of Services</h3>
+                    <h3 className="text-3xl leading-normal font-semibold text-white">Terms & Conditions</h3>
                 </div>
             </div>
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-primary"><Link href="/">Travosy</Link></li>
-                    <li className="inline-block text-base text-slate-950 dark:text-white mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-primary"><Link href="">Utility</Link></li>
-                    <li className="inline-block text-base text-slate-950 dark:text-white mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold text-primary" aria-current="page">Terms</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/70 hover:text-white"><Link href="/">Rukmana Bali Tour</Link></li>
+                    <li className="inline-block text-base text-white/70 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
+                    <li className="inline-block text-base text-white/50 mx-0.5"><HiChevronRight className="text-xl inline-block align-middle" /></li>
+                    <li className="inline-block text-base text-white/70 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
+                    <li className="inline-block uppercase text-[13px] font-bold text-white" aria-current="page">Terms & Conditions</li>
                 </ul>
             </div>
         </section>
@@ -32,7 +33,7 @@ export default function Terms(){
             <div className="container relative">
                 <div className="md:flex justify-center">
                     <div className="md:w-3/4">
-                        <div className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                        <div className="p-6 bg-white shadow rounded-md">
                             <h5 className="text-xl font-semibold mb-4">Introduction :</h5>
                             <p className="text-slate-400">It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text.</p>
 
@@ -50,13 +51,6 @@ export default function Terms(){
                                     )
                                 })}
                             </ul>
-
-                            <h5 className="text-xl font-semibold mt-8">Users Question & Answer :</h5>
-
-                            <div className="mt-6">
-                                <Link href="" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-primary hover:bg-primary-600 border-primary hover:border-primary-600 text-white rounded-md">Accept</Link>
-                                <Link href="" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-primary border-primary text-primary hover:text-white rounded-md ms-2">Decline</Link>
-                            </div>
                         </div>
                     </div>
                 </div>
