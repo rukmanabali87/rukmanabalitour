@@ -4,7 +4,86 @@ import Switcher from "../components/switcher";
 import Footer from "../components/footer";
 import { HiChevronRight } from "react-icons/hi";
 
-import { restrictions } from "../data/data";
+// Data untuk General Terms & Cancellation Policy
+const termsSections = [
+    {
+        title: "General Terms",
+        intro: "Welcome to Rukmana Bali Tour! By using our services, you agree to the following terms and conditions. Please read them carefully before placing an order.",
+        items: [
+        {
+            heading: "Services We Offer",
+            points: [
+            { text: "We provide tour booking services, including tickets, accommodation, transportation, and travel activities." }
+            ]
+        },
+        {
+            heading: "Booking and Payment",
+            points: [
+            { text: "All bookings must be made through our official platform." },
+            { text: "Payments must be made using the available payment methods on our website." },
+            { text: "Prices listed are subject to change without prior notice." }
+            ]
+        },
+        {
+            heading: "Change and Cancellation Policy",
+            points: [
+            { text: "Changes to travel dates or routes are subject to availability. Please contact us directly to discuss the options." },
+            { text: "Charges and cancellations will follow the applicable cancellation & refund policy." }
+            ]
+        },
+        {
+            heading: "Responsibilities and Risks",
+            points: [
+            { text: "We are not responsible for events beyond our control, such as natural disasters, strikes, or changes in government regulations." },
+            { text: "Tour participants must have valid travel documents (passport, visa, etc.)." }
+            ]
+        },
+        {
+            heading: "Copyright and Website Usage",
+            points: [
+            { text: "The content on our website is protected by copyright and may not be used without our written permission." }
+            ]
+        }
+        ]
+    },
+    {
+        title: "Cancellation & Refund Policy",
+        intro: "Please review our refund and cancellation guidelines below:",
+        items: [
+        {
+            heading: "Cancellations by Customers",
+            points: [
+            { text: "More than 12 hours before departure → 100% refund" },
+            { text: "Less than 12 hours before departure → No refund." }
+            ]
+        },
+        {
+            heading: "Cancellations by Us",
+            points: [
+            { text: "If we cancel the trip for any reason (e.g., force majeure or an insufficient number of participants), customers will receive a full refund or may choose an alternative tour." }
+            ]
+        },
+        {
+            heading: "Schedule Changes",
+            points: [
+            { text: "If customers wish to change their dates or itinerary, changes are subject to availability. Please contact us directly to discuss the options." }
+            ]
+        },
+        {
+            heading: "Refund Process",
+            points: [
+            { 
+                text: "Refund requests should contact us directly via this WhatsApp number ", 
+                waText: "+6287862207901", 
+                waNumber: "6287862207901",
+                extraText: ", along with proof of payment and order details." 
+            },
+            { text: "The refund process takes 2 x 24 working hours, according to the payment method used." }
+            ]
+        }
+        ]
+    }
+];
 
 export default function Terms(){
     return(
@@ -14,7 +93,7 @@ export default function Terms(){
         <section className="relative table w-full py-20 lg:py-24 bg-[#0B472D]">
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center mt-10">
-                    <h3 className="text-3xl leading-normal font-semibold text-white">Terms & Conditions</h3>
+                    <h3 className="text-3xl leading-normal font-bold text-white">Terms & Conditions</h3>
                 </div>
             </div>
             
@@ -29,28 +108,49 @@ export default function Terms(){
             </div>
         </section>
 
-        <section className="relative md:py-24 py-16">
+        <section className="relative md:py-18 py-10">
             <div className="container relative">
                 <div className="md:flex justify-center">
                     <div className="md:w-3/4">
-                        <div className="p-6 bg-white shadow rounded-md">
-                            <h5 className="text-xl font-semibold mb-4">Introduction :</h5>
-                            <p className="text-slate-400">It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text.</p>
-
-                            <h5 className="text-xl font-semibold mb-4 mt-8">User Agreements :</h5>
-                            <p className="text-slate-400">The most well-known dummy text is the 'Lorem Ipsum', which is said to have <b className="text-primary-600">originated</b> in the 16th century. Lorem Ipsum is <b className="text-primary-600">composed</b> in a pseudo-Latin language which more or less <b className="text-primary-600">corresponds</b> to 'proper' Latin. It contains a series of real Latin words. This ancient dummy text is also <b className="text-primary-600">incomprehensible</b>, but it imitates the rhythm of most European languages in Latin script. The <b className="text-primary-600">advantage</b> of its Latin origin and the relative <b className="text-primary-600">meaninglessness</b> of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's <b className="text-primary-600">attention</b> from the layout.</p>
-                            <p className="text-slate-400 mt-3">There is now an <b className="text-primary-600">abundance</b> of readable dummy texts. These are usually used when a text is <b className="text-primary-600">required purely</b> to fill a space. These alternatives to the classic Lorem Ipsum texts are often amusing and tell short, funny or <b className="text-primary-600">nonsensical</b> stories.</p>
-                            <p className="text-slate-400 mt-3">It seems that only <b className="text-primary-600">fragments</b> of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text.</p>
+                        <div className="p-6 bg-white shadow rounded-md space-y-10">
                             
-                            <h5 className="text-xl font-semibold mb-4 mt-8">Restrictions :</h5>
-                            <p className="text-slate-400">You are specifically restricted from all of the following :</p>
-                            <ul className="list-none text-slate-400 mt-3">
-                                {restrictions.map((item,index)=>{
-                                    return(
-                                        <li className="flex mt-2" key={index}><i className="mdi mdi-chevron-right text-primary text-lg align-middle me-2"></i>{item}</li>
-                                    )
-                                })}
-                            </ul>
+                            {termsSections.map((section, sIndex) => (
+                                <div key={sIndex}>
+                                    {sIndex > 0 && <hr className="my-8 border-slate-200" />}
+                                    
+                                    <h5 className="text-2xl font-bold text-center mb-4">{section.title}</h5>
+                                    <p className="text-slate-400 mb-6">{section.intro}</p>
+
+                                    <ol className="list-decimal list-inside space-y-6">
+                                        {section.items.map((item, iIndex) => (
+                                            <li key={iIndex} className="text-xl font-semibold text-slate-800">
+                                                <span className="font-semibold">
+                                                    {item.heading}
+                                                </span>
+                                                <ul className="list-disc ms-6 mt-2 text-sm text-slate-400 font-normal space-y-1">
+                                                    {item.points.map((point, pIndex) => (
+                                                        <li key={pIndex}>
+                                                            {point.text}
+                                                            {point.waNumber && (
+                                                                <a 
+                                                                    href={`https://wa.me/${point.waNumber}`} 
+                                                                    target="_blank" 
+                                                                    rel="noopener noreferrer"
+                                                                    className="text-primary font-semibold underline hover:text-primary/50"
+                                                                >
+                                                                    {point.waText}
+                                                                </a>
+                                                            )}
+                                                            {point.extraText}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </li>
+                                        ))}
+                                    </ol>
+                                </div>
+                            ))}
+
                         </div>
                     </div>
                 </div>
