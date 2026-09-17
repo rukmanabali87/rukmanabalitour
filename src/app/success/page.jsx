@@ -18,34 +18,54 @@ function SuccessContent() {
     const searchParams = useSearchParams();
     const orderId = searchParams.get('orderId') || '-';
     
-    // State untuk menampung data dari localStorage
     const [bookingData, setBookingData] = useState(null);
+    const [printDate, setPrintDate] = useState('');
+    
+    // 1. Tambahkan state loading
+    const [isLoading, setIsLoading] = useState(true); 
 
     useEffect(() => {
-        // Ambil data dari penyimpanan browser saat halaman dimuat
         const savedData = localStorage.getItem('rukmanaPendingOrder');
         if (savedData) {
             setBookingData(JSON.parse(savedData));
-            // Opsional: Hapus data setelah dibaca agar memori bersih
-            // localStorage.removeItem('rukmanaPendingOrder'); 
+            localStorage.removeItem('rukmanaPendingOrder'); 
         }
+
+        setPrintDate(new Date().toLocaleString('en-US', {
+            dateStyle: 'medium',
+            timeStyle: 'short'
+        }));
+
+        // 2. Matikan status loading setelah pencarian data selesai (baik ketemu maupun kosong)
+        setIsLoading(false); 
     }, []);
 
     const handlePrint = () => {
         const originalTitle = document.title;
-        
         document.title = `E-Voucher-Rukmana-Bali-Tour-${orderId}`;
-        
         window.print();
-        
         setTimeout(() => {
             document.title = originalTitle;
         }, 1000);
     };
 
-    // Jika data belum termuat
-    if (!bookingData) {
+    // 3. Tampilkan tulisan verifying HANYA saat proses mencari data berlangsung
+    if (isLoading) {
         return <div className="min-h-screen flex items-center justify-center">Verifying your booking data...</div>;
+    }
+
+    // 4. Jika loading selesai TAPI data kosong (karena sudah dihapus/refresh)
+    if (!bookingData) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 text-center">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Session Expired</h2>
+                <p className="text-gray-500 mb-6">Your booking data has been cleared for security, or the session has expired.</p>
+                <Link href="/" className="flex items-center gap-2 py-2 px-6 bg-primary hover:bg-primary/90 text-white rounded-md font-medium transition-all">
+                    <FiHome className="w-5 h-5" />
+                    Back to Home
+                </Link>
+            </div>
+        );
     }
 
     return (

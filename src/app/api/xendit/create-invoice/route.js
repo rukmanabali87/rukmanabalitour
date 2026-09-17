@@ -4,25 +4,31 @@ export async function POST(request) {
     try {
         const { id, productName, price, quantity, customerName, email, phone, nationality, date, pickupTime, pickupPoint, note } = await request.json();
 
-        const orderId = Date.now().toString() + Math.floor(Math.random() * 10000);
+        // 1. OPTIMASI: Validasi keamanan dasar untuk mencegah manipulasi data dari frontend
+        if (!price || price <= 0 || !quantity || quantity <= 0) {
+            return NextResponse.json({ error: "Invalid price or quantity" }, { status: 400 });
+        }
+
+        // 2. OPTIMASI: Gunakan UUID yang dijamin 100% unik dan standar industri
+        const orderId = crypto.randomUUID(); 
         const grossAmount = price * quantity;
 
-        // Gabungkan custom fields ke dalam description Xendit
         const tourDescription = `Nationality: ${nationality} | Date: ${date} | Time: ${pickupTime} | Pickup: ${pickupPoint || '-'} | Note: ${note || '-'}`;
 
-        // 1. Definisikan URL dasar (localhost untuk testing, domain asli untuk production)
         const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
         
-        // 2. Buat URL redirect yang membawa data pesanan pelanggan ke halaman /success
-        const redirectUrl = `${baseUrl}/success?orderId=${orderId}`;
+        // URL Redirect
+        const successUrl = `${baseUrl}/success?orderId=${orderId}`;
+        const failureUrl = `${baseUrl}/`; // 3. OPTIMASI: Arahkan ke Home atau halaman khusus jika gagal bayar
 
-        // Format data transaksi sesuai standar Xendit Invoice
         const payload = {
             external_id: orderId,
             amount: grossAmount,
             payer_email: email,
             description: tourDescription,
-            success_redirect_url: redirectUrl, // 3. Aktifkan redirect otomatis dari Xendit
+            invoice_duration: 3600, // 4. OPTIMASI: Invoice kedaluwarsa dalam 3600 detik (1 Jam). Sesuaikan kebutuhan.
+            success_redirect_url: successUrl,
+            failure_redirect_url: failureUrl, 
             customer: {
                 given_names: customerName,
                 email: email,
@@ -39,11 +45,9 @@ export async function POST(request) {
             ]
         };
 
-        // Encode Xendit Secret Key ke format Base64 (Syarat autentikasi API Xendit)
         const secretKey = process.env.XENDIT_SECRET_KEY + ":";
         const encodedKey = Buffer.from(secretKey).toString('base64');
 
-        // Minta URL pembayaran (Invoice) dari Xendit
         const response = await fetch('https://api.xendit.co/v2/invoices', {
             method: 'POST',
             headers: {
@@ -59,7 +63,6 @@ export async function POST(request) {
             throw new Error(data.message || "Gagal membuat invoice Xendit");
         }
 
-        // Kembalikan invoiceUrl ke frontend
         return NextResponse.json({ invoiceUrl: data.invoice_url });
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
