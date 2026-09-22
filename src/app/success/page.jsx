@@ -74,21 +74,19 @@ function SuccessContent() {
                 <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="!justify-end nav-light" />
             </div>
             
-            <section className="relative w-full py-15 bg-primary overflow-hidden print:hidden">
-                <Image
-                    src="/images/bg/8.jpg"
-                    alt="Travel Blogs"
-                    fill
-                    priority
-                    className="object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
+            <section className="relative table w-full py-20 lg:py-24 bg-[#0B472D] print:hidden">
                 <div className="container relative">
-                    <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                        <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">
-                            Checkout Your Booking
-                        </h3>
+                    <div className="grid grid-cols-1 text-center mt-10">
+                        <h3 className="text-3xl leading-normal font-bold text-white">Booking Success</h3>
                     </div>
+                </div>
+                
+                <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+                    <ul className="tracking-[0.5px] mb-0 inline-block">
+                        <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/70 hover:text-white"><Link href="/">Rukmana Bali Tour</Link></li>
+                        <li className="inline-block text-base text-white/50 mx-0.5"><HiChevronRight className="text-xl inline-block align-middle" /></li>
+                        <li className="inline-block uppercase text-[13px] font-bold text-white" aria-current="page">Booking</li>
+                    </ul>
                 </div>
             </section>
 
