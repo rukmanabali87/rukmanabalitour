@@ -471,13 +471,23 @@ export const productPrices = {
         },
     },
     "jumping-sliding-aling-aling-waterfall": {
-        "Standard": {
-            1: 350000,
-            2: 325000,
-            3: 300000,
-            4: 275000,
-            5: 250000,
-        }
+        "Private Car Transfer": {
+            1: 1160000,
+            2: 696000,
+            3: 551000,
+            4: 479000,
+            5: 435000,
+            6: 551000,
+            7: 510000,
+            8: 479000,
+            9: 455000,
+            10: 435000,
+            11: 419000,
+            12: 406000,
+            13: 395000,
+            14: 386000,
+            15: 247000,
+        },
     },
     "mount-batur-sunrise-trekking": {
         "Standard": {
