@@ -2,6 +2,7 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { HiChevronRight } from "react-icons/hi";
 import { FiCheckCircle, FiPrinter, FiHome } from 'react-icons/fi';
 import { Berkshire_Swash } from 'next/font/google';
 import Navbar from "@/app/components/navbar";

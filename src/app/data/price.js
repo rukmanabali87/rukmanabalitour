@@ -579,7 +579,7 @@ export const productPrices = {
         },
     },
     "ubud-highlights-tour": {
-        "Inclusive Tour with Lunch": {
+        "Inclusive Tour without Lunch": {
             1: 936000,
             2: 650000,
             3: 555000,
